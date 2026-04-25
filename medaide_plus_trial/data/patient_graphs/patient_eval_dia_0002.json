@@ -1,0 +1,112 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "eval_dia_0002",
+    "created_at": 1776028603.2272415
+  },
+  "nodes": [
+    {
+      "text": "cough",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776028617.9639444,
+      "source": "regex",
+      "id": "Symptom_cough"
+    },
+    {
+      "text": "copd",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776028617.964184,
+      "source": "regex",
+      "id": "Diagnosis_copd"
+    },
+    {
+      "text": "bronchitis",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776028617.964185,
+      "source": "regex",
+      "id": "Diagnosis_bronchitis"
+    },
+    {
+      "text": "pneumonia",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776028617.9641867,
+      "source": "regex",
+      "id": "Diagnosis_pneumonia"
+    },
+    {
+      "text": "asthma",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776028617.9641893,
+      "source": "regex",
+      "id": "Diagnosis_asthma"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Symptom_cough",
+      "target": "Diagnosis_copd"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Symptom_cough",
+      "target": "Diagnosis_bronchitis"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Symptom_cough",
+      "target": "Diagnosis_pneumonia"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Symptom_cough",
+      "target": "Diagnosis_asthma"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Diagnosis_copd",
+      "target": "Diagnosis_bronchitis"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Diagnosis_copd",
+      "target": "Diagnosis_pneumonia"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Diagnosis_copd",
+      "target": "Diagnosis_asthma"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Diagnosis_bronchitis",
+      "target": "Diagnosis_pneumonia"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Diagnosis_bronchitis",
+      "target": "Diagnosis_asthma"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028617.9648387,
+      "source": "Diagnosis_pneumonia",
+      "target": "Diagnosis_asthma"
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+[
+  {
+    "id": "pred_0001",
+    "domain": "Pre-Diagnosis",
+    "query": "I am a 58-year-old male with a history of type 2 diabetes and hypertension. For the past two hours, I have been experiencing crushing substernal chest pain radiating to my left arm, accompanied by diaphoresis and nausea. My father had a myocardial infarction at age 52. Should I be worried, and how urgent is this?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This presentation warrants EMERGENCY evaluation \u00e2\u20ac\u201d call 911 immediately. Do not drive yourself to the hospital.\n\n**Symptom Triage:** Your symptoms \u00e2\u20ac\u201d crushing substernal ches",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I am a 58-year-old male with a history of type 2 diabetes and hypertension. For ...]",
+        "metrics": {
+          "bleu_1": 0.0146,
+          "bleu_2": 0.0075,
+          "rouge_1": 12.2271,
+          "rouge_2": 2.6432,
+          "rouge_l": 6.9869,
+          "gleu": 1.9851,
+          "meteor": 4.9011,
+          "bert_score": 46.3292,
+          "latency_ms": 638.2
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s address this seriously. Given your symptoms and risk factors, this requires immediate attention.\n\n**Urgency Assessment:** Emergency \u2013 This presentation with crushing chest pain radiating to the left arm, diaphoresis (sweating), and nausea, combined with your family history of myocardial infarction, strongly suggests a potential cardiac event.\n\n**Symptom Triage:**\n*   **Chest Pain:** The crushing substernal pain radiating to the left arm is a classic symptom of myocardial ischemia (reduced blood flow to the heart muscle).\n*   **Diaphoresis & Nausea:** These symptoms often accompany cardiac distress and can indicate the body\u2019s response to reduced oxygen supply.\n\n**Risk Factor Analysis:**\n*   **Age (58):** Your age places you within a higher risk category for cardiovascular disease.\n*   **Type 2 Diabetes:** Diabetes significantly increases the risk of coronary artery disease.\n*   **Hypertension:** High blood pressure contributes to the development of atherosclerosis (plaque buildup in arteries).\n*   **Family History:** Your father\u2019s myocardial infarction at a relatively young age is a significant positive risk factor.\n\n**Red Flags:**\n*   **Crushing Chest Pain Radiating to the Arm:** This is a hallmark symptom of acute coronary syndrome (ACS), which includes unstable angina and myocardial infarction (heart attack).\n*   **Diaphoresis & Nausea:** These symptoms can indicate a serious compromise of cardiac function.\n\n**Immediate Actions:**\n1.  **Call Emergency Services (911 or your local emergency number) immediately.**  Do not delay.  Clearly state your symptoms and your medical history.\n2.  **Do not drive yourself to the hospital.** Paramedics can begin treatment immediately.\n3.  **If you have been prescribed nitroglycerin, take it as directed.** (Only if you know how and have been instructed to do so).\n4.  **Remain calm and still** while waiting for medical assistance.\n\n**Important Disclaimer:** *I am an AI and cannot provide medical diagnoses. This information is for pre-diagnostic guidance only. Your symptoms require immediate evaluation by a qualified healthcare professional.  Delaying treatment could have serious consequences.*",
+        "metrics": {
+          "bleu_1": 29.316,
+          "bleu_2": 15.7826,
+          "rouge_1": 44.3564,
+          "rouge_2": 15.507,
+          "rouge_l": 20.5941,
+          "gleu": 11.0475,
+          "meteor": 29.6156,
+          "bert_score": 67.0907,
+          "latency_ms": 103685.2
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address this seriously. Given your symptoms \u2013 crushing substernal chest pain radiating to your left arm, diaphoresis (sweating), and nausea \u2013 combined with your family history of myocardial infarction (heart attack) and your existing conditions of type 2 diabetes and hypertension, this requires immediate attention.\n\n**Urgency Assessment:** This is an **URGENT** situation. The combination of symptoms, particularly the chest pain and radiation, strongly suggests a potential cardiac event.\n\n**Symptom Triage:**\n*   **Chest Pain:** The crushing nature and radiation are highly concerning for angina or myocardial infarction.\n*   **Diaphoresis:** Profuse sweating is a common autonomic response to pain and cardiac stress.\n*   **Nausea:** Can be associated with both cardiac and gastrointestinal issues, but frequently accompanies severe chest pain.\n\n**Risk Factor Analysis:**\n*   **Age:** 58 years old is within the age range where cardiovascular risk increases.\n*   **Type 2 Diabetes:** Diabetes significantly increases the risk of coronary artery disease and heart attack.\n*   **Hypertension:** High blood pressure is a major risk factor for heart disease.\n*   **Family History:** Your father\u2019s myocardial infarction at age 52 is a significant positive family history factor.\n\n**Red Flags:**\n*   **Crushing Substernal Chest Pain:** This is a classic symptom of myocardial ischemia (lack of blood flow to the heart muscle).\n*   **Radiation to Left Arm:** Indicates potential involvement of the left coronary artery.\n*   **Diaphoresis & Nausea:** These symptoms amplify the concern for a serious cardiac event.\n\n**Immediate Actions:**\n1.  **Call Emergency Services (911 or your local emergency number) IMMEDIATELY.** Do not delay. Explain your symptoms clearly to the dispatcher.\n2.  **Do not drive yourself to the hospital.** Paramedics can begin treatment en route.\n3.  **If you have been prescribed aspirin for your diabetes, and have no contraindications (allergy, active ulcer), take one 325mg tablet immediately** *while waiting for emergency services to arrive*.  However, this should *not* delay calling for help.\n4.  **Remain calm and still** to minimize cardiac stress.\n\n*Disclaimer: I am an AI and cannot provide medical diagnoses. This information is for pre-diagnostic guidance only. It is crucial to seek immediate professional",
+        "intents": [
+          "Symptom_Triage",
+          "Progress_Tracking",
+          "Dosage_Recommendation"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.5,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 25.6637,
+          "bleu_2": 15.5875,
+          "rouge_1": 41.9476,
+          "rouge_2": 15.0376,
+          "rouge_l": 21.3483,
+          "gleu": 10.1481,
+          "meteor": 27.6754,
+          "bert_score": 66.626,
+          "latency_ms": 112527.8
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0001",
+    "domain": "Diagnosis",
+    "query": "A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, constipation, and cold intolerance. Her TSH is 12.8 mIU/L (normal 0.4\u20134.0), free T4 is 0.5 ng/dL (normal 0.8\u20131.8), and hemoglobin is 10.2 g/dL (normal 12.0\u201316.0 g/dL for females). What are the possible diagnoses and how do the symptoms correlate?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nThis 54-year-old woman presents with a classic constellation of hypothyroid symptoms: fatigue, weight gain, constipation, and cold intolerance. Her laboratory findin",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, ...]",
+        "metrics": {
+          "bleu_1": 0.0025,
+          "bleu_2": 0.0016,
+          "rouge_1": 9.7744,
+          "rouge_2": 5.303,
+          "rouge_l": 6.7669,
+          "gleu": 1.8764,
+          "meteor": 3.589,
+          "bert_score": 43.1992,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s carefully analyze this patient\u2019s presentation. Given the provided information, here\u2019s a breakdown:\n\n**Urgency Assessment:** Urgent \u2013 The significantly elevated TSH (12.8 mIU/L) and low free T4 (0.5 ng/dL) strongly suggest a thyroid disorder, which can have significant systemic effects. The anemia (hemoglobin 10.2 g/dL) also warrants investigation.\n\n**Symptom Triage:**\n*   **Fatigue:** Highly suggestive of hypothyroidism, as thyroid hormones are crucial for energy production.\n*   **Weight Gain (15 lbs):** Common in hypothyroidism due to slowed metabolism.\n*   **Constipation:** Frequently associated with reduced thyroid hormone levels, impacting gut motility.\n*   **Cold Intolerance:** A classic symptom of hypothyroidism, reflecting reduced thermogenesis.\n*   **Anemia:** The low hemoglobin level needs to be investigated independently, but could be exacerbated by hypothyroidism.\n\n**Risk Factor Analysis:**\n*   **Age (54):** Hypothyroidism becomes more common with increasing age.\n*   **Female:** Women are more frequently diagnosed with hypothyroidism than men.\n*   **TSH 12.8 mIU/L:** This is markedly elevated, indicating severe hypothyroidism.\n*   **Clinical History:** The gradual onset of symptoms over 6 months is typical of autoimmune thyroid conditions like Hashimoto's thyroiditis, which is the most common cause of hypothyroidism in developed countries.\n\n**Red Flags:**\n*   **Markedly Elevated TSH:** This level necessitates immediate investigation and treatment.\n*   **Anemia:** The anemia needs to be investigated to determine the cause, which could be related to the hypothyroidism or another underlying condition.\n\n**Immediate Actions:**\n1.  **Schedule an Immediate Appointment with an Endocrinologist:** This is crucial given the severely elevated TSH.\n2.  **Complete Thyroid Antibody Testing:** Testing for anti-TPO and anti-thyroglobulin antibodies will help determine if Hashimoto's thyroiditis is the cause. (Evidence-based guideline: American Thyroid Association guidelines for thyroid disorders).\n3.  **Full Blood Count (CBC) with Differential:** To further investigate the anemia and rule out other potential causes.\n4.  **Further Investigation:** The endocrinologist will likely order further tests, including free T4, thyroid ultrasound, and potentially a thyroid scan, to confirm the diagnosis and assess thyroid gland function.\n\n**",
+        "metrics": {
+          "bleu_1": 22.9299,
+          "bleu_2": 10.1273,
+          "rouge_1": 42.4242,
+          "rouge_2": 13.2379,
+          "rouge_l": 18.5383,
+          "gleu": 7.28,
+          "meteor": 17.7437,
+          "bert_score": 69.6642,
+          "latency_ms": 113229.4
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s thoroughly evaluate this patient\u2019s presentation.\n\n**Urgency Assessment:** Urgent \u2013 The combination of symptoms, particularly the significantly elevated TSH (12.8 mIU/L) and low free T4 (0.5 ng/dL), alongside anemia (hemoglobin 10.2 g/dL), warrants immediate investigation. While not immediately life-threatening, these findings suggest a serious underlying condition that needs prompt diagnosis.\n\n**Symptom Triage:**\n*   **Fatigue:** Common in thyroid disorders, anemia, and general medical conditions.\n*   **Weight Gain (15 lbs over 6 months):** Frequently associated with hypothyroidism (underactive thyroid), but can also be linked to other conditions like Cushing\u2019s syndrome or PCOS.\n*   **Constipation:** A classic symptom of hypothyroidism, impacting gut motility.\n*   **Cold Intolerance:** Strongly indicative of hypothyroidism, reflecting reduced metabolic heat production.\n*   **Anemia (Hemoglobin 10.2 g/dL):** Requires investigation to determine the cause \u2013 iron deficiency, vitamin B12 deficiency, or other potential blood disorders.\n\n**Risk Factor Analysis:** The patient\u2019s age (54) and the presence of several symptoms, particularly the thyroid abnormalities and anemia, require careful consideration. Further information needed:\n*   **Family History:** Any family history of thyroid disorders, diabetes, anemia, or autoimmune diseases?\n*   **Medications:** Is she currently taking any medications that could affect thyroid function or cause constipation?\n*   **Diet & Exercise:** What is her typical diet and level of physical activity?\n*   **Menstrual History:** Details regarding her menstrual cycle could be relevant.\n\n**Red Flags:**\n*   **Hypothyroidism (Suspected):** The markedly elevated TSH and low free T4 strongly suggest hypothyroidism. Untreated hypothyroidism can lead to significant complications.\n*   **Anemia:** The low hemoglobin level needs immediate investigation to rule out serious causes like blood loss or impaired red blood cell production.\n\n**Immediate Actions:**\n1.  **STAT Thyroid Function Tests:** Confirm the thyroid abnormalities. Consider adding thyroid antibodies (TPO and TgAb) to screen for autoimmune thyroid disease (Hashimoto\u2019s thyroiditis).\n2.  **Complete Blood Count (CBC) with Differential:** To further investigate the anemia \u2013 assess red blood cell indices (MCV, MCH, MCHC) and look for abnormalities in white blood cell counts.",
+        "intents": [
+          "Health_Inquiry",
+          "Symptom_Triage",
+          "Progress_Tracking"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 19.5584,
+          "bleu_2": 6.0939,
+          "rouge_1": 38.2143,
+          "rouge_2": 9.6774,
+          "rouge_l": 16.4286,
+          "gleu": 5.3883,
+          "meteor": 16.7387,
+          "bert_score": 67.297,
+          "latency_ms": 114678.1
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0001",
+    "domain": "Medication",
+    "query": "A 68-year-old man with atrial fibrillation is on warfarin 5 mg daily (INR 2.4) and was just prescribed fluconazole 200 mg daily for a fungal infection. He also takes metoprolol 50 mg twice daily and atorvastatin 40 mg at bedtime. What drug interactions should be monitored, and do any dosage adjustments need to be made?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis**\n\nThe most critical interaction here is between warfarin and fluconazole. Fluconazole is a potent inhibitor of CYP2C9, the primary enzyme responsible for metabolizing the ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: A 68-year-old man with atrial fibrillation is on warfarin 5 mg daily (INR 2.4) a...]",
+        "metrics": {
+          "bleu_1": 0.0003,
+          "bleu_2": 0.0001,
+          "rouge_1": 9.7403,
+          "rouge_2": 1.9608,
+          "rouge_l": 8.4416,
+          "gleu": 1.1132,
+          "meteor": 2.7918,
+          "bert_score": 47.1889,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s carefully evaluate this patient\u2019s situation. Given the combination of medications and the potential for drug interactions, a thorough review by a physician is absolutely crucial.\n\n**Urgency Assessment:** Routine \u2013 While this situation requires careful monitoring, it doesn\u2019t immediately represent an emergency. However, the potential for significant interactions warrants prompt medical attention.\n\n**Symptom Triage:**\n*   **Warfarin:** The patient is already on warfarin, a blood thinner, requiring meticulous INR monitoring. The current INR of 2.4 indicates a need for careful management.\n*   **Fluconazole:** Fluconazole, an antifungal, is a known CYP3A4 inhibitor. This means it can significantly alter the metabolism of warfarin, potentially increasing warfarin levels and the risk of bleeding.\n*   **Metoprolol & Atorvastatin:** These medications are generally considered stable in this context, but their effects should be continuously monitored.\n\n**Risk Factor Analysis:**\n*   **Age (68):** Older adults are generally more susceptible to drug interactions and bleeding complications.\n*   **Atrial Fibrillation:** This condition itself increases the risk of bleeding complications.\n*   **Warfarin Management (INR 2.4):** The current INR is elevated, suggesting a need for careful monitoring and potential dose adjustments.\n\n**Red Flags:**\n*   **Increased Bleeding Risk:** The primary red flag is the potential for increased bleeding due to the combined effects of warfarin and fluconazole. Signs to watch for include easy bruising, prolonged bleeding from cuts, nosebleeds, blood in urine or stool, or excessive menstrual bleeding (if applicable).\n*   **Fluconazole-Induced Warfarin Elevation:** Fluconazole can significantly increase warfarin levels, potentially leading to serious bleeding events.\n\n**Immediate Actions:**\n1.  **Contact the Physician Immediately:** The patient *must* discuss this medication combination with their cardiologist and/or primary care physician *immediately*.\n2.  **INR Monitoring:** The patient\u2019s INR needs to be checked frequently (as directed by their physician) \u2013 likely more frequently than standard monitoring.\n3.  **Fluconazole Dosage Review:** The physician will likely need to adjust the fluconazole dosage or consider an alternative antifungal with a lower risk of CYP3A4 interaction.\n4.  **Patient Education:** The patient needs to be educated about the signs and symptoms of bleeding and the importance of reporting any unusual symptoms promptly.\n\n**Disclaimer:** *",
+        "metrics": {
+          "bleu_1": 26.0234,
+          "bleu_2": 9.9604,
+          "rouge_1": 41.1576,
+          "rouge_2": 5.8065,
+          "rouge_l": 16.0772,
+          "gleu": 7.6358,
+          "meteor": 19.0365,
+          "bert_score": 65.1151,
+          "latency_ms": 116858.9
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address this carefully. You\u2019ve brought up some important considerations with this medication regimen.\n\n**Drug Interactions & Monitoring:**\n\nThe combination of warfarin, fluconazole, and metoprolol requires close monitoring due to potential interactions. \n\n*   **Warfarin & Fluconazole:** Fluconazole can significantly increase warfarin levels. Fluconazole inhibits the CYP2C9 enzyme, which is responsible for warfarin metabolism. This can lead to elevated INR values and an increased risk of bleeding. We need to closely monitor your INR \u2013 ideally, we should be checking it *every 4-6 weeks* initially, and potentially more frequently if we see any changes. \n\n*   **Metoprolol & Warfarin:** While the interaction is less pronounced than with fluconazole, metoprolol can slightly increase the anticoagulant effect of warfarin. \n\n*   **Atorvastatin & Fluconazole:** Atorvastatin and fluconazole can both potentially increase bleeding risk, though the risk is generally low. \n\n**Dosage Adjustments:**\n\nGiven the potential for increased warfarin levels due to fluconazole, a slight reduction in your warfarin dose (e.g., down to 4.5mg daily) might be warranted, *in consultation with your cardiologist*. We\u2019ll need to closely monitor your INR to determine the optimal dose. \n\n**Phase I: Initial Stabilization & INR Monitoring (Weeks 1-4)**\n\n*   **Goal:** Establish a stable INR and minimize the impact of fluconazole on warfarin metabolism.\n*   **Activities:** Frequent INR monitoring (as outlined above \u2013 every 4-6 weeks initially), continued adherence to your current warfarin and metoprolol regimen.\n*   **Timeline:**  We\u2019ll assess your INR at 2 weeks, 6 weeks, and 4 weeks after starting fluconazole.\n\n---\n\n**Follow-up Schedule**\n\n*   **2 Weeks:** Assess INR, review fluconazole side effects, and discuss any concerns.\n*   **6 Weeks:**  Repeat INR. Evaluate for any changes in symptoms (bleeding, dizziness, etc.).\n*   **3 Months:**  Repeat INR. Assess HbA1c (given your Type 2 Diabetes) \u2013 target <7%. Review medication effectiveness and potential side effects.\n*   **6 Months:** Repeat INR. Assess overall well-being and adherence to the medication regimen.\n*   **1 Year:** Comprehensive review of medication effectiveness,",
+        "intents": [
+          "Progress_Tracking",
+          "Dosage_Recommendation",
+          "Drug_Counseling"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.9,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 26.8987,
+          "bleu_2": 9.6919,
+          "rouge_1": 38.5787,
+          "rouge_2": 7.1307,
+          "rouge_l": 17.2589,
+          "gleu": 7.6312,
+          "meteor": 16.8724,
+          "bert_score": 68.0836,
+          "latency_ms": 119214.9
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0001",
+    "domain": "Post-Diagnosis",
+    "query": "I'm a 55-year-old man, 6 weeks post-STEMI with 2 drug-eluting stents placed in the LAD. My ejection fraction is 45%. I completed Phase I cardiac rehab in the hospital. What should my rehabilitation plan look like going forward, and when should I have follow-up appointments?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Phase II Outpatient Cardiac Rehabilitation (Weeks 6\u201312)**\n\nYou should enroll in a supervised outpatient cardiac rehabilitation program, typically consisting of 36 sessions over 12 weeks (3 sessions ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I'm a 55-year-old man, 6 weeks post-STEMI with 2 drug-eluting stents placed in t...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 4.6243,
+          "rouge_2": 1.1628,
+          "rouge_l": 3.4682,
+          "gleu": 0.416,
+          "meteor": 1.2783,
+          "bert_score": 44.6542,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s address your rehabilitation plan and follow-up appointments following your recent STEMI. Given your situation \u2013 a 55-year-old male with a 6-week history of a STEMI, 45% ejection fraction, and stent placement \u2013 a structured approach is crucial.\n\n**Urgency Assessment:** Urgent \u2013 due to the recent cardiac event and ongoing heart function.\n\n**Symptom Triage:** You\u2019ve already completed Phase I cardiac rehab, which is excellent. Moving forward, we need a comprehensive plan focused on improving your functional capacity, managing symptoms, and optimizing your heart health.\n\n**Risk Factor Analysis:** Your age (55) and history of STEMI significantly elevate your risk of future cardiac events. The reduced ejection fraction (45%) indicates ongoing myocardial damage, and the LAD stent placement requires careful monitoring.  It\u2019s important to address modifiable risk factors such as hypertension, hyperlipidemia, and smoking (if applicable).\n\n**Red Flags:** While you\u2019ve completed Phase I, continued monitoring for symptoms like chest pain, shortness of breath, palpitations, or swelling in your ankles is vital. Any new symptoms should be reported immediately.\n\n**Immediate Actions & Rehabilitation Plan:**\n\n1.  **Continue Phase II Cardiac Rehabilitation:** You should be progressing to Phase II cardiac rehab, which typically involves supervised exercise training, education on heart-healthy lifestyle choices, and symptom management strategies. Aim for 3 times per week. (American Heart Association, *Guidelines for Exercise Rehabilitation for Patients with Coronary Artery Disease*).\n2.  **Personalized Exercise Plan:** Work with a cardiac rehab specialist to develop a tailored exercise plan based on your current fitness level and tolerance. Start slowly and gradually increase intensity and duration.\n3.  **Medication Adherence:** Strictly adhere to your prescribed medications \u2013 likely including aspirin, a beta-blocker, and an ACE inhibitor or ARB \u2013 as directed by your cardiologist.\n4.  **Follow-up Appointments:**\n    *   **Week 6 (Current):**  You've just completed 6 weeks, so a review of your medication, symptoms, and echocardiogram results is essential.\n    *   **Weeks 12 & 24:** Scheduled follow-up appointments with your cardiologist for repeat echocardiograms to assess your ejection fraction and overall cardiac function.\n    *   **Ongoing:**  Regular monitoring of blood pressure, cholesterol levels, and HbA1c (if diabetic) is crucial",
+        "metrics": {
+          "bleu_1": 22.2222,
+          "bleu_2": 7.6584,
+          "rouge_1": 34.2857,
+          "rouge_2": 6.9382,
+          "rouge_l": 11.4286,
+          "gleu": 6.3142,
+          "meteor": 16.5285,
+          "bert_score": 61.4725,
+          "latency_ms": 113663.8
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s develop a plan moving forward after your STEMI. Given your ejection fraction of 45% and completion of Phase I cardiac rehab, we\u2019ll focus on a structured, progressive approach.\n\n**Phase II: Strengthening & Functional Restoration (Weeks 8-16)**\n\n* **Goals:** Increase exercise tolerance, improve functional capacity (walking distance, climbing stairs), and continue building confidence.\n* **Activities:**\n    * **Cardiac Rehabilitation:** Continue attending your cardiac rehab sessions 2-3 times per week. These sessions will focus on supervised exercise, education on heart health, and psychological support.\n    * **Aerobic Exercise:** Gradually increase your moderate-intensity aerobic exercise to at least 150 minutes per week, as recommended. This could include brisk walking, cycling, or swimming. We\u2019ll start with 20-30 minutes, gradually increasing duration and intensity as tolerated.\n    * **Strength Training:** Introduce light strength training 2 times per week, focusing on major muscle groups (legs, arms, core). Start with bodyweight exercises or light resistance bands.\n    * **Diet:** Continue adhering to the Mediterranean diet \u2013 rich in fruits, vegetables, whole grains, lean protein, and healthy fats. This will help manage cholesterol and inflammation.\n* **Timeline:** This phase will last approximately 8-12 weeks, with adjustments based on your progress.\n\n**Phase III: Maintenance & Long-Term Management (Weeks 16+)**\n\n* **Goals:** Maintain achieved gains, prevent readmissions, and promote long-term heart health.\n* **Activities:** Continue Phase II activities, focusing on maintenance and incorporating activities you enjoy.  Ongoing education on heart health and medication adherence.\n* **Timeline:** This phase is ongoing, with regular monitoring and adjustments.\n\n\n\n**Follow-up Schedule**\n\n* **2 Weeks:** Follow-up with your cardiologist to review your progress, adjust medication if needed, and assess any new symptoms. We\u2019ll also check your blood pressure and cholesterol levels.\n* **6 Weeks:**  Repeat echocardiogram to assess your ejection fraction and cardiac function.  We\u2019ll discuss your exercise progress and any challenges you\u2019ve encountered.\n* **3 Months:** Comprehensive cardiac assessment including stress test (if appropriate) and review of medication adherence.\n* **6 Months:**  Repeat echocardiogram and review of long-term lifestyle modifications.  We\u2019ll discuss your goals for the future and address any concerns.",
+        "intents": [
+          "Rehabilitation_Advice",
+          "Drug_Counseling",
+          "Follow_up_Scheduling"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.5,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 26.2687,
+          "bleu_2": 10.1115,
+          "rouge_1": 36.9466,
+          "rouge_2": 10.4135,
+          "rouge_l": 18.0153,
+          "gleu": 7.6462,
+          "meteor": 19.3174,
+          "bert_score": 64.165,
+          "latency_ms": 115762.3
+        }
+      }
+    }
+  }
+]

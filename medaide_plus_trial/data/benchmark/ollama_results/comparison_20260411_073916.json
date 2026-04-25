@@ -1,0 +1,162 @@
+{
+  "models": [
+    "gemma3:4b"
+  ],
+  "limit": 1,
+  "condition": "all",
+  "timestamp": "20260411_073916",
+  "results": {
+    "gemma3:4b": {
+      "per_category": {
+        "Pre-Diagnosis": {
+          "vanilla": {
+            "bleu_1": 0.01,
+            "bleu_2": 0.01,
+            "rouge_1": 12.23,
+            "rouge_2": 2.64,
+            "rouge_l": 6.99,
+            "gleu": 1.99,
+            "meteor": 4.9,
+            "bert_score": 46.33,
+            "latency_ms": 645.9,
+            "n": 1
+          }
+        },
+        "Diagnosis": {
+          "vanilla": {
+            "bleu_1": 0.0,
+            "bleu_2": 0.0,
+            "rouge_1": 9.77,
+            "rouge_2": 5.3,
+            "rouge_l": 6.77,
+            "gleu": 1.88,
+            "meteor": 3.59,
+            "bert_score": 43.2,
+            "latency_ms": 0.0,
+            "n": 1
+          }
+        },
+        "Medication": {
+          "vanilla": {
+            "bleu_1": 0.0,
+            "bleu_2": 0.0,
+            "rouge_1": 9.74,
+            "rouge_2": 1.96,
+            "rouge_l": 8.44,
+            "gleu": 1.11,
+            "meteor": 2.79,
+            "bert_score": 47.19,
+            "latency_ms": 0.0,
+            "n": 1
+          }
+        },
+        "Post-Diagnosis": {
+          "vanilla": {
+            "bleu_1": 0.0,
+            "bleu_2": 0.0,
+            "rouge_1": 4.62,
+            "rouge_2": 1.16,
+            "rouge_l": 3.47,
+            "gleu": 0.42,
+            "meteor": 1.28,
+            "bert_score": 44.65,
+            "latency_ms": 0.0,
+            "n": 1
+          }
+        }
+      },
+      "overall": {
+        "vanilla": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 9.09,
+          "rouge_2": 2.77,
+          "rouge_l": 6.42,
+          "gleu": 1.35,
+          "meteor": 3.14,
+          "bert_score": 45.34,
+          "latency_ms": 161.47
+        }
+      },
+      "conditions": {
+        "Vanilla GPT-4o": {
+          "global": {
+            "bleu_1": 0.0,
+            "bleu_2": 0.0,
+            "rouge_1": 9.09,
+            "rouge_2": 2.77,
+            "rouge_l": 6.42,
+            "gleu": 1.35,
+            "meteor": 3.14,
+            "bert_score": 45.34,
+            "latency_ms": 161.47
+          },
+          "per_category": {
+            "Pre-Diagnosis": {
+              "bleu_1": 0.01,
+              "bleu_2": 0.01,
+              "rouge_1": 12.23,
+              "rouge_2": 2.64,
+              "rouge_l": 6.99,
+              "gleu": 1.99,
+              "meteor": 4.9,
+              "bert_score": 46.33,
+              "latency_ms": 645.9,
+              "n": 1
+            },
+            "Diagnosis": {
+              "bleu_1": 0.0,
+              "bleu_2": 0.0,
+              "rouge_1": 9.77,
+              "rouge_2": 5.3,
+              "rouge_l": 6.77,
+              "gleu": 1.88,
+              "meteor": 3.59,
+              "bert_score": 43.2,
+              "latency_ms": 0.0,
+              "n": 1
+            },
+            "Medication": {
+              "bleu_1": 0.0,
+              "bleu_2": 0.0,
+              "rouge_1": 9.74,
+              "rouge_2": 1.96,
+              "rouge_l": 8.44,
+              "gleu": 1.11,
+              "meteor": 2.79,
+              "bert_score": 47.19,
+              "latency_ms": 0.0,
+              "n": 1
+            },
+            "Post-Diagnosis": {
+              "bleu_1": 0.0,
+              "bleu_2": 0.0,
+              "rouge_1": 4.62,
+              "rouge_2": 1.16,
+              "rouge_l": 3.47,
+              "gleu": 0.42,
+              "meteor": 1.28,
+              "bert_score": 44.65,
+              "latency_ms": 0.0,
+              "n": 1
+            }
+          }
+        }
+      },
+      "n_evaluated": 4,
+      "conditions_run": "all",
+      "timestamp": "2026-04-11T07:39:45.833519",
+      "_meta": {
+        "model": "gemma3:4b",
+        "provider": "ollama",
+        "elapsed_seconds": 18.8,
+        "limit": 1,
+        "condition": "all",
+        "timestamp": "20260411_073928",
+        "summary_file": "C:\\Users\\modip\\OneDrive\\Desktop\\college study material-PunyaModi\\Sem 8\\Major\\medaide_plus_trial\\data\\benchmark\\ollama_results\\gemma3_4b\\summary_latest.json",
+        "results_file": "C:\\Users\\modip\\OneDrive\\Desktop\\college study material-PunyaModi\\Sem 8\\Major\\medaide_plus_trial\\data\\benchmark\\ollama_results\\gemma3_4b\\results_20260411_073945.json",
+        "exit_code": 0
+      }
+    }
+  }
+}

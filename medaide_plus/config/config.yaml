@@ -1,0 +1,136 @@
+# MedAide+ Configuration File
+
+# LLM Provider Configuration
+# Supported providers: openai, ollama, anthropic, azure_openai, google_gemini, huggingface, openai_compatible
+llm:
+  provider: "openai"           # Default provider
+  
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-4o"
+    max_tokens: 1024
+    temperature: 0.3
+  
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "qwen3:8b"           # Change to gemma3:4b for Gemma testing
+    max_tokens: 1024
+    temperature: 0.3
+    num_ctx: 2048               # Reduces KV-cache VRAM from ~3.5GB → ~200MB
+                                # Allows 8B Q4 model to fully load on 8GB GPU (RTX 3070)
+                                # Increase to 4096 if queries exceed ~1500 tokens
+    # Available local models:
+    #   qwen3:8b   — ~5.2 GB — Qwen3 8B (best quality)
+    #   gemma3:4b  — ~3.3 GB — Gemma 3 4B (faster)
+  
+  anthropic:
+    api_key: "${ANTHROPIC_API_KEY}"
+    model: "claude-3-sonnet-20240229"
+    max_tokens: 1024
+    temperature: 0.3
+  
+  azure_openai:
+    api_key: "${AZURE_OPENAI_API_KEY}"
+    endpoint: "${AZURE_OPENAI_ENDPOINT}"
+    api_version: "2024-02-01"
+    deployment_name: "gpt-4o"
+    max_tokens: 1024
+    temperature: 0.3
+  
+  google_gemini:
+    api_key: "${GOOGLE_API_KEY}"
+    model: "gemini-1.5-pro"
+    max_tokens: 1024
+    temperature: 0.3
+  
+  huggingface:
+    api_key: "${HF_TOKEN}"
+    model: "meta-llama/Meta-Llama-3-8B-Instruct"
+    max_tokens: 1024
+    temperature: 0.3
+  
+  openai_compatible:
+    base_url: "http://localhost:8000/v1"
+    api_key: "not-needed"
+    model: "local-model"
+    max_tokens: 1024
+    temperature: 0.3
+
+models:
+  flan_t5: "google/flan-t5-base"
+  biobert: "dmis-lab/biobert-base-cased-v1.2"
+  roberta: "roberta-base"
+  sentence_transformer: "all-MiniLM-L6-v2"
+  openai_model: "gpt-4o"
+
+# DEPRECATED: Use the 'llm' section above instead. Kept for backward compatibility.
+api:
+  openai_api_key: "${OPENAI_API_KEY}"
+  max_tokens: 1024
+  temperature: 0.3
+  timeout: 30
+
+modules:
+  amqu:
+    k_shots: 5
+    consistency_threshold: 0.85
+    min_count: 3
+    recency_lambda: 0.1
+    max_subqueries: 5
+  
+  hdio:
+    ood_threshold: 0.30
+    num_categories: 4
+    num_intents: 18
+    gat_heads: 4
+    gat_hidden: 128
+  
+  dmacn:
+    max_agents: 4
+    timeout: 180
+    confidence_weight: true
+  
+  plmm:
+    max_nodes: 500
+    graph_storage_path: "data/patient_graphs"
+    node_types:
+      - Symptom
+      - Diagnosis
+      - Medication
+      - Allergy
+      - Procedure
+  
+  hdfg:
+    mc_dropout_passes: 15
+    uncertainty_threshold: 0.3
+    faiss_top_k: 5
+    support_threshold: 0.75
+  
+  aqcr:
+    simple_agents: 1
+    moderate_agents: 2
+    complex_agents: 4
+    simple_threshold: 0.33
+    complex_threshold: 0.66
+  
+  miet:
+    beta: 0.6
+    buffer_size: 5
+    state_dim: 18
+
+knowledge_base:
+  kb_path: "data/knowledge_base.json"
+  faiss_index_path: "data/faiss_index"
+  chunk_size: 512
+  overlap: 64
+  top_k: 5
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+  file: "logs/medaide_plus.log"
+
+evaluation:
+  bleu_weights: [0.25, 0.25, 0.25, 0.25]
+  rouge_types: ["rouge1", "rouge2", "rougeL"]
+  bert_score_model: "bert-base-uncased"

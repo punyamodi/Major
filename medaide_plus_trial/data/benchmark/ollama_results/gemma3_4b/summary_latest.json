@@ -1,0 +1,385 @@
+{
+  "per_category": {
+    "Pre-Diagnosis": {
+      "vanilla": {
+        "bleu_1": 0.01,
+        "bleu_2": 0.0,
+        "rouge_1": 10.11,
+        "rouge_2": 2.78,
+        "rouge_l": 6.37,
+        "gleu": 1.28,
+        "meteor": 2.84,
+        "bert_score": 46.12,
+        "latency_ms": 160.92,
+        "n": 5
+      },
+      "medaide": {
+        "bleu_1": 24.67,
+        "bleu_2": 11.77,
+        "rouge_1": 40.74,
+        "rouge_2": 10.58,
+        "rouge_l": 18.09,
+        "gleu": 8.25,
+        "meteor": 24.65,
+        "bert_score": 65.87,
+        "latency_ms": 12403.76,
+        "n": 5
+      },
+      "medaide_plus": {
+        "bleu_1": 26.07,
+        "bleu_2": 12.79,
+        "rouge_1": 41.71,
+        "rouge_2": 11.47,
+        "rouge_l": 17.48,
+        "gleu": 8.98,
+        "meteor": 26.12,
+        "bert_score": 65.43,
+        "latency_ms": 12750.0,
+        "n": 5
+      }
+    },
+    "Diagnosis": {
+      "vanilla": {
+        "bleu_1": 0.0,
+        "bleu_2": 0.0,
+        "rouge_1": 10.18,
+        "rouge_2": 3.71,
+        "rouge_l": 6.7,
+        "gleu": 1.5,
+        "meteor": 2.91,
+        "bert_score": 46.12,
+        "latency_ms": 0.0,
+        "n": 5
+      },
+      "medaide": {
+        "bleu_1": 24.08,
+        "bleu_2": 10.16,
+        "rouge_1": 39.09,
+        "rouge_2": 10.62,
+        "rouge_l": 18.51,
+        "gleu": 7.61,
+        "meteor": 19.52,
+        "bert_score": 66.52,
+        "latency_ms": 15517.04,
+        "n": 5
+      },
+      "medaide_plus": {
+        "bleu_1": 31.58,
+        "bleu_2": 17.92,
+        "rouge_1": 46.15,
+        "rouge_2": 17.86,
+        "rouge_l": 24.47,
+        "gleu": 12.32,
+        "meteor": 26.72,
+        "bert_score": 69.24,
+        "latency_ms": 14603.5,
+        "n": 5
+      }
+    },
+    "Medication": {
+      "vanilla": {
+        "bleu_1": 0.0,
+        "bleu_2": 0.0,
+        "rouge_1": 6.16,
+        "rouge_2": 1.2,
+        "rouge_l": 5.09,
+        "gleu": 0.79,
+        "meteor": 1.88,
+        "bert_score": 43.87,
+        "latency_ms": 0.02,
+        "n": 5
+      },
+      "medaide": {
+        "bleu_1": 27.62,
+        "bleu_2": 11.5,
+        "rouge_1": 40.3,
+        "rouge_2": 8.13,
+        "rouge_l": 14.97,
+        "gleu": 8.55,
+        "meteor": 18.21,
+        "bert_score": 65.28,
+        "latency_ms": 15958.0,
+        "n": 5
+      },
+      "medaide_plus": {
+        "bleu_1": 33.52,
+        "bleu_2": 15.35,
+        "rouge_1": 46.21,
+        "rouge_2": 12.33,
+        "rouge_l": 19.58,
+        "gleu": 10.66,
+        "meteor": 21.31,
+        "bert_score": 68.05,
+        "latency_ms": 17125.92,
+        "n": 5
+      }
+    },
+    "Post-Diagnosis": {
+      "vanilla": {
+        "bleu_1": 0.0,
+        "bleu_2": 0.0,
+        "rouge_1": 4.28,
+        "rouge_2": 0.91,
+        "rouge_l": 3.15,
+        "gleu": 0.46,
+        "meteor": 1.27,
+        "bert_score": 42.98,
+        "latency_ms": 0.0,
+        "n": 5
+      },
+      "medaide": {
+        "bleu_1": 22.78,
+        "bleu_2": 7.63,
+        "rouge_1": 34.14,
+        "rouge_2": 6.56,
+        "rouge_l": 12.3,
+        "gleu": 6.42,
+        "meteor": 14.54,
+        "bert_score": 61.43,
+        "latency_ms": 12661.76,
+        "n": 5
+      },
+      "medaide_plus": {
+        "bleu_1": 24.49,
+        "bleu_2": 10.5,
+        "rouge_1": 37.03,
+        "rouge_2": 8.52,
+        "rouge_l": 14.45,
+        "gleu": 7.53,
+        "meteor": 16.57,
+        "bert_score": 63.84,
+        "latency_ms": 14575.08,
+        "n": 5
+      }
+    }
+  },
+  "overall": {
+    "vanilla": {
+      "bleu_1": 0.0,
+      "bleu_2": 0.0,
+      "rouge_1": 7.68,
+      "rouge_2": 2.15,
+      "rouge_l": 5.33,
+      "gleu": 1.01,
+      "meteor": 2.22,
+      "bert_score": 44.77,
+      "latency_ms": 40.23
+    },
+    "medaide": {
+      "bleu_1": 24.79,
+      "bleu_2": 10.27,
+      "rouge_1": 38.56,
+      "rouge_2": 8.97,
+      "rouge_l": 15.97,
+      "gleu": 7.71,
+      "meteor": 19.23,
+      "bert_score": 64.77,
+      "latency_ms": 14135.14
+    },
+    "medaide_plus": {
+      "bleu_1": 28.91,
+      "bleu_2": 14.14,
+      "rouge_1": 42.77,
+      "rouge_2": 12.55,
+      "rouge_l": 18.99,
+      "gleu": 9.87,
+      "meteor": 22.68,
+      "bert_score": 66.64,
+      "latency_ms": 14763.62
+    }
+  },
+  "conditions": {
+    "Vanilla GPT-4o": {
+      "global": {
+        "bleu_1": 0.0,
+        "bleu_2": 0.0,
+        "rouge_1": 7.68,
+        "rouge_2": 2.15,
+        "rouge_l": 5.33,
+        "gleu": 1.01,
+        "meteor": 2.22,
+        "bert_score": 44.77,
+        "latency_ms": 40.23
+      },
+      "per_category": {
+        "Pre-Diagnosis": {
+          "bleu_1": 0.01,
+          "bleu_2": 0.0,
+          "rouge_1": 10.11,
+          "rouge_2": 2.78,
+          "rouge_l": 6.37,
+          "gleu": 1.28,
+          "meteor": 2.84,
+          "bert_score": 46.12,
+          "latency_ms": 160.92,
+          "n": 5
+        },
+        "Diagnosis": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 10.18,
+          "rouge_2": 3.71,
+          "rouge_l": 6.7,
+          "gleu": 1.5,
+          "meteor": 2.91,
+          "bert_score": 46.12,
+          "latency_ms": 0.0,
+          "n": 5
+        },
+        "Medication": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 6.16,
+          "rouge_2": 1.2,
+          "rouge_l": 5.09,
+          "gleu": 0.79,
+          "meteor": 1.88,
+          "bert_score": 43.87,
+          "latency_ms": 0.02,
+          "n": 5
+        },
+        "Post-Diagnosis": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 4.28,
+          "rouge_2": 0.91,
+          "rouge_l": 3.15,
+          "gleu": 0.46,
+          "meteor": 1.27,
+          "bert_score": 42.98,
+          "latency_ms": 0.0,
+          "n": 5
+        }
+      }
+    },
+    "Simulated MedAide": {
+      "global": {
+        "bleu_1": 24.79,
+        "bleu_2": 10.27,
+        "rouge_1": 38.56,
+        "rouge_2": 8.97,
+        "rouge_l": 15.97,
+        "gleu": 7.71,
+        "meteor": 19.23,
+        "bert_score": 64.77,
+        "latency_ms": 14135.14
+      },
+      "per_category": {
+        "Pre-Diagnosis": {
+          "bleu_1": 24.67,
+          "bleu_2": 11.77,
+          "rouge_1": 40.74,
+          "rouge_2": 10.58,
+          "rouge_l": 18.09,
+          "gleu": 8.25,
+          "meteor": 24.65,
+          "bert_score": 65.87,
+          "latency_ms": 12403.76,
+          "n": 5
+        },
+        "Diagnosis": {
+          "bleu_1": 24.08,
+          "bleu_2": 10.16,
+          "rouge_1": 39.09,
+          "rouge_2": 10.62,
+          "rouge_l": 18.51,
+          "gleu": 7.61,
+          "meteor": 19.52,
+          "bert_score": 66.52,
+          "latency_ms": 15517.04,
+          "n": 5
+        },
+        "Medication": {
+          "bleu_1": 27.62,
+          "bleu_2": 11.5,
+          "rouge_1": 40.3,
+          "rouge_2": 8.13,
+          "rouge_l": 14.97,
+          "gleu": 8.55,
+          "meteor": 18.21,
+          "bert_score": 65.28,
+          "latency_ms": 15958.0,
+          "n": 5
+        },
+        "Post-Diagnosis": {
+          "bleu_1": 22.78,
+          "bleu_2": 7.63,
+          "rouge_1": 34.14,
+          "rouge_2": 6.56,
+          "rouge_l": 12.3,
+          "gleu": 6.42,
+          "meteor": 14.54,
+          "bert_score": 61.43,
+          "latency_ms": 12661.76,
+          "n": 5
+        }
+      }
+    },
+    "Full MedAide+": {
+      "global": {
+        "bleu_1": 28.91,
+        "bleu_2": 14.14,
+        "rouge_1": 42.77,
+        "rouge_2": 12.55,
+        "rouge_l": 18.99,
+        "gleu": 9.87,
+        "meteor": 22.68,
+        "bert_score": 66.64,
+        "latency_ms": 14763.62
+      },
+      "per_category": {
+        "Pre-Diagnosis": {
+          "bleu_1": 26.07,
+          "bleu_2": 12.79,
+          "rouge_1": 41.71,
+          "rouge_2": 11.47,
+          "rouge_l": 17.48,
+          "gleu": 8.98,
+          "meteor": 26.12,
+          "bert_score": 65.43,
+          "latency_ms": 12750.0,
+          "n": 5
+        },
+        "Diagnosis": {
+          "bleu_1": 31.58,
+          "bleu_2": 17.92,
+          "rouge_1": 46.15,
+          "rouge_2": 17.86,
+          "rouge_l": 24.47,
+          "gleu": 12.32,
+          "meteor": 26.72,
+          "bert_score": 69.24,
+          "latency_ms": 14603.5,
+          "n": 5
+        },
+        "Medication": {
+          "bleu_1": 33.52,
+          "bleu_2": 15.35,
+          "rouge_1": 46.21,
+          "rouge_2": 12.33,
+          "rouge_l": 19.58,
+          "gleu": 10.66,
+          "meteor": 21.31,
+          "bert_score": 68.05,
+          "latency_ms": 17125.92,
+          "n": 5
+        },
+        "Post-Diagnosis": {
+          "bleu_1": 24.49,
+          "bleu_2": 10.5,
+          "rouge_1": 37.03,
+          "rouge_2": 8.52,
+          "rouge_l": 14.45,
+          "gleu": 7.53,
+          "meteor": 16.57,
+          "bert_score": 63.84,
+          "latency_ms": 14575.08,
+          "n": 5
+        }
+      }
+    }
+  },
+  "n_evaluated": 20,
+  "conditions_run": "all",
+  "timestamp": "2026-04-13T02:55:12.891399"
+}

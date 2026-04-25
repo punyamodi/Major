@@ -1,0 +1,106 @@
+[
+  {
+    "id": "pred_0001",
+    "domain": "Pre-Diagnosis",
+    "query": "I am 35 years old and have been experiencing chest pain for the past 14 days. My brother had coronary artery disease. How serious is this and what is my risk of developing it?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "Based on the information provided, here is a comprehensive assessment:\n\n**Symptom Triage**: Your described symptoms warrant medical evaluation. The pattern of symptoms suggests a potentially serious c",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I am 35 years old and have been experiencing chest pain for the past 14 days. My...]",
+        "metrics": {
+          "bleu1": 1.4835,
+          "bleu2": 0.2769,
+          "rouge1": 6.1856,
+          "rouge2": 0.0,
+          "rouge_l": 4.1237,
+          "gleu": 1.049,
+          "meteor": 3.6765,
+          "bert_score": 43.534,
+          "latency_ms": 2109.6
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0001",
+    "domain": "Diagnosis",
+    "query": "I have swollen ankles, sensitivity to light, and fever for 10 days. What conditions might explain all of these symptoms together?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "Based on the information provided, here is a comprehensive assessment:\n\n**Differential Diagnosis**: The combination of symptoms and findings is consistent with several conditions including inflammator",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: I have swollen ankles, sensitivity to light, and fever for 10 days. What conditi...]",
+        "metrics": {
+          "bleu1": 1.8368,
+          "bleu2": 0.3441,
+          "rouge1": 9.7561,
+          "rouge2": 0.0,
+          "rouge_l": 7.3171,
+          "gleu": 1.2397,
+          "meteor": 3.4602,
+          "bert_score": 44.9748,
+          "latency_ms": 0.0
+        }
+      }
+    }
+  },
+  {
+    "id": "medi_0001",
+    "domain": "Medication",
+    "query": "I take warfarin 25mg daily. My doctor added ciprofloxacin 20mg. Are there interactions I should know about, and is this dose combination safe?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "Based on the information provided, here is a comprehensive assessment:\n\n**Drug Interaction**: This drug combination carries a clinically significant interaction risk and requires dose adjustment or al",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: I take warfarin 25mg daily. My doctor added ciprofloxacin 20mg. Are there intera...]",
+        "metrics": {
+          "bleu1": 0.4928,
+          "bleu2": 0.1601,
+          "rouge1": 4.7619,
+          "rouge2": 0.0,
+          "rouge_l": 4.7619,
+          "gleu": 0.4,
+          "meteor": 1.6807,
+          "bert_score": 44.2028,
+          "latency_ms": 0.0
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0001",
+    "domain": "Post-Diagnosis",
+    "query": "I had chemotherapy 6 weeks ago. When can I return to traveling by air, and when should my next follow-up appointment be?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "Based on the information provided, here is a comprehensive assessment:\n\n**Rehabilitation Advice**: A graduated return to activity is recommended, starting with low-impact exercises and progressively i",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I had chemotherapy 6 weeks ago. When can I return to traveling by air, and when ...]",
+        "metrics": {
+          "bleu1": 2.7198,
+          "bleu2": 1.1353,
+          "rouge1": 13.7255,
+          "rouge2": 4.0,
+          "rouge_l": 7.8431,
+          "gleu": 2.381,
+          "meteor": 5.0143,
+          "bert_score": 46.4566,
+          "latency_ms": 0.0
+        }
+      }
+    }
+  }
+]

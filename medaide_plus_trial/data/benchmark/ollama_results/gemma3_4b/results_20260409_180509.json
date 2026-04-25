@@ -1,0 +1,1242 @@
+[
+  {
+    "id": "pred_0001",
+    "domain": "Pre-Diagnosis",
+    "query": "I am a 58-year-old male with a history of type 2 diabetes and hypertension. For the past two hours, I have been experiencing crushing substernal chest pain radiating to my left arm, accompanied by diaphoresis and nausea. My father had a myocardial infarction at age 52. Should I be worried, and how urgent is this?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This presentation warrants EMERGENCY evaluation \u00e2\u20ac\u201d call 911 immediately. Do not drive yourself to the hospital.\n\n**Symptom Triage:** Your symptoms \u00e2\u20ac\u201d crushing substernal ches",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I am a 58-year-old male with a history of type 2 diabetes and hypertension. For ...]",
+        "metrics": {
+          "bleu_1": 0.0146,
+          "bleu_2": 0.0075,
+          "rouge_1": 12.2271,
+          "rouge_2": 2.6432,
+          "rouge_l": 6.9869,
+          "gleu": 1.9851,
+          "meteor": 4.9011,
+          "bert_score": 46.3292,
+          "latency_ms": 702.6
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nYou are describing symptoms that are highly concerning and require immediate evaluation. The crushing substernal chest pain radiating to the left arm, along with diaphoresis (sweating) and nausea, is a classic presentation suggestive of a possible acute coronary syndrome (ACS), which could include unstable angina or a myocardial infarction (heart attack). Your family history of early-onset myocardial infarction in your father significantly elevates the risk. The combination of your existing risk factors \u2013 age (58), type 2 diabetes, and hypertension \u2013 further increases your vulnerability.\n\n**Urgency Level**\n\n**Critical \u2013 Immediate Emergency** This presentation warrants immediate medical attention. The symptoms you\u2019re describing could represent a life-threatening condition.\n\n**Recommended Action**\n\n1.  **Call Emergency Services (911 or your local equivalent) immediately.** Do not attempt to drive yourself to the hospital. Paramedics can begin treatment en route.\n2.  **Remain Calm:** While distressing, try to remain as calm as possible. Anxiety can worsen symptoms.\n3.  **Inform Paramedics:** Clearly and concisely explain your symptoms, medical history (type 2 diabetes, hypertension), and family history to the paramedics.\n\n**When to Seek Emergency Care**\n\nGiven the severity of your symptoms, you should seek emergency care *immediately*. Delaying treatment could have serious and potentially irreversible consequences.  This situation aligns with the American Heart Association\u2019s guidelines for recognizing and responding to chest pain, which prioritize rapid assessment and intervention.  Do not hesitate \u2013 every minute counts in these circumstances.",
+        "metrics": {
+          "bleu_1": 32.6087,
+          "bleu_2": 18.4865,
+          "rouge_1": 45.5172,
+          "rouge_2": 13.3949,
+          "rouge_l": 21.1494,
+          "gleu": 13.3479,
+          "meteor": 27.2071,
+          "bert_score": 64.6411,
+          "latency_ms": 13806.7
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address this seriously. Given your symptoms \u2013 crushing substernal chest pain radiating to your left arm, diaphoresis (sweating), and nausea \u2013 combined with your history of type 2 diabetes, hypertension, and your father\u2019s history of myocardial infarction at a relatively young age, this requires immediate attention.\n\n**Symptom Assessment**\n\nThe combination of symptoms you\u2019re describing is highly concerning and strongly suggests a possible cardiac event, specifically angina or, potentially, a myocardial infarction (heart attack). The radiation of pain to the left arm, along with diaphoresis (sweating) and nausea, are classic signs. Your family history of early-onset MI further elevates the risk.\n\n**Urgency Level**\n\n**Critical \u2013 Immediate Emergency** This is not a situation to delay. The symptoms you\u2019re experiencing could indicate a life-threatening condition.\n\n**Recommended Action**\n\n1.  **Call Emergency Services (911 or your local equivalent) immediately.** Do not attempt to drive yourself to the hospital. Paramedics can begin treatment immediately upon arrival.\n2.  **Remain Calm:** While it's understandably frightening, try to remain as calm as possible while awaiting emergency services.\n3.  **Inform Paramedics:** Clearly and concisely explain your symptoms, your medical history (type 2 diabetes, hypertension, family history of MI), and any medications you are currently taking.\n\n**When to Seek Emergency Care**\n\n*   **Crushing chest pain:** Any persistent, severe chest pain should be treated as a potential heart attack.\n*   **Radiation of pain:** Pain radiating to the arm, jaw, neck, or back is a significant warning sign.\n*   **Diaphoresis:** Excessive sweating, especially with chest pain, is a common symptom of cardiac distress.\n*   **Nausea:** Nausea can be associated with reduced blood flow to the heart and can be a symptom of a heart attack.\n\n**Important Note:** *I must reiterate that I am a pre-diagnostic medical assistant and cannot provide a diagnosis. This information is intended to guide you to seek immediate medical attention. Your symptoms require immediate evaluation by a qualified medical professional.*",
+        "intents": [
+          "Symptom_Triage",
+          "Progress_Tracking",
+          "Dosage_Recommendation"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 0.7,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 21.4058,
+          "bleu_2": 12.0032,
+          "rouge_1": 35.8382,
+          "rouge_2": 10.058,
+          "rouge_l": 16.5703,
+          "gleu": 8.5072,
+          "meteor": 22.554,
+          "bert_score": 62.2705,
+          "latency_ms": 11760.8
+        }
+      }
+    }
+  },
+  {
+    "id": "pred_0002",
+    "domain": "Pre-Diagnosis",
+    "query": "I'm a 45-year-old woman with a BMI of 34 and a 20-pack-year smoking history. Over the past three weeks, I've noticed increasing shortness of breath when climbing stairs and occasional wheezing at night. I also have a sedentary lifestyle. What is my risk level, and how urgently should I seek care?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This situation is URGENT but not an immediate emergency. You should schedule an appointment within the next 1-2 days with your primary care physician or a pulmonologist.\n\n**Sym",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I'm a 45-year-old woman with a BMI of 34 and a 20-pack-year smoking history. Ove...]",
+        "metrics": {
+          "bleu_1": 0.0062,
+          "bleu_2": 0.0035,
+          "rouge_1": 12.4481,
+          "rouge_2": 5.0209,
+          "rouge_l": 6.639,
+          "gleu": 1.6867,
+          "meteor": 2.6288,
+          "bert_score": 44.7311,
+          "latency_ms": 0.1
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s address your concerns. Given your reported symptoms and risk factors, it\u2019s important to take this seriously.\n\n**Symptom Assessment**\n\nYou\u2019re a 45-year-old woman experiencing increasing shortness of breath with exertion (climbing stairs) and occasional wheezing, particularly at night. You also report a BMI of 34 (indicating obesity), a 20-pack-year smoking history, and a sedentary lifestyle. These factors collectively raise significant concerns. Shortness of breath and wheezing can be indicative of several respiratory conditions, and your smoking history and obesity are established risk factors for chronic obstructive pulmonary disease (COPD) and asthma.\n\n**Urgency Level**\n\nConsidering your symptoms and risk factors, I would classify this as **Moderate Urgency**. While not immediately life-threatening, the progression of symptoms over three weeks warrants prompt investigation. The combination of shortness of breath and wheezing suggests a potential underlying respiratory issue that needs to be identified and addressed early to prevent further decline in lung function.\n\n**Risk Assessment**\n\nYour risk profile is elevated due to several factors:\n\n*   **Smoking History (20-pack-years):** This is a major risk factor for COPD, lung cancer, and other respiratory illnesses. The American Lung Association (ALA) states that smokers are 15 to 30 times more likely to develop COPD than nonsmokers. ([https://www.lung.org/blog/copd-what-you-need-to-know](https://www.lung.org/blog/copd-what-you-need-to-know))\n*   **Obesity (BMI 34):** Obesity can exacerbate respiratory conditions and contribute to reduced lung capacity.\n*   **Sedentary Lifestyle:** Lack of physical activity can weaken respiratory muscles and contribute to shortness of breath.\n*   **Age (45):** The risk of developing respiratory diseases increases with age.\n\n**When to Seek Emergency Care**\n\nYou should seek immediate emergency medical attention (call 911 or go to the nearest emergency room) if you experience any of the following:\n\n*   Severe shortness of breath that doesn't improve with rest.\n*   Chest pain or pressure.\n*   Bluish discoloration of the lips or fingertips (cyanosis).\n*   Rapid or labored breathing.\n*   Confusion or altered mental state.\n\n**Recommended Action**\n\nI strongly recommend scheduling an appointment with",
+        "metrics": {
+          "bleu_1": 24.6835,
+          "bleu_2": 12.2018,
+          "rouge_1": 37.9747,
+          "rouge_2": 10.8893,
+          "rouge_l": 15.5515,
+          "gleu": 8.5056,
+          "meteor": 27.1539,
+          "bert_score": 61.7892,
+          "latency_ms": 13969.0
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address your concerns. Given your reported symptoms and risk factors, it\u2019s important to take this seriously.\n\n**Symptom Assessment**\n\nYou\u2019re describing symptoms of dyspnea (shortness of breath) and wheezing, which, combined with your history of smoking and sedentary lifestyle, raise significant concerns. Shortness of breath can be caused by a multitude of factors, including respiratory conditions like asthma, COPD (Chronic Obstructive Pulmonary Disease), or heart conditions. Wheezing is often associated with airway narrowing, which can be linked to these same conditions. Your BMI of 34 also indicates obesity, which is a known risk factor for several respiratory and cardiovascular issues.\n\n**Urgency Level**\n\nI would rate your current risk level as **Moderate to High**. The combination of your smoking history (20-pack-year \u2013 this indicates a significant level of exposure to harmful toxins), shortness of breath, and wheezing warrants prompt investigation. While not immediately life-threatening, these symptoms could be indicative of a developing, serious condition.\n\n**Recommended Action**\n\n1.  **Schedule an Appointment with Your GP Immediately:** Your primary care physician is the best starting point. They can perform a thorough physical examination, including listening to your lungs and heart, and order initial tests.\n2.  **Pulmonary Function Tests (PFTs):** These tests will assess your lung capacity and airflow, which are crucial for diagnosing conditions like asthma or COPD.\n3.  **Chest X-ray:** This can help rule out other potential causes of your symptoms, such as pneumonia or heart enlargement.\n4.  **Consider a referral to a Pulmonologist:** Given your smoking history and symptoms, a specialist in lung diseases would be beneficial.\n\n**When to Seek Emergency Care**\n\n**You should seek immediate emergency medical attention (call 911 or go to the nearest emergency room) if you experience any of the following:**\n\n*   **Severe shortness of breath:** Difficulty breathing that significantly limits your ability to speak or perform daily activities.\n*   **Chest pain:** Especially if accompanied by shortness of breath or arm pain.\n*   **Bluish discoloration of the lips or fingertips (cyanosis):** This indicates a lack of oxygen in your blood.\n*   **Rapid or labored breathing:** Feeling like you're struggling to get enough air.\n*   **Loss of consciousness:** Fainting or feeling dizzy.\n\n*Disclaimer: This information is for pre",
+        "intents": [
+          "Health_Inquiry",
+          "Risk_Assessment",
+          "Lifestyle_Guidance"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 0.9,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 20.2778,
+          "bleu_2": 8.2329,
+          "rouge_1": 36.8056,
+          "rouge_2": 8.7108,
+          "rouge_l": 13.5417,
+          "gleu": 6.2064,
+          "meteor": 21.2935,
+          "bert_score": 64.3629,
+          "latency_ms": 13951.4
+        }
+      }
+    }
+  },
+  {
+    "id": "pred_0003",
+    "domain": "Pre-Diagnosis",
+    "query": "I am a 67-year-old male diabetic (HbA1c 8.2%) with a 15-year history of poorly controlled hypertension. Over the past week, I've been experiencing persistent headaches, blurred vision, and mild swelling in both ankles. My last blood pressure reading at home was 178/102 mmHg. How concerning are these symptoms given my medical history?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This is an URGENT situation. You should seek medical evaluation today, ideally at an urgent care facility or emergency department, given the possibility of hypertensive emergen",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I am a 67-year-old male diabetic (HbA1c 8.2%) with a 15-year history of poorly c...]",
+        "metrics": {
+          "bleu_1": 0.0019,
+          "bleu_2": 0.0008,
+          "rouge_1": 9.5618,
+          "rouge_2": 3.2129,
+          "rouge_l": 5.5777,
+          "gleu": 0.7901,
+          "meteor": 1.4793,
+          "bert_score": 47.1043,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s address your symptoms and assess the situation given your medical history.\n\n**Symptom Assessment**\n\nYou\u2019re reporting a constellation of symptoms \u2013 persistent headaches, blurred vision, and ankle swelling \u2013 alongside significant hypertension (178/102 mmHg) and a history of poorly controlled diabetes (HbA1c 8.2%). These symptoms, particularly when considered together, warrant careful evaluation. The elevated blood pressure is a key concern, and the neurological symptoms (headache, blurred vision) could be linked to several potential issues, including hypertensive retinopathy, diabetic complications, or other underlying causes. Ankle swelling can be related to fluid retention, which is common in both hypertension and diabetes.\n\n**Urgency Level**\n\nModerate to High. While not immediately life-threatening, the combination of factors indicates a need for prompt medical attention. The elevated blood pressure is a significant risk factor for cardiovascular events, and the neurological symptoms require investigation to rule out serious complications.\n\n**Recommended Action**\n\n1.  **Immediate Blood Pressure Monitoring:** Continue to monitor your blood pressure regularly at home, but also seek immediate medical attention to have your blood pressure assessed in a clinical setting.\n2.  **Neurological Examination:** You need a thorough neurological examination by a physician, including a detailed eye exam to assess for hypertensive retinopathy and evaluate your vision further.\n3.  **Renal Function Assessment:** Given your diabetes and hypertension, assessing your kidney function (e.g., creatinine, eGFR) is crucial, as both conditions can impact kidney health.\n4.  **Fluid Balance Assessment:** Your doctor should assess your fluid intake and output to determine if the ankle swelling is due to fluid retention.\n\n**When to Seek Emergency Care**\n\n*   **Severe Chest Pain:** Any sudden or severe chest pain should be evaluated immediately.\n*   **Sudden, Severe Headache:** A sudden, extremely severe headache, especially if accompanied by fever, stiff neck, confusion, seizures, or weakness, requires immediate emergency medical attention.\n*   **Difficulty Breathing:** Any significant shortness of breath should be evaluated immediately.\n*   **Sudden Vision Loss:** Any sudden loss of vision requires immediate evaluation.\n*   **Confusion or Altered Mental Status:** If you experience confusion, disorientation, or changes in your mental state, seek immediate medical attention.\n\n*Disclaimer: This information is for pre-diagnostic guidance only and does not constitute medical advice. It is essential to consult with a qualified healthcare professional for a proper",
+        "metrics": {
+          "bleu_1": 24.7956,
+          "bleu_2": 11.0429,
+          "rouge_1": 40.5405,
+          "rouge_2": 10.5085,
+          "rouge_l": 16.5541,
+          "gleu": 8.2079,
+          "meteor": 25.079,
+          "bert_score": 65.3589,
+          "latency_ms": 13073.4
+        }
+      },
+      "medaide_plus": {
+        "response": "**Symptom Assessment**\n\nThe symptoms you\u2019re describing \u2013 persistent headaches, blurred vision, and ankle swelling \u2013 combined with your existing medical history of long-standing, poorly controlled diabetes and hypertension, warrant careful attention. The elevated blood pressure reading of 178/102 mmHg is particularly concerning, as it\u2019s significantly above the target range for most individuals with hypertension, especially those with diabetes. These symptoms can be associated with several conditions, including hypertensive retinopathy (related to high blood pressure damaging the eyes), diabetic neuropathy (nerve damage potentially causing vision and swelling), and fluid retention due to both hypertension and diabetes.\n\n**Urgency Level**\n\nModerate to High \u2013 While not immediately life-threatening, these symptoms require prompt evaluation. The combination of hypertension, diabetes, and these new symptoms suggests a potential for complications if left unaddressed.\n\n**Recommended Action**\n\n1.  **Schedule an Appointment Immediately:** You should schedule an appointment with your primary care physician (GP) or endocrinologist as soon as possible. Given the elevated blood pressure, a consultation with a cardiologist might also be beneficial to rule out cardiovascular involvement.\n2.  **Detailed Examination:**  Your doctor will likely perform a thorough physical examination, including an eye exam to assess for hypertensive retinopathy and neurological evaluation to assess for diabetic neuropathy.\n3.  **Further Blood Work:** Expect your doctor to order further blood tests, including a full metabolic panel to assess kidney function (important in diabetes and hypertension), HbA1c to monitor long-term blood sugar control, and possibly a urine analysis.\n\n**When to Seek Emergency Care**\n\n*   **Severe Chest Pain:** Any sudden or severe chest pain should be evaluated immediately.\n*   **Difficulty Breathing:** Significant shortness of breath or difficulty breathing requires immediate medical attention.\n*   **Sudden, Severe Headache:** A sudden, extremely severe headache, especially if accompanied by fever, stiff neck, confusion, or seizures, needs immediate evaluation.\n*   **Neurological Symptoms:** Sudden weakness, numbness, or difficulty speaking should be evaluated immediately.\n\n*Disclaimer: This information is for pre-diagnostic guidance only and does not constitute medical advice. It is essential to consult with a qualified healthcare professional for a proper diagnosis and treatment plan.*",
+        "intents": [
+          "Symptom_Triage",
+          "Progress_Tracking",
+          "Dosage_Recommendation"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 0.8,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 27.6786,
+          "bleu_2": 12.8548,
+          "rouge_1": 42.0677,
+          "rouge_2": 10.3757,
+          "rouge_l": 16.3993,
+          "gleu": 9.2676,
+          "meteor": 24.1688,
+          "bert_score": 64.2715,
+          "latency_ms": 16390.5
+        }
+      }
+    }
+  },
+  {
+    "id": "pred_0004",
+    "domain": "Pre-Diagnosis",
+    "query": "My 8-year-old daughter has had a fever of 102.5\u00c2\u00b0F for three days, along with a sore throat, difficulty swallowing, and tender swollen lymph nodes in her neck. She has no cough or runny nose. She had a penicillin allergy (rash) as a toddler. Should I take her to the ER or can this wait for a pediatrician visit?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This is URGENT but likely manageable with a same-day pediatrician visit rather than an ER visit, unless she develops breathing difficulty, drooling, inability to swallow liquid",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: My 8-year-old daughter has had a fever of 102.5\u00c2\u00b0F for three days, along with a ...]",
+        "metrics": {
+          "bleu_1": 0.0023,
+          "bleu_2": 0.0008,
+          "rouge_1": 8.6957,
+          "rouge_2": 1.4599,
+          "rouge_l": 6.5217,
+          "gleu": 0.9636,
+          "meteor": 2.7326,
+          "bert_score": 43.3149,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nYour daughter is presenting with a persistent fever (102.5\u00b0F), sore throat, difficulty swallowing, and swollen lymph nodes. The absence of cough or nasal symptoms is notable. The reported penicillin allergy is a critical factor.\n\n**Urgency Level**\n\nThis presents as moderate urgency. While a pediatrician visit is warranted, the combination of fever, difficulty swallowing, and a history of allergic reaction necessitates careful consideration. The swollen lymph nodes could indicate a variety of infections, some of which may require specific treatment.\n\n**Recommended Action**\n\n1.  **Contact her pediatrician immediately.** Describe all symptoms and the penicillin allergy. They can advise on the next steps, which may include a rapid strep test and/or blood work to rule out bacterial infections.\n2.  **Avoid self-treating with antibiotics** without a confirmed diagnosis from a healthcare professional, given her previous reaction.\n3.  **Continue to monitor her closely.** Note any changes in her symptoms, such as worsening difficulty swallowing, increased fever, or new symptoms.\n\n**When to Seek Emergency Care**\n\n*   **Difficulty breathing or stridor (a high-pitched whistling sound when breathing)** \u2013 This could indicate airway obstruction.\n*   **Severe neck stiffness or headache** \u2013 Could signify meningitis.\n*   **Seizure** \u2013 Requires immediate medical attention.\n*   **Change in mental status (confusion, lethargy)** \u2013 Could indicate serious infection or other neurological issues.\n*   **Signs of dehydration** (decreased urination, dry mouth, dizziness).\n\n*Disclaimer: This information is for pre-diagnostic guidance only and does not constitute medical advice. It is crucial to consult with a qualified healthcare professional for an accurate diagnosis and appropriate treatment plan.*",
+        "metrics": {
+          "bleu_1": 25.0,
+          "bleu_2": 9.4679,
+          "rouge_1": 35.6713,
+          "rouge_2": 5.6338,
+          "rouge_l": 15.2305,
+          "gleu": 7.2854,
+          "meteor": 16.3951,
+          "bert_score": 60.9032,
+          "latency_ms": 17724.7
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s assess this situation carefully. Given your daughter\u2019s symptoms \u2013 fever of 102.5\u00b0F for three days, sore throat, difficulty swallowing, and swollen lymph nodes \u2013 and her history of a penicillin allergy, we need to proceed with caution.\n\n**Drug Information**\n\nThe symptoms you describe could indicate several possibilities, including streptococcal pharyngitis (strep throat), viral pharyngitis, or, less likely, other bacterial infections. The fever is a significant finding, and difficulty swallowing warrants particular attention.\n\n**Dosage & Administration**\n\n*   There are no specific dosages to recommend at this stage. Management focuses on symptomatic relief and monitoring.\n*   **Physician Oversight Required:** Any decisions regarding antibiotics (given the penicillin allergy) *must* be made by a physician.\n\n**Warnings & Contraindications**\n\n*   **Penicillin Allergy:** A history of a penicillin allergy (rash) is a *relative contraindication* to penicillin-based antibiotics.  Even if the reaction was mild, it indicates a potential for a more significant reaction.\n*   **Difficulty Swallowing:** This symptom could indicate a serious underlying condition requiring immediate evaluation.\n*   **Swollen Lymph Nodes:**  While often associated with viral infections, swollen lymph nodes can also be a sign of more serious infections, including those requiring prompt treatment.\n\n**Drug Interactions**\n\n*   There are currently no obvious drug interactions to consider given the limited information. However, any potential antibiotic therapy will need to be carefully evaluated for interactions.\n\n**Patient Advice**\n\n1.  **Seek Immediate Medical Attention:** Given the fever, difficulty swallowing, and swollen lymph nodes, I strongly advise you to seek evaluation by a healthcare professional *immediately*.  Do not delay.\n2.  **Inform the Provider:** Clearly communicate the entire history, including the penicillin allergy (rash), current symptoms, and the duration of the fever.\n3.  **Avoid Self-Treatment:** Do not administer any medications (e.g., ibuprofen or acetaminophen) without consulting a physician, particularly given the potential for a serious underlying condition.\n4.  **Monitor Symptoms:** Closely monitor your daughter\u2019s symptoms, including fever, difficulty swallowing, and any changes in her condition. Note the time of symptom onset and any associated factors.",
+        "intents": [
+          "Contraindication_Check",
+          "Progress_Tracking",
+          "Care_Support"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 0.9,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 17.5926,
+          "bleu_2": 5.7166,
+          "rouge_1": 30.0699,
+          "rouge_2": 3.1579,
+          "rouge_l": 12.9371,
+          "gleu": 5.0388,
+          "meteor": 15.8441,
+          "bert_score": 62.069,
+          "latency_ms": 20084.7
+        }
+      }
+    }
+  },
+  {
+    "id": "pred_0005",
+    "domain": "Pre-Diagnosis",
+    "query": "I'm a 72-year-old woman with osteoporosis and atrial fibrillation on warfarin. Last night I fell in the bathroom and hit the back of my head on the tub. I did not lose consciousness, but I now have a persistent dull headache and feel slightly dizzy. How serious is this, and what are my risks?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This is an EMERGENCY. You should go to the emergency department immediately for a non-contrast CT scan of the head. Patients on anticoagulants who sustain head trauma are at si",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I'm a 72-year-old woman with osteoporosis and atrial fibrillation on warfarin. L...]",
+        "metrics": {
+          "bleu_1": 0.0002,
+          "bleu_2": 0.0001,
+          "rouge_1": 7.6336,
+          "rouge_2": 1.5385,
+          "rouge_l": 6.1069,
+          "gleu": 0.9514,
+          "meteor": 2.4631,
+          "bert_score": 49.1051,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s address your concerns. This is a potentially serious situation given your history and the fall.\n\n**Symptom Assessment**\n\nYou've experienced a head injury following a fall, resulting in a persistent headache and dizziness. These symptoms, combined with your existing conditions \u2013 osteoporosis and atrial fibrillation (which can affect clotting factors due to warfarin) \u2013 warrant careful evaluation. The fact that you didn't lose consciousness is reassuring, but persistent symptoms after a head injury always require investigation.\n\n**Urgency Level**\n\nGiven your age (72), osteoporosis (increasing your risk of fractures), and the mechanism of injury (head trauma), this presents as **Moderate Urgency**. While you didn't lose consciousness, the potential for a subdural hematoma (bleeding in the brain) or other intracranial injury is elevated.\n\n**Recommended Action**\n\n1.  **Immediate Medical Evaluation:** You should seek immediate medical attention, ideally at an urgent care center or emergency department.\n2.  **Neurological Examination:** Expect a thorough neurological examination, including assessment of your mental status, cranial nerves, motor strength, sensation, reflexes, and coordination.\n3.  **Imaging:**  A CT scan of the head is highly recommended to rule out skull fracture, hematoma, or other structural abnormalities. MRI may be considered to assess for more subtle injuries.\n4.  **Warfarin Management:** Your warfarin dosage needs to be reviewed and potentially adjusted by your physician, considering the fall and potential for increased bleeding risk.\n\n**Risk Assessment**\n\n*   **Increased Bleeding Risk:** Warfarin, combined with head trauma, significantly increases your risk of bleeding.\n*   **Osteoporotic Fracture Complications:** The fall could have exacerbated your osteoporosis, potentially leading to further fractures, particularly in the cervical spine.\n*   **Intracranial Hemorrhage:** As mentioned, the fall carries a risk of intracranial hemorrhage, which can be life-threatening.\n*   **Post-Concussive Symptoms:** You are likely experiencing post-concussive symptoms (headache, dizziness), which can be prolonged.\n\n**When to Seek Emergency Care**\n\n*   **Worsening Headache:** A rapidly worsening headache.\n*   **New Neurological Symptoms:** Any new symptoms such as confusion, weakness, numbness, difficulty speaking, seizures, or changes in vision.\n*   **Increased Dizziness or Loss of Balance:** Significantly increased dizziness or loss of balance.\n*   **Vomiting:**",
+        "metrics": {
+          "bleu_1": 28.9941,
+          "bleu_2": 13.4416,
+          "rouge_1": 46.2609,
+          "rouge_2": 11.5183,
+          "rouge_l": 15.3043,
+          "gleu": 9.4354,
+          "meteor": 21.9525,
+          "bert_score": 66.1116,
+          "latency_ms": 15109.4
+        }
+      },
+      "medaide_plus": {
+        "response": "**Symptom Assessment**\n\nYou\u2019ve experienced a fall with a head impact, resulting in a persistent headache and dizziness. These symptoms, particularly in the context of your existing conditions (osteoporosis and atrial fibrillation being on warfarin), require careful evaluation. The fact that you didn\u2019t lose consciousness is reassuring, but persistent symptoms following a head injury always warrant investigation.\n\n**Urgency Level**\n\nGiven your age (72), history of osteoporosis (increasing risk of subdural hematoma), and the mechanism of injury (head impact), this presents as a moderate urgency. While you didn\u2019t lose consciousness, the potential for a serious underlying injury \u2013 such as a concussion, intracranial hemorrhage, or subdural hematoma \u2013 cannot be ruled out. \n\n**Recommended Action**\n\n1.  **Immediate Medical Evaluation:** You should seek immediate medical attention. Ideally, this should be within the next few hours.\n2.  **Neurological Examination:** A thorough neurological examination is crucial, including assessment of your mental status, cranial nerves, motor strength, sensation, reflexes, and coordination.\n3.  **Imaging:** Given the fall and your symptoms, a non-contrast head CT scan is strongly recommended to rule out skull fracture, hematoma, or other intracranial abnormalities. The American Academy of Neurological Surgery (AANS) guidelines recommend CT scans for head trauma, particularly in older adults, to detect subtle injuries.\n4. **Warfarin Review:** Your anticoagulation with warfarin needs to be reviewed by your physician. Falls can increase the risk of bleeding complications.\n\n**When to Seek Emergency Care**\n\n*   **Any change in neurological status:** Worsening headache, confusion, altered level of consciousness, seizures, weakness, or numbness.\n*   **Increased dizziness or loss of balance.**\n*   **New onset of vomiting.**\n*   **Clear fluid leaking from the nose or ears.**\n*   **Any signs of significant bleeding (e.g., excessive bruising, blood in urine or stool).**\n\n*Disclaimer: This information is for pre-diagnostic guidance only and does not constitute medical advice. It is essential to consult with a qualified healthcare professional for a proper diagnosis and treatment plan.*",
+        "intents": [
+          "Symptom_Triage",
+          "Risk_Assessment",
+          "Progress_Tracking"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 29.4872,
+          "bleu_2": 12.3168,
+          "rouge_1": 44.2831,
+          "rouge_2": 9.8361,
+          "rouge_l": 15.245,
+          "gleu": 8.7762,
+          "meteor": 22.1092,
+          "bert_score": 66.1062,
+          "latency_ms": 15413.3
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0001",
+    "domain": "Diagnosis",
+    "query": "A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, constipation, and cold intolerance. Her TSH is 12.8 mIU/L (normal 0.4\u20134.0), free T4 is 0.5 ng/dL (normal 0.8\u20131.8), and hemoglobin is 10.2 g/dL (normal 12.0\u201316.0 g/dL for females). What are the possible diagnoses and how do the symptoms correlate?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nThis 54-year-old woman presents with a classic constellation of hypothyroid symptoms: fatigue, weight gain, constipation, and cold intolerance. Her laboratory findin",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, ...]",
+        "metrics": {
+          "bleu_1": 0.0025,
+          "bleu_2": 0.0016,
+          "rouge_1": 9.7744,
+          "rouge_2": 5.303,
+          "rouge_l": 6.7669,
+          "gleu": 1.8764,
+          "meteor": 3.589,
+          "bert_score": 43.1992,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s analyze this patient\u2019s presentation. Given the provided information, we have a 54-year-old woman experiencing fatigue, weight gain, constipation, and cold intolerance alongside concerning thyroid lab values.\n\n**Symptom Assessment**\n\nThe combination of symptoms \u2013 fatigue, weight gain, constipation, and cold intolerance \u2013 strongly suggests a potential thyroid disorder. The significantly elevated TSH (12.8 mIU/L) and low free T4 (0.5 ng/dL) are indicative of hypothyroidism, meaning the thyroid gland isn't producing enough thyroid hormone. The anemia (hemoglobin 10.2 g/dL) adds another layer to the clinical picture, as anemia can be both a cause and consequence of hypothyroidism.\n\n**Urgency Level**\n\nThis presentation warrants prompt medical attention. While not immediately life-threatening, the hypothyroidism is a serious condition that needs to be addressed to prevent further complications. The anemia also needs investigation.\n\n**Recommended Action**\n\n1.  **Endocrinologist Referral:** The most appropriate next step is a referral to an endocrinologist for comprehensive thyroid evaluation.\n2.  **Further Blood Tests:** The endocrinologist will likely order additional blood tests, including:\n    *   Thyroid antibodies (to rule out autoimmune thyroid disease like Hashimoto\u2019s thyroiditis, which is common)\n    *   Complete Blood Count (CBC) with differential to further assess the anemia and look for other abnormalities.\n    *   Vitamin D level \u2013 Hypothyroidism can be associated with Vitamin D deficiency.\n    *   Iron studies (ferritin, serum iron, TIBC) to investigate the anemia.\n3.  **Physical Examination:** A thorough physical examination by the endocrinologist is crucial, including assessing for signs of hypothyroidism (e.g., dry skin, hair loss, delayed relaxation of deep tendon reflexes).\n\n**When to Seek Emergency Care**\n\n*   **Severe shortness of breath or difficulty breathing:** This could indicate a severe thyroid storm (rare but potentially life-threatening complication of hypothyroidism).\n*   **Chest pain:** Could indicate a cardiac issue, which can be exacerbated by hypothyroidism.\n*   **Confusion, altered mental status, or seizures:** These symptoms could indicate a serious endocrine emergency.\n\n**Disclaimer:** *This information is for pre-diagnostic guidance only and does not constitute medical advice. It is essential to consult with a qualified healthcare professional for accurate diagnosis and treatment.*\n\n**Evidence-Based Guidelines:**\n\n*",
+        "metrics": {
+          "bleu_1": 23.8806,
+          "bleu_2": 10.6957,
+          "rouge_1": 37.9487,
+          "rouge_2": 13.036,
+          "rouge_l": 19.1453,
+          "gleu": 7.7961,
+          "meteor": 20.8903,
+          "bert_score": 68.8227,
+          "latency_ms": 15604.5
+        }
+      },
+      "medaide_plus": {
+        "response": "**Symptom Assessment**\n\nThe patient\u2019s presentation \u2013 fatigue, weight gain, constipation, and cold intolerance \u2013 alongside abnormal thyroid function tests (elevated TSH and low free T4) strongly suggests a thyroid disorder. Specifically, the combination of these findings points towards **hypothyroidism**, a condition where the thyroid gland doesn\u2019t produce enough thyroid hormone. The low hemoglobin (10.2 g/dL) is also a significant finding that needs further investigation.\n\n**Urgency Level**\n\nWhile not immediately life-threatening, this presentation warrants prompt medical attention. The abnormal thyroid function and anemia require investigation to determine the underlying cause and prevent potential complications.\n\n**Recommended Action**\n\n1.  **Further Thyroid Evaluation:** Given the markedly elevated TSH, a repeat TSH and free T4 test is crucial to confirm the initial findings. Considering the low free T4, measuring thyroid antibodies (anti-TPO and anti-thyroglobulin) is essential to differentiate between primary hypothyroidism (due to thyroid destruction) and secondary hypothyroidism (due to pituitary gland issues).\n2.  **Complete Blood Count (CBC) with Differential:** The low hemoglobin requires a full investigation. The CBC should include a differential to assess for anemia of unknown origin, iron deficiency, or other potential causes.\n3.  **Assessment for Other Contributing Factors:** The patient's history should be explored in detail to identify potential contributing factors to fatigue and constipation, such as depression, medication side effects, dietary changes, and lifestyle factors.\n\n**When to Seek Emergency Care**\n\nThere are no immediate emergency symptoms presented in this scenario. However, if the patient develops symptoms such as severe shortness of breath, chest pain, confusion, or suicidal ideation, immediate emergency medical attention is required.",
+        "intents": [
+          "Health_Inquiry",
+          "Symptom_Triage",
+          "Progress_Tracking"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 0.8571428571428571,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 24.8031,
+          "bleu_2": 9.9013,
+          "rouge_1": 34.127,
+          "rouge_2": 9.5618,
+          "rouge_l": 16.2698,
+          "gleu": 7.9208,
+          "meteor": 16.0072,
+          "bert_score": 66.4213,
+          "latency_ms": 12450.1
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0002",
+    "domain": "Diagnosis",
+    "query": "A 67-year-old man with a 40-pack-year smoking history presents with progressive exertional dyspnea over 2 years, productive cough with white sputum, and bilateral wheezing on auscultation. Spirometry shows FEV1/FVC ratio of 0.58 and FEV1 of 52% predicted. Chest X-ray reveals hyperinflated lungs with flattened diaphragms. What diagnoses should be considered and what do the symptoms indicate?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nThis 67-year-old male with significant tobacco exposure presents with chronic respiratory symptoms and objective evidence of airflow obstruction on spirometry.\n\n**Sy",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 67-year-old man with a 40-pack-year smoking history presents with progressive ...]",
+        "metrics": {
+          "bleu_1": 0.0002,
+          "bleu_2": 0.0001,
+          "rouge_1": 9.9617,
+          "rouge_2": 3.0888,
+          "rouge_l": 6.8966,
+          "gleu": 1.0309,
+          "meteor": 2.0325,
+          "bert_score": 43.9806,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nThis patient presents with a constellation of symptoms highly suggestive of chronic obstructive pulmonary disease (COPD), specifically chronic bronchitis and emphysema. The key features are:\n\n*   **Progressive exertional dyspnea:** Shortness of breath with exertion, worsening over time.\n*   **Productive cough with white sputum:** Indicates airway inflammation and mucus production.\n*   **Bilateral wheezing on auscultation:** Suggests airway obstruction.\n*   **Spirometry Findings:** FEV1/FVC ratio of 0.58 and FEV1 of 52% predicted are classic indicators of airflow obstruction. The FEV1/FVC ratio of 0.58 is below the generally accepted cut-off of 0.70, confirming obstructive lung disease.\n*   **Chest X-ray Findings:** Hyperinflated lungs and flattened diaphragms are consistent with emphysema, a component of COPD.\n\n**Urgency Level**\n\nThis presentation represents moderate urgency. While not immediately life-threatening, the progressive nature of the dyspnea and the presence of airway obstruction warrant prompt investigation and management.\n\n**Recommended Action**\n\n1.  **Pulmonary Function Testing (PFTs):** Repeat spirometry with bronchodilator challenge testing (e.g., with methacholine) to assess reversibility of airflow obstruction, which is crucial for differentiating between asthma and COPD.\n2.  **High-Resolution Computed Tomography (HRCT) of the Chest:** This imaging modality can better visualize the lung parenchyma and identify patterns of emphysema and airway disease, aiding in accurate diagnosis and staging.\n3.  **Sputum Analysis:** To rule out infection (e.g., bacterial or fungal) and potentially identify inflammatory markers.\n4.  **Assessment for Alpha-1 Antitrypsin Deficiency:** Given the patient\u2019s smoking history, a deficiency in alpha-1 antitrypsin, a protein that protects the lungs, should be considered.\n\n**When to Seek Emergency Care**\n\n*   **Severe, sudden onset of dyspnea:** This could indicate acute respiratory distress syndrome (ARDS), pneumothorax, or pulmonary embolism.\n*   **Chest pain:** Could signify a cardiac event or pulmonary embolism.\n*   **Cyanosis (bluish discoloration of the skin or lips):** Indicates low oxygen levels and requires immediate intervention.\n*   **Confusion or altered mental status:** May indicate hypoxia or other serious complications",
+        "metrics": {
+          "bleu_1": 28.7582,
+          "bleu_2": 11.4893,
+          "rouge_1": 45.3721,
+          "rouge_2": 10.5647,
+          "rouge_l": 20.6897,
+          "gleu": 8.5386,
+          "meteor": 23.8855,
+          "bert_score": 70.0247,
+          "latency_ms": 15471.1
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address this complex presentation. Given the patient\u2019s history, symptoms, and spirometry results, we need to seriously consider several diagnoses. \n\n**Possible Diagnoses**\n\nBased on the information provided, the most likely diagnoses to consider are:\n\n*   **Chronic Obstructive Pulmonary Disease (COPD):** This is highly probable given the smoking history, progressive dyspnea, productive cough, and spirometry findings (low FEV1/FVC ratio and FEV1). The chest X-ray findings of hyperinflation and flattened diaphragms further support this.\n*   **Bronchiectasis:** The productive cough with white sputum, combined with the hyperinflated lungs, raises the possibility of bronchiectasis \u2013 a condition where the airways are abnormally widened, leading to mucus buildup and chronic infection.\n*   **Emphysema:** While often linked to COPD, emphysema itself can be a significant contributor to the patient\u2019s symptoms, particularly the hyperinflated lungs.\n*   **Less Likely, but Important to Rule Out:** Given the wheezing, we must also consider conditions like asthma exacerbation or, though less likely given the history, early-onset interstitial lung disease.\n\n**Symptom Analysis**\n\n*   **Progressive Exertional Dyspnea:** This is a hallmark symptom of COPD and suggests airflow obstruction is worsening.\n*   **Productive Cough with White Sputum:** Indicates inflammation and likely infection within the airways, frequently associated with bacterial colonization.\n*   **Bilateral Wheezing:** Suggests airway narrowing and reactivity, common in COPD and potentially exacerbating asthma.\n*   **Spirometry Results (FEV1/FVC 0.58, FEV1 52% predicted):** Confirms airflow obstruction, with a ratio consistent with COPD. The reduced FEV1 indicates the degree of obstruction.\n*   **Chest X-ray Findings (Hyperinflation, Flattened Diaphragms):** Classic findings of COPD, reflecting air trapping within the lungs.\n\n**Recovery Plan**\n\n1.  **Referral to a Pulmonologist:** Immediate referral is crucial for definitive diagnosis and management.\n2.  **Bronchodilator Therapy:** Likely initiation of short-acting bronchodilators (e.g., albuterol) for symptom relief, particularly during exacerbations.\n3.  **Inhaled Corticosteroids:** Consideration for long-term use, depending on the severity of",
+        "intents": [
+          "Progress_Tracking",
+          "Symptom_Triage",
+          "Symptom_Analysis"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 26.5101,
+          "bleu_2": 10.7721,
+          "rouge_1": 39.6296,
+          "rouge_2": 9.6654,
+          "rouge_l": 17.4074,
+          "gleu": 8.0101,
+          "meteor": 18.5811,
+          "bert_score": 66.7933,
+          "latency_ms": 20005.3
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0003",
+    "domain": "Diagnosis",
+    "query": "A 28-year-old woman presents with episodic palpitations, diaphoresis, headaches, and anxiety lasting 15\u201320 minutes. During an episode her BP is 210/120 mmHg and heart rate is 130 bpm; between episodes BP is 130/85 mmHg. She has a family history of medullary thyroid carcinoma. What conditions should be considered and which symptoms are most diagnostically relevant?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nA young woman with paroxysmal hypertension accompanied by the classic triad of headache, diaphoresis, and palpitations raises a strong suspicion for a catecholamine-",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 28-year-old woman presents with episodic palpitations, diaphoresis, headaches,...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 7.874,
+          "rouge_2": 0.0,
+          "rouge_l": 3.937,
+          "gleu": 0.8247,
+          "meteor": 1.8091,
+          "bert_score": 47.5112,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let's address this patient's presentation. This is a complex case with several concerning symptoms and a significant family history.\n\n**Symptom Assessment**\n\nThis patient is experiencing a cluster of symptoms that warrant thorough investigation. The key symptoms are:\n\n*   **Episodic Palpitations:** Irregular heartbeats are a primary concern.\n*   **Diaphoresis (Excessive Sweating):** Often associated with anxiety and autonomic nervous system dysregulation.\n*   **Headaches:** Can be a symptom of various conditions, including hypertension and anxiety.\n*   **Anxiety:** A significant component, potentially linked to the palpitations and other symptoms.\n*   **Elevated Blood Pressure (BP):** The acutely elevated BP during episodes (210/120 mmHg) is particularly concerning.\n*   **Tachycardia (Heart Rate):** A heart rate of 130 bpm during an episode is significantly elevated.\n\n**Urgency Level**\n\nThis presentation requires *urgent* evaluation. The acutely elevated blood pressure and tachycardia, combined with the other symptoms, suggest a potentially serious underlying condition. The family history of medullary thyroid carcinoma adds further urgency.\n\n**Recommended Action**\n\n1.  **Immediate Blood Pressure Monitoring:** Continuous BP monitoring is crucial to assess the stability of the patient's blood pressure.\n2.  **Electrocardiogram (ECG/EKG):** To evaluate the rhythm and identify any arrhythmias contributing to the palpitations.\n3.  **Complete Blood Count (CBC) & Comprehensive Metabolic Panel (CMP):** To assess overall health, electrolyte imbalances, and kidney function.\n4.  **Thyroid Function Tests:** Given the family history of medullary thyroid carcinoma, thyroid function tests (TSH, Free T4) are essential to rule out thyroid dysfunction, which can cause palpitations and anxiety.\n5.  **Autonomic Testing:** To assess the function of the autonomic nervous system, which controls heart rate and blood pressure.\n6.  **Consider Cardiac Evaluation:** Given the symptoms and elevated BP, a thorough cardiac evaluation, potentially including echocardiography, is warranted.\n\n**When to Seek Emergency Care**\n\n*   **Chest Pain:** Any chest pain should be immediately evaluated as it could indicate a cardiac event.\n*   **Severe Shortness of Breath:** Difficulty breathing requires immediate attention.\n*   **Loss of Consciousness:** Any episode of fainting or loss of consciousness needs immediate medical attention.\n*   **",
+        "metrics": {
+          "bleu_1": 19.8777,
+          "bleu_2": 8.5539,
+          "rouge_1": 30.1616,
+          "rouge_2": 6.4865,
+          "rouge_l": 14.7217,
+          "gleu": 6.7588,
+          "meteor": 15.4251,
+          "bert_score": 62.1839,
+          "latency_ms": 16086.6
+        }
+      },
+      "medaide_plus": {
+        "response": "**Symptom Assessment**\n\nThis presentation raises significant concerns due to the acute blood pressure elevation (210/120 mmHg) and rapid heart rate (130 bpm) occurring during an episode, coupled with the constellation of symptoms \u2013 palpitations, diaphoresis, headaches, and anxiety. The family history of medullary thyroid carcinoma (MTC) is a crucial factor.\n\nThe symptoms themselves \u2013 palpitations, diaphoresis, headaches, and anxiety \u2013 can be associated with a range of conditions, including:\n\n*   **Cardiac Arrhythmias:** The palpitations and rapid heart rate strongly suggest this possibility.\n*   **Anxiety Disorders:** Anxiety can manifest with many of these symptoms.\n*   **Hypertensive Crisis:** The markedly elevated blood pressure during the episode is a primary concern.\n*   **Autonomic Dysfunction:** This can cause fluctuations in heart rate and blood pressure alongside anxiety symptoms.\n*   **Thyroid Dysfunction:** Given the family history of MTC, thyroid abnormalities (particularly hyperthyroidism) need to be investigated.\n\n**Urgency Level**\n\nThis presentation warrants **high urgency** due to the acute hypertension and tachycardia. The episodic nature combined with the family history elevates the concern for a potentially serious underlying condition.\n\n**Recommended Action**\n\n1.  **Immediate Blood Pressure Monitoring:** Continuous monitoring of blood pressure is essential.\n2.  **ECG (Electrocardiogram):** To assess for arrhythmias and structural heart abnormalities.\n3.  **Complete Blood Count (CBC) & Comprehensive Metabolic Panel (CMP):** To evaluate overall health status, electrolytes, and kidney function.\n4.  **Thyroid Function Tests (TFTs):** Including Free T4, Free T3, and Thyroid-Stimulating Hormone (TSH) \u2013 crucial given the family history.\n5.  **Further Cardiac Evaluation:** Depending on the ECG findings, further cardiac imaging (echocardiogram) may be necessary.\n\n**When to Seek Emergency Care**\n\n**Immediately seek emergency medical attention if any of the following occur:**\n\n*   Worsening chest pain\n*   Severe shortness of breath\n*   Loss of consciousness\n*   Confusion or altered mental status\n*   Seizures\n*   Sudden, severe headache",
+        "intents": [
+          "Symptom_Triage",
+          "Progress_Tracking",
+          "Dosage_Recommendation"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 0.6666666666666666,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 24.9147,
+          "bleu_2": 11.3131,
+          "rouge_1": 34.4961,
+          "rouge_2": 6.6148,
+          "rouge_l": 14.7287,
+          "gleu": 8.2333,
+          "meteor": 18.6964,
+          "bert_score": 63.6854,
+          "latency_ms": 15038.5
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0004",
+    "domain": "Diagnosis",
+    "query": "A 45-year-old man presents with symmetric joint pain and morning stiffness lasting over 1 hour in the metacarpophalangeal and proximal interphalangeal joints of both hands for 3 months. He also reports fatigue and low-grade fevers. Physical exam reveals boggy synovitis of MCP joints 2\u20134 bilaterally. ESR is 48 mm/hr (normal <20) and CRP is 3.2 mg/dL (normal <0.5). What should be on the differential and which symptoms point toward specific diagnoses?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nThis 45-year-old man has a symmetric inflammatory polyarthropathy affecting small joints of the hands with prolonged morning stiffness, systemic symptoms, and elevat",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 45-year-old man presents with symmetric joint pain and morning stiffness lasti...]",
+        "metrics": {
+          "bleu_1": 0.0012,
+          "bleu_2": 0.0005,
+          "rouge_1": 13.0435,
+          "rouge_2": 3.5088,
+          "rouge_l": 7.8261,
+          "gleu": 1.4252,
+          "meteor": 3.831,
+          "bert_score": 48.2177,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s analyze this patient\u2019s presentation. This is a complex case with several suggestive features.\n\n**Symptom Assessment**\n\nThe patient\u2019s presentation \u2013 symmetric joint pain and morning stiffness lasting over an hour, affecting the metacarpophalangeal and proximal interphalangeal joints of both hands, along with fatigue and low-grade fevers \u2013 is highly suggestive of inflammatory arthritis. The boggy synovitis confirmed on physical exam, coupled with elevated inflammatory markers (ESR of 48 mm/hr and CRP of 3.2 mg/dL), further strengthens this suspicion. The 3-month duration is also consistent with many chronic inflammatory arthritic conditions.\n\n**Urgency Level**\n\nModerate. While not immediately life-threatening, the persistent inflammation and potential for long-term joint damage warrant prompt investigation.\n\n**Recommended Action**\n\nGiven the symptoms and initial lab results, the following should be considered on the differential diagnosis:\n\n1.  **Rheumatoid Arthritis (RA):** This is the most likely diagnosis given the symmetric polyarthritis, morning stiffness, elevated inflammatory markers, and synovitis. RA is a chronic autoimmune disorder characterized by inflammation of the synovial lining of joints.\n2.  **Psoriatic Arthritis:**  This should be considered, particularly if there\u2019s a history of psoriasis (skin condition) or nail changes. The inflammatory markers and joint involvement align with this diagnosis.\n3.  **Systemic Lupus Erythematosus (SLE):** Although less likely given the presentation, SLE can present with polyarthritis, fatigue, and fever. The elevated inflammatory markers are consistent with SLE.\n4.  **Osteoarthritis:** While less likely given the inflammatory markers, it's important to rule out, especially as morning stiffness can be present.\n5.  **Gout/Pseudogout:** These crystal arthropathies can present with acute inflammatory arthritis, but the chronic nature of the symptoms and the absence of a sudden onset make them less likely as the primary diagnosis.\n\n**Further Diagnostic Steps**\n\n*   **Detailed Rheumatological History:**  Specifically, inquire about family history of autoimmune diseases, previous exposures, and any skin manifestations.\n*   **Joint Aspiration and Analysis:**  Synovial fluid analysis (cell count, crystal analysis, Gram stain, culture) is crucial to differentiate between inflammatory and infectious causes, and to rule out gout or pseudogout.\n*   **Blood Tests:**  Further autoimmune workup including rheumatoid",
+        "metrics": {
+          "bleu_1": 24.2515,
+          "bleu_2": 11.4494,
+          "rouge_1": 41.3043,
+          "rouge_2": 11.6364,
+          "rouge_l": 21.7391,
+          "gleu": 7.8947,
+          "meteor": 24.5059,
+          "bert_score": 67.6838,
+          "latency_ms": 15098.9
+        }
+      },
+      "medaide_plus": {
+        "response": "**Symptom Assessment**\n\nThe patient\u2019s presentation \u2013 symmetric joint pain, morning stiffness (lasting over 1 hour), metacarpophalangeal (MCP) and proximal interphalangeal (PIP) joint involvement, fatigue, low-grade fevers, boggy synovitis, elevated ESR (48 mm/hr) and CRP (3.2 mg/dL) \u2013 strongly suggests an inflammatory arthritis. The specific findings warrant careful consideration of several conditions.\n\n**Urgency Level**\n\nWhile not immediately life-threatening, the elevated inflammatory markers (ESR and CRP) and synovitis indicate an active inflammatory process. The symptoms are concerning and require prompt investigation.\n\n**Recommended Action**\n\n1.  **Rheumatology Consultation:** This is the most appropriate initial referral. Rheumatologists specialize in diagnosing and managing inflammatory arthritis.\n2.  **Further Investigations:** The following should be pursued to refine the diagnosis:\n    *   **Blood Tests:** Complete blood count (CBC) to assess for anemia or other abnormalities, rheumatoid factor (RF), anti-CCP antibodies, anti-nuclear antibody (ANA), and Lyme disease testing (given the geographic location and symptoms).\n    *   **Imaging:** Hand radiographs to evaluate for erosions, which are indicative of rheumatoid arthritis. Ultrasound of the affected joints can assess synovitis and fluid accumulation.\n    *   **Joint Aspiration & Analysis:** Fluid analysis from the affected joints (synovial fluid aspiration) to assess for inflammatory cells, crystals (e.g., gout), and rule out infection.\n\n**When to Seek Emergency Care**\n\n*   **Sudden onset of severe chest pain:** Could indicate a cardiac event.\n*   **Difficulty breathing or severe shortness of breath:** Could indicate a respiratory issue.\n*   **Sudden weakness, numbness, or paralysis:** Could indicate a neurological event.\n*   **Confusion or altered mental status:** Could indicate a serious medical condition.\n*   **High fever (over 101\u00b0F/38.3\u00b0C) accompanied by severe joint pain and swelling:** Could indicate sepsis or another serious infection.\n\n*Disclaimer: This information is for pre-diagnostic guidance only and does not constitute medical advice. It is essential to consult with a qualified healthcare professional for accurate diagnosis and treatment.*",
+        "intents": [
+          "Symptom_Triage",
+          "Differential_Diagnosis",
+          "Health_Inquiry"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 22.7119,
+          "bleu_2": 8.3382,
+          "rouge_1": 40.9449,
+          "rouge_2": 12.253,
+          "rouge_l": 18.5039,
+          "gleu": 6.5588,
+          "meteor": 16.5683,
+          "bert_score": 66.0808,
+          "latency_ms": 14925.0
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0005",
+    "domain": "Diagnosis",
+    "query": "A 72-year-old woman with a history of atrial fibrillation on warfarin presents with sudden onset left-sided weakness, facial droop, and slurred speech 2 hours ago. Her INR is 1.3 (therapeutic range 2.0\u20133.0 for AF). NIHSS score is 14. CT head without contrast shows no acute hemorrhage. What are the most likely diagnoses and how do the symptoms localize the lesion?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nA 72-year-old woman with atrial fibrillation on subtherapeutic anticoagulation presents with acute neurological deficits consistent with a stroke syndrome.\n\n**Sympto",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 72-year-old woman with a history of atrial fibrillation on warfarin presents w...]",
+        "metrics": {
+          "bleu_1": 0.0004,
+          "bleu_2": 0.0003,
+          "rouge_1": 10.2564,
+          "rouge_2": 6.6421,
+          "rouge_l": 8.0586,
+          "gleu": 2.3327,
+          "meteor": 3.2779,
+          "bert_score": 47.6676,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nThis patient presents with a concerning constellation of symptoms \u2013 sudden onset left-sided weakness, facial droop, and slurred speech \u2013 alongside a history of atrial fibrillation on warfarin and a current INR of 1.3. The NIHSS score of 14 indicates significant neurological deficit. The CT head negative for hemorrhage is reassuring but doesn\u2019t rule out other causes. The combination of these factors raises significant concern for an acute stroke.\n\n**Urgency Level**\n\nThis is a **high-priority, emergent situation**. The patient\u2019s symptoms and INR suggest a rapidly progressing stroke. Time is of the essence for maximizing treatment efficacy.\n\n**Recommended Action**\n\n1.  **Immediate Stroke Protocol Activation:** Initiate a full stroke protocol immediately, including rapid neurological assessment, blood pressure management (carefully, considering warfarin), and administration of thrombolytic therapy (alteplase/tPA) if within the appropriate time window (typically within 4.5 hours of symptom onset) and if there are no contraindications.\n2.  **Continuous Monitoring:** Continuous monitoring of vital signs, neurological status (repeat NIHSS), and coagulation parameters (INR) is crucial.\n3.  **Further Investigations:** While the CT was negative, a diffusion-weighted MRI (DWI) should be considered urgently to detect early ischemic changes that may not be visible on CT.  A CT angiogram could also be considered to further assess for vascular pathology.\n\n**Localization of the Lesion & Likely Diagnoses**\n\nThe symptoms (left-sided weakness, facial droop, slurred speech) strongly suggest a lesion in the **dominant hemisphere** \u2013 typically the left side \u2013 affecting the **Broca\u2019s area** (responsible for speech production) and/or the **motor cortex** controlling movement. Given the atrial fibrillation history, the most likely diagnosis is an **ischemic stroke** due to thromboembolism.  The slightly elevated INR (1.3) could potentially contribute to the stroke risk, though it\u2019s currently within the therapeutic range.  Other less likely possibilities include a lacunar stroke, or a hemorrhagic stroke (although the CT ruled this out).\n\n**When to Seek Emergency Care**\n\n**This patient requires immediate transfer to a comprehensive stroke center for definitive diagnosis and treatment. Do not delay transport.**  Call emergency services (911 or your local equivalent) immediately.  Any worsening of symptoms or new symptoms should also prompt immediate re-evaluation.",
+        "metrics": {
+          "bleu_1": 29.7688,
+          "bleu_2": 13.1367,
+          "rouge_1": 41.8451,
+          "rouge_2": 11.9008,
+          "rouge_l": 15.1565,
+          "gleu": 9.3614,
+          "meteor": 22.6045,
+          "bert_score": 66.337,
+          "latency_ms": 19874.4
+        }
+      },
+      "medaide_plus": {
+        "response": "**Symptom Assessment**\n\nThis patient presents with a concerning constellation of symptoms \u2013 sudden onset left-sided weakness, facial droop, and slurred speech \u2013 alongside a history of atrial fibrillation and warfarin use. The NIHSS score of 14 indicates significant neurological impairment. The normal INR (1.3) is somewhat reassuring, but doesn\u2019t rule out the possibility of warfarin\u2019s effects on cerebral perfusion. The CT head negative for hemorrhage is also important.\n\n**Urgency Level**\n\nThis presentation is **high urgency**. The combination of neurological deficits and the patient's history strongly suggests an acute stroke, likely ischemic given the absence of hemorrhage. The NIHSS score further emphasizes the need for rapid assessment and intervention.\n\n**Recommended Action**\n\n1.  **Immediate Neurological Consultation:** The patient requires immediate evaluation by a neurologist specializing in stroke.\n2.  **Stroke Protocol Activation:** Initiate stroke protocol immediately, including rapid assessment of vascular risk factors, blood glucose, and coagulation status.\n3.  **Further Imaging:** While the initial CT was negative, a CT angiogram or MRI of the brain is crucial to definitively identify the location and extent of any vascular occlusion. Diffusion-weighted MRI (DWI) is particularly sensitive for detecting acute ischemic stroke.\n4.  **Monitor INR:** Frequent monitoring of the INR is essential, as warfarin can significantly impact treatment options.\n\n**When to Seek Emergency Care**\n\n**This patient requires immediate emergency medical attention.** Given the NIHSS score of 14, any worsening of neurological symptoms, including increased weakness, altered level of consciousness, or respiratory distress, necessitates immediate transfer to a comprehensive stroke center.  **Specifically, call emergency services (911 or your local equivalent) immediately.**  Time is of the essence in stroke management.  The goal is to rapidly identify the source of the blockage and administer appropriate treatment (e.g., thrombolysis or thrombectomy) within the recommended time windows.  *Note: The patient's warfarin use complicates the decision-making process regarding thrombolysis, requiring careful consideration of the risk-benefit ratio.*",
+        "intents": [
+          "Symptom_Triage",
+          "Progress_Tracking",
+          "Symptom_Analysis"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 27.3026,
+          "bleu_2": 10.8231,
+          "rouge_1": 38.6525,
+          "rouge_2": 7.1174,
+          "rouge_l": 15.6028,
+          "gleu": 8.3471,
+          "meteor": 19.0648,
+          "bert_score": 64.0054,
+          "latency_ms": 24014.9
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0001",
+    "domain": "Medication",
+    "query": "A 68-year-old man with atrial fibrillation is on warfarin 5 mg daily (INR 2.4) and was just prescribed fluconazole 200 mg daily for a fungal infection. He also takes metoprolol 50 mg twice daily and atorvastatin 40 mg at bedtime. What drug interactions should be monitored, and do any dosage adjustments need to be made?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis**\n\nThe most critical interaction here is between warfarin and fluconazole. Fluconazole is a potent inhibitor of CYP2C9, the primary enzyme responsible for metabolizing the ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: A 68-year-old man with atrial fibrillation is on warfarin 5 mg daily (INR 2.4) a...]",
+        "metrics": {
+          "bleu_1": 0.0003,
+          "bleu_2": 0.0001,
+          "rouge_1": 9.7403,
+          "rouge_2": 1.9608,
+          "rouge_l": 8.4416,
+          "gleu": 1.1132,
+          "meteor": 2.7918,
+          "bert_score": 47.1889,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nThis patient presents with a complex medication regimen and potential drug interactions requiring careful monitoring, particularly given his atrial fibrillation and warfarin use. The combination of fluconazole and warfarin is a significant concern due to the potential for increased bleeding risk.\n\n**Urgency Level**\n\nModerate \u2013 Requires close monitoring and potential adjustments. The interaction between fluconazole and warfarin is clinically significant and could lead to serious adverse events.\n\n**Recommended Action**\n\n1.  **Warfarin Monitoring:** Given the patient\u2019s INR of 2.4, *very* frequent INR monitoring (at least daily, potentially twice daily initially) is crucial while he is on fluconazole. Fluconazole is a moderate CYP2C9 inhibitor, and CYP2C9 is the enzyme responsible for warfarin metabolism. This inhibition can increase warfarin levels, elevating the risk of bleeding.\n\n2.  **Fluconazole Dosage:** The current dose of 200mg daily is generally considered safe while on warfarin, but the patient's INR needs to be closely monitored.\n\n3.  **Metoprolol and Atorvastatin:** Continue current dosages unless there are specific indications for adjustment based on blood pressure or lipid levels. These medications are generally considered to have minimal interactions with warfarin or fluconazole at the prescribed doses.\n\n4.  **Communication:** The prescribing physician needs to be informed of the fluconazole prescription and the patient\u2019s warfarin regimen.\n\n**When to Seek Emergency Care**\n\n*   Any signs of bleeding (e.g., prolonged nosebleeds, bruising, blood in urine or stool, excessive bleeding from cuts)\n*   Sudden onset of dizziness or weakness\n*   Any symptoms suggestive of stroke (e.g., sudden numbness or weakness on one side of the body, difficulty speaking, vision changes) \u2013 *These symptoms require immediate emergency medical attention.*\n\n**Disclaimer:** *This information is for pre-diagnostic guidance only and does not constitute medical advice. It is essential for the patient to consult with their physician or pharmacist for a comprehensive evaluation and personalized treatment plan.*",
+        "metrics": {
+          "bleu_1": 31.7726,
+          "bleu_2": 15.6596,
+          "rouge_1": 43.0769,
+          "rouge_2": 8.5763,
+          "rouge_l": 17.4359,
+          "gleu": 10.5042,
+          "meteor": 21.05,
+          "bert_score": 66.5457,
+          "latency_ms": 14704.2
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address the potential drug interactions and necessary monitoring with this patient\u2019s current medication regimen. This is a complex situation requiring careful attention.\n\n**Drug Interactions & Monitoring**\n\nThe primary concern here is the interaction between warfarin and fluconazole. Fluconazole is a potent CYP2C9 inhibitor. CYP2C9 is the enzyme responsible for metabolizing warfarin. By inhibiting this enzyme, fluconazole significantly reduces warfarin\u2019s breakdown, leading to a potentially substantial increase in warfarin\u2019s anticoagulant effect and a heightened risk of bleeding.\n\n*   **Monitoring:**  We *must* closely monitor his INR (International Normalized Ratio) with significantly more frequent testing \u2013 initially, daily, and then potentially every 48-72 hours \u2013 for at least 5-7 days while the fluconazole is being administered.  The target INR range for atrial fibrillation patients on warfarin is typically 2.0-3.0, but we need to be particularly vigilant given the interaction.\n*   **Communication:**  It\u2019s crucial to inform both the infectious disease specialist prescribing the fluconazole and the cardiologist managing the atrial fibrillation.\n\n**Dosage Adjustments**\n\nGiven the potential for significant INR elevation, a **reduction in warfarin dosage is highly likely**. The cardiologist will need to assess the patient's clinical situation (bleeding risk, INR, and clinical symptoms) to determine the appropriate dose reduction.  It's unlikely the 5mg dose will be appropriate while fluconazole is being taken.  A starting dose reduction might be 25-50% of the current dose, with close INR monitoring as described above.\n\n**Important Note:** This information is for guidance only and does not substitute for a thorough clinical assessment by the patient\u2019s healthcare team.",
+        "intents": [
+          "Progress_Tracking",
+          "Dosage_Recommendation",
+          "Drug_Counseling"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 36.0535,
+          "bleu_2": 19.3099,
+          "rouge_1": 47.4265,
+          "rouge_2": 14.0221,
+          "rouge_l": 22.4265,
+          "gleu": 13.3581,
+          "meteor": 24.3071,
+          "bert_score": 66.6337,
+          "latency_ms": 15209.3
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0002",
+    "domain": "Medication",
+    "query": "My 55-year-old father with type 2 diabetes is on metformin 1000 mg twice daily and is scheduled for a CT scan with iodinated IV contrast next week. He also takes lisinopril 20 mg daily and atorvastatin 20 mg daily. His last eGFR was 58 mL/min. What are the risks of continuing metformin, and what dosage adjustments are needed around the procedure?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis**\n\nThe primary concern is the combination of metformin and iodinated IV contrast media. While the contrast agent does not directly interact with metformin pharmacokinetical",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: My 55-year-old father with type 2 diabetes is on metformin 1000 mg twice daily a...]",
+        "metrics": {
+          "bleu_1": 0.0001,
+          "bleu_2": 0.0,
+          "rouge_1": 4.8485,
+          "rouge_2": 0.6098,
+          "rouge_l": 3.0303,
+          "gleu": 0.5942,
+          "meteor": 1.1173,
+          "bert_score": 43.0343,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nYour father\u2019s situation presents several considerations regarding metformin use prior to an iodinated contrast CT scan, given his existing conditions and renal function. Metformin is commonly used to manage type 2 diabetes, but its use requires careful monitoring, particularly when combined with contrast-enhanced imaging.\n\n**Urgency Level**\n\nModerate \u2013 While not immediately life-threatening, the potential for lactic acidosis with metformin and contrast exposure warrants careful assessment and potential adjustments.\n\n**Recommended Action**\n\n1.  **Discuss with His Physician:** The most crucial step is a thorough discussion with your father\u2019s physician. They need to evaluate the risks and benefits specifically for his situation.\n2.  **Metformin Discontinuation:** Current guidelines (e.g., American Diabetes Association) recommend temporarily discontinuing metformin 72 hours prior to iodinated contrast administration. This allows for the elimination of metformin from the body, reducing the risk of lactic acidosis.\n3.  **Hydration:** Increased fluid intake (as advised by his physician) is essential before, during, and after the CT scan to help flush out contrast and minimize the risk of kidney injury.\n4.  **Renal Function Monitoring:** Given his existing eGFR of 58 mL/min, close monitoring of renal function before and after the scan is vital. Contrast-induced nephropathy (CIN) is a significant concern in patients with reduced eGFR.\n\n**When to Seek Emergency Care**\n\n*   **Symptoms of Lactic Acidosis:** Seek immediate medical attention if your father experiences symptoms such as:\n    *   Rapid breathing\n    *   Muscle pain or weakness\n    *   Nausea or vomiting\n    *   Dizziness or lightheadedness\n    *   Confusion\n*   **Signs of Contrast-Induced Nephropathy:** Monitor for symptoms like:\n    *   Decreased urine output\n    *   Swelling in the legs or ankles\n    *   Increased blood pressure\n\n**Disclaimer:** *This information is for pre-diagnostic guidance only and does not constitute medical advice. It is essential to consult with a qualified healthcare professional for a proper diagnosis and treatment plan.*",
+        "metrics": {
+          "bleu_1": 35.0168,
+          "bleu_2": 15.3818,
+          "rouge_1": 44.8505,
+          "rouge_2": 9.3333,
+          "rouge_l": 15.9468,
+          "gleu": 10.5753,
+          "meteor": 20.8996,
+          "bert_score": 63.9043,
+          "latency_ms": 18208.8
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address the potential risks and adjustments related to your father\u2019s metformin use in the context of his upcoming CT scan with iodinated contrast and his existing medications.\n\n**Drug Information \u2013 Metformin**\n\nMetformin is an oral antihyperglycemic agent that works primarily by reducing hepatic glucose production and improving insulin sensitivity. It does *not* directly impact the risks associated with iodinated contrast media. However, metformin can cause lactic acidosis, a serious metabolic complication, particularly in situations of renal impairment.\n\n**Dosage & Administration \u2013 Metformin Adjustment**\n\nGiven your father\u2019s eGFR of 58 mL/min, he is at moderate risk for metformin-induced lactic acidosis.  The standard dose of 1000 mg twice daily should be **temporarily reduced to 500 mg twice daily** in the 48-72 hours *prior* to the CT scan. This reduction minimizes the potential for lactic acid accumulation.  Following the CT scan, a gradual return to the full 1000 mg twice daily can be considered, *provided* his renal function remains stable.  **This dosage adjustment requires physician oversight.**\n\n**Warnings & Contraindications \u2013 Contrast-Induced Nephropathy & Lactic Acidosis**\n\n*   **Contrast-Induced Nephropathy (CIN):** Iodinated contrast media can temporarily impair renal function, potentially exacerbating your father\u2019s existing mild renal impairment.  Adequate hydration with intravenous fluids is crucial *before*, *during*, and *after* the CT scan to mitigate this risk.\n*   **Lactic Acidosis:** Metformin-induced lactic acidosis is a significant concern, especially with reduced renal function. Symptoms include nausea, vomiting, abdominal pain, and rapid breathing.  **HIGH-Severity Risk**\n*   **Lisnopril & Atorvastatin:** These medications do not directly interact with metformin in terms of risk, but should be continued as prescribed.\n\n**Drug Interactions**\n\n*   **Iodinated Contrast Media & Metformin:**  Contrast media can impair renal function, increasing the risk of metformin-induced lactic acidosis. **HIGH-Severity Risk**\n*   **No other significant interactions identified** based on the provided medications.\n\n**Patient Advice**\n\n*   **Hydration:** Strict adherence to the hydration protocol prescribed by the radiology department is paramount.\n*   **Monitoring:**  Closely monitor your father for any signs or symptoms of lactic acidosis (nausea, vomiting, abdominal pain, rapid",
+        "intents": [
+          "Dosage_Recommendation",
+          "Risk_Assessment",
+          "Follow_up_Scheduling"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 0.9,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 31.8182,
+          "bleu_2": 15.2351,
+          "rouge_1": 43.7795,
+          "rouge_2": 11.6904,
+          "rouge_l": 18.2677,
+          "gleu": 10.6545,
+          "meteor": 22.2632,
+          "bert_score": 66.659,
+          "latency_ms": 13557.5
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0003",
+    "domain": "Medication",
+    "query": "A 74-year-old woman with chronic heart failure and persistent atrial fibrillation is on simvastatin 40 mg daily and was recently started on amiodarone 200 mg daily for rate control. She also takes furosemide 40 mg daily and digoxin 0.125 mg daily. What is the interaction risk between simvastatin and amiodarone, and what dosing changes are recommended?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis**\n\nAmiodarone is a potent inhibitor of CYP3A4, the primary enzyme responsible for simvastatin metabolism. Co-administration significantly increases simvastatin plasma conce",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: A 74-year-old woman with chronic heart failure and persistent atrial fibrillatio...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 4.7198,
+          "rouge_2": 1.1869,
+          "rouge_l": 4.7198,
+          "gleu": 0.4202,
+          "meteor": 1.2925,
+          "bert_score": 39.6155,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nThis patient presents with a complex medication regimen \u2013 simvastatin, amiodarone, furosemide, and digoxin \u2013 frequently associated with cardiovascular conditions like chronic heart failure and atrial fibrillation. The combination of these medications raises concerns regarding potential drug interactions, specifically regarding simvastatin and amiodarone. Amiodarone is known to significantly increase the risk of myopathy and rhabdomyolysis, and simvastatin can also contribute to muscle damage.\n\n**Urgency Level**\n\nModerate \u2013 While not immediately life-threatening, this combination requires careful monitoring due to the increased risk of adverse effects.\n\n**Recommended Action**\n\nGiven the patient\u2019s existing heart failure and the concurrent use of simvastatin and amiodarone, a thorough assessment of muscle function is crucial. This should include:\n\n*   **Baseline Creatine Kinase (CK) Level:** A CK level should be obtained *before* any further adjustments to simvastatin.\n*   **Monitoring CK Levels:** CK levels should be monitored regularly (e.g., weekly initially, then bi-weekly or monthly) to detect early signs of myopathy. The frequency of monitoring should be increased if any symptoms suggestive of muscle problems arise.\n*   **Simvastatin Dose Reduction:** Due to the increased risk, consider reducing the simvastatin dose to 20mg daily, or even temporarily discontinuing it under close monitoring. The decision to continue simvastatin should be made in consultation with a cardiologist.\n*   **Amiodarone Dose Review:** While amiodarone is essential for rate control, the current dose of 200mg daily should be reviewed. Lower doses may be considered if clinically feasible, but this should be done in consultation with a cardiologist.\n\n**When to Seek Emergency Care**\n\n*   **Signs of Myopathy:** Any symptoms such as muscle pain, weakness, tenderness, or cramps should be reported immediately.\n*   **Severe Muscle Weakness:** Significant muscle weakness, particularly in the proximal muscles (e.g., hips and thighs), warrants immediate medical attention.\n*   **Elevated CK Levels:** A markedly elevated CK level (typically >10 times the upper limit of normal) should be evaluated urgently.\n\n**Disclaimer:** *This information is for pre-diagnostic guidance only and does not constitute medical advice. It is essential for the patient to consult with their physician or cardiologist for a comprehensive evaluation and personalized treatment plan.*\n\n**Evidence-Based Guidelines:**\n\n*   **FDA Warnings",
+        "metrics": {
+          "bleu_1": 25.2149,
+          "bleu_2": 11.4202,
+          "rouge_1": 37.594,
+          "rouge_2": 7.8431,
+          "rouge_l": 14.4361,
+          "gleu": 8.2734,
+          "meteor": 18.0126,
+          "bert_score": 64.648,
+          "latency_ms": 12860.5
+        }
+      },
+      "medaide_plus": {
+        "response": "**Symptom Assessment**\n\nThis patient presents with a complex medication regimen \u2013 simvastatin, amiodarone, furosemide, and digoxin \u2013 all frequently used in patients with chronic heart failure and atrial fibrillation. The combination raises potential interaction risks that require careful consideration. Amiodarone is known to significantly increase the risk of myopathy and rhabdomyolysis, particularly when used with statins.\n\n**Urgency Level**\n\nModerate \u2013 While not immediately life-threatening, this combination warrants close monitoring due to the increased risk of muscle damage.\n\n**Recommended Action**\n\n1.  **Monitor Creatine Kinase (CK) Levels:** The *most crucial* step is to closely monitor the patient's CK levels (at least weekly initially, then potentially less frequently based on results) to detect early signs of myopathy. Guidelines from the American College of Cardiology and American Heart Association recommend statin monitoring in patients at risk.\n2.  **Assess for Symptoms of Myopathy:**  Be vigilant for symptoms such as muscle weakness, tenderness, cramps, or elevated CK levels.\n3.  **Consider Amiodarone Dose Reduction:** Given the patient\u2019s existing risk factors (age, heart failure, statin use), a discussion with the prescribing physician regarding a lower amiodarone dose (if feasible for rate control) should be considered.\n4. **Review Medication Interactions:** A pharmacist review of all medications is highly recommended to identify any additional potential interactions.\n\n**When to Seek Emergency Care**\n\n*   **Severe Muscle Pain or Weakness:** Immediate medical attention is required if the patient experiences significant muscle pain, weakness, or difficulty moving.\n*   **Dark Urine:** Dark urine can be a sign of rhabdomyolysis, a serious condition requiring immediate hospitalization.\n*   **Signs of Heart Failure Worsening:** Any sudden worsening of heart failure symptoms (shortness of breath, edema) should be evaluated promptly.\n\n**Disclaimer:** *This information is for pre-diagnostic guidance only and does not constitute medical advice. A thorough evaluation by a qualified healthcare professional is essential for accurate diagnosis and treatment.*",
+        "intents": [
+          "Health_Inquiry",
+          "Risk_Assessment",
+          "Drug_Interaction"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 29.3333,
+          "bleu_2": 11.7195,
+          "rouge_1": 37.5405,
+          "rouge_2": 8.1169,
+          "rouge_l": 13.9159,
+          "gleu": 9.0452,
+          "meteor": 19.7351,
+          "bert_score": 61.6884,
+          "latency_ms": 18211.1
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0004",
+    "domain": "Medication",
+    "query": "A 42-year-old woman with major depressive disorder on sertraline 150 mg daily presents to the ED with acute lower back pain after a fall. The ED physician wants to prescribe tramadol 50 mg every 6 hours for pain. She also takes gabapentin 300 mg three times daily for chronic neuropathic pain. What are the interaction concerns, and what alternative analgesic strategy with proper dosing would you recommend?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis \u2014 Serotonin Syndrome Risk**\n\nThe combination of sertraline (an SSRI) and tramadol is a HIGH-RISK interaction. Tramadol has dual mechanisms: it is a weak mu-opioid receptor ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: A 42-year-old woman with major depressive disorder on sertraline 150 mg daily pr...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 3.681,
+          "rouge_2": 0.0,
+          "rouge_l": 3.681,
+          "gleu": 0.4244,
+          "meteor": 1.1182,
+          "bert_score": 43.1649,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nThis patient presents with a complex medication regimen and a new onset of acute lower back pain following a fall. She is concurrently taking sertraline (an SSRI), tramadol, and gabapentin. The fall itself introduces a potential mechanism for the back pain (muscle strain, fracture \u2013 though this needs to be ruled out). The combination of medications raises several interaction concerns.\n\n**Urgency Level**\n\nModerate \u2013 While the fall is a contributing factor, the potential for drug interactions and the use of tramadol (an opioid) necessitate careful consideration.\n\n**Recommended Action & Alternative Analgesic Strategy**\n\nGiven the patient\u2019s history of depression and neuropathic pain, a multimodal approach to pain management is warranted. I recommend the following:\n\n1.  **Immediate Pain Management (Initial 72 Hours):**\n    *   **NSAIDs:** Initiate with a short course of a non-steroidal anti-inflammatory drug (NSAID) like ibuprofen (e.g., 600mg every 6-8 hours) or naproxen (e.g., 500mg twice daily) \u2013 *Caution: Assess renal function and gastrointestinal risk factors before prescribing.*\n    *   **Acetaminophen:** Add acetaminophen (e.g., 500mg every 6 hours) for additional pain relief, recognizing its limitations in neuropathic pain.\n\n2.  **Sertraline Management:** Continue the current sertraline dose (150mg daily) unless there\u2019s a specific indication to adjust it for pain management (which would require careful monitoring).\n\n3.  **Gabapentin Optimization:** Maintain the current gabapentin dosage (300mg three times daily) as it\u2019s already established for neuropathic pain.\n\n4.  **Tramadol Discontinuation:** *I strongly advise against prescribing tramadol at this time.* Opioids carry a significant risk of respiratory depression, especially when combined with other central nervous system depressants like gabapentin. The potential for serotonin syndrome (due to the SSRI and tramadol) is also a concern.\n\n5. **Non-Pharmacological Interventions:** Encourage physical therapy, heat/cold therapy, and gentle stretching.\n\n**Dosing Considerations (Alternative Strategy - Initial 72 Hours):**\n\n*   **NSAID:** Ibuprofen 600mg every 6-8 hours PRN (as needed)\n*   **Acetaminophen:**",
+        "metrics": {
+          "bleu_1": 28.6667,
+          "bleu_2": 13.4968,
+          "rouge_1": 41.7763,
+          "rouge_2": 11.2211,
+          "rouge_l": 15.4605,
+          "gleu": 9.2127,
+          "meteor": 19.3135,
+          "bert_score": 66.0877,
+          "latency_ms": 22772.3
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s analyze the potential interactions and recommend an alternative analgesic strategy for this patient.\n\n**Drug Information**\n\n*   **Sertraline (Zoloft):** A selective serotonin reuptake inhibitor (SSRI) commonly used for major depressive disorder.\n*   **Tramadol (Ultram):** A centrally acting synthetic opioid analgesic with SNRI properties. It\u2019s a mixed agonist-antagonist.\n*   **Gabapentin (Neurontin):** An anticonvulsant primarily used for neuropathic pain.\n\n**Dosage & Administration**\n\n*   **Tramadol:** The ED physician\u2019s proposed dose of 50 mg every 6 hours is a significant starting point for opioid therapy.  Given the patient\u2019s history of depression and potential for serotonin syndrome, careful monitoring is crucial.  *Dosage adjustments require physician oversight.*\n*   **Gabapentin:** 300 mg three times daily is a standard starting dose for neuropathic pain.\n*   **Sertraline:** 150 mg daily remains unchanged.\n\n**Warnings & Contraindications**\n\n*   **Tramadol & Sertraline Interaction (HIGH-Severity):** Tramadol is a potent CYP2D6 inhibitor. Sertraline is metabolized by CYP2D6. Concomitant use significantly increases tramadol exposure, elevating the risk of serotonin syndrome (characterized by agitation, confusion, rapid heart rate, muscle rigidity, and autonomic instability). *FDA Labeling indicates a HIGH risk of serotonin syndrome.*\n*   **Gabapentin & Tramadol Interaction (Moderate-Severity):** Gabapentin can increase the analgesic effects of tramadol, potentially leading to excessive pain relief and sedation.\n*   **Tramadol Contraindications:** Absolute contraindications include a history of opioid abuse or addiction, severe respiratory impairment, and severe hepatic impairment. Relative contraindications include a history of seizures, significant cardiovascular disease, and concomitant use of other CNS depressants.\n\n**Drug Interactions**\n\n| Interaction Type        | Drug(s) Involved | Clinical Severity | Mechanism                                                              |\n| ----------------------- | --------------- | ----------------- | ---------------------------------------------------------------------- |\n| Drug-Drug (Significant) | Sertraline/Tramadol | HIGH              | Tramadol inhibits CYP2D6, increasing sertraline levels.               |\n| Drug-Drug (Moderate)     | Gabapentin/Tramadol | Moderate          | Gabapentin enhances tramadol\u2019",
+        "intents": [
+          "Drug_Interaction",
+          "Symptom_Triage",
+          "Progress_Tracking"
+        ],
+        "tier": "Complex",
+        "hallucination_rate": 0.8888888888888888,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 27.6826,
+          "bleu_2": 11.8607,
+          "rouge_1": 42.0495,
+          "rouge_2": 9.5745,
+          "rouge_l": 15.1943,
+          "gleu": 8.5739,
+          "meteor": 17.9255,
+          "bert_score": 67.0723,
+          "latency_ms": 26878.7
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0005",
+    "domain": "Medication",
+    "query": "A 60-year-old man with a mechanical aortic valve is on warfarin 7.5 mg daily with a stable INR of 2.8. He developed knee osteoarthritis and his orthopedist prescribed naproxen 500 mg twice daily. He also takes amlodipine 10 mg daily for hypertension and omeprazole 20 mg daily. What drug interactions exist, and what dosing recommendations should be followed?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis**\n\nWarfarin and naproxen (NSAID) interaction is a MAJOR concern with multiple overlapping mechanisms:\n\n1. Pharmacodynamic interaction: NSAIDs inhibit cyclooxygenase-1 (COX-",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: A 60-year-old man with a mechanical aortic valve is on warfarin 7.5 mg daily wit...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 7.8212,
+          "rouge_2": 2.2472,
+          "rouge_l": 5.5866,
+          "gleu": 1.4173,
+          "meteor": 3.072,
+          "bert_score": 46.3668,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nThis patient presents with a complex medication regimen involving warfarin, naproxen, amlodipine, and omeprazole, all potentially interacting with each other given his mechanical aortic valve and existing conditions. The addition of naproxen is particularly concerning due to its potential to significantly impact warfarin\u2019s anticoagulant effect.\n\n**Urgency Level**\n\nModerate \u2013 The potential for serious bleeding complications due to warfarin interaction is present. Close monitoring of INR is crucial.\n\n**Recommended Action**\n\n1.  **Warfarin-Naproxen Interaction:** Naproxen is a P-glycoprotein (P-gp) inhibitor. Warfarin is metabolized by P-gp. Inhibition of P-gp by naproxen can increase warfarin concentrations, elevating the risk of bleeding.\n2.  **INR Monitoring:** Given the increased risk, the patient *must* have their INR monitored *much* more frequently \u2013 ideally every 2-3 days, or as directed by their cardiologist. The target INR range for a patient with a mechanical aortic valve is typically 2.0-3.0, but this may need to be adjusted based on INR monitoring.\n3.  **Naproxen Dose Reduction/Discontinuation:** The orthopedist should be informed about the warfarin use and consider reducing the naproxen dose or switching to a different NSAID (if appropriate for the osteoarthritis) that does not significantly inhibit P-gp. Celecoxib (Celebrex) is a COX-2 selective NSAID that has a lower risk of interacting with warfarin, but should still be used cautiously.\n4.  **Continue Existing Medications:** Continue amlodipine 10mg daily for hypertension and omeprazole 20mg daily as currently prescribed, *unless* there is evidence of adverse effects.\n\n**When to Seek Emergency Care**\n\n*   Any signs of bleeding, including bruising, nosebleeds, gum bleeding, blood in urine or stool, or excessive bleeding from cuts.\n*   Sudden changes in INR readings (either significantly elevated or decreased).\n*   Any new or worsening symptoms, particularly those related to cardiovascular function or gastrointestinal distress.\n\n**Disclaimer:** *This information is for pre-diagnostic guidance only and does not constitute medical advice. It is crucial for the patient to consult with their cardiologist and other relevant specialists for a comprehensive evaluation and personalized treatment plan.*\n\n**Evidence-Based Guidelines:**\n\n*   American College of Cardiology/American Heart Association (ACC/AHA",
+        "metrics": {
+          "bleu_1": 30.3303,
+          "bleu_2": 11.3092,
+          "rouge_1": 42.7729,
+          "rouge_2": 7.6923,
+          "rouge_l": 16.8142,
+          "gleu": 8.8989,
+          "meteor": 18.3979,
+          "bert_score": 66.0625,
+          "latency_ms": 11879.7
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let's analyze the potential drug interactions and dosing considerations for this patient.\n\n**Drug Information**\n\n*   **Warfarin:** An anticoagulant that inhibits the vitamin K epoxide reductase complex, thereby reducing the production of clotting factors. It\u2019s crucial for patients with mechanical aortic valves to maintain a stable INR.\n*   **Naproxen:** A nonsteroidal anti-inflammatory drug (NSAID) that inhibits cyclooxygenase (COX) enzymes, reducing prostaglandin synthesis and inflammation.\n*   **Amlodipine:** A calcium channel blocker used to treat hypertension by relaxing blood vessels.\n*   **Omeprazole:** A proton pump inhibitor (PPI) that reduces stomach acid production.\n\n**Dosage & Administration**\n\n1.  **Warfarin:** Continue current 7.5 mg daily dose.  *INR monitoring is critical, ideally at least daily initially, then as clinically indicated.*\n2.  **Naproxen:** 500 mg twice daily is a standard dose for osteoarthritis.  *Consider starting with a lower dose (220mg twice daily) to assess for gastrointestinal side effects, particularly given the omeprazole use.*\n3.  **Amlodipine:** 10 mg daily is a standard dose for hypertension. *This dose should be continued unless there are signs of hypotension or significant edema.*\n4.  **Omeprazole:** 20 mg daily is a standard dose for gastric acid suppression. *Continue as prescribed.*\n\n**Warnings & Contraindications**\n\n*   **Warfarin/Naproxen Interaction:** **HIGH-Severity Interaction.** NSAIDs like naproxen can increase the anticoagulant effect of warfarin, leading to a higher risk of bleeding.  *Monitor INR closely and consider dose reduction of naproxen or temporary discontinuation if bleeding occurs.* Reference: Lexicomp.\n*   **Warfarin/Omeprazole Interaction:** Moderate-Severity Interaction. PPIs like omeprazole can reduce warfarin's effectiveness. *Monitor INR closely and consider increasing warfarin dose slightly if maintaining target INR.* Reference: Micromedex.\n*   **Naproxen/Amlodipine Interaction:** Low-Severity Interaction. NSAIDs can potentially increase blood pressure. *Monitor blood pressure regularly.*\n*   **Warfarin Contraindications:** Absolute: Known bleeding disorders, severe liver disease. Relative: History of gastrointestinal bleeding, recent surgery.\n\n**Drug Interactions**\n\n| Drug 1           | Drug 2          | Interaction Type |",
+        "intents": [
+          "Drug_Counseling",
+          "Drug_Interaction",
+          "Progress_Tracking"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 0.6,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 28.1589,
+          "bleu_2": 8.9195,
+          "rouge_1": 43.4231,
+          "rouge_2": 7.6312,
+          "rouge_l": 14.2631,
+          "gleu": 7.7953,
+          "meteor": 18.4932,
+          "bert_score": 66.7208,
+          "latency_ms": 13128.5
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0001",
+    "domain": "Post-Diagnosis",
+    "query": "I'm a 55-year-old man, 6 weeks post-STEMI with 2 drug-eluting stents placed in the LAD. My ejection fraction is 45%. I completed Phase I cardiac rehab in the hospital. What should my rehabilitation plan look like going forward, and when should I have follow-up appointments?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Phase II Outpatient Cardiac Rehabilitation (Weeks 6\u201312)**\n\nYou should enroll in a supervised outpatient cardiac rehabilitation program, typically consisting of 36 sessions over 12 weeks (3 sessions ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I'm a 55-year-old man, 6 weeks post-STEMI with 2 drug-eluting stents placed in t...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 4.6243,
+          "rouge_2": 1.1628,
+          "rouge_l": 3.4682,
+          "gleu": 0.416,
+          "meteor": 1.2783,
+          "bert_score": 44.6542,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nYou\u2019re presenting with a complex cardiac history following a STEMI (ST-elevation myocardial infarction) involving the left anterior descending (LAD) artery, with a current ejection fraction of 45%. This indicates significant left ventricular dysfunction, which is common after a STEMI, but also necessitates a carefully structured rehabilitation program. The fact that you\u2019ve completed Phase I cardiac rehab in the hospital is a positive step.\n\n**Urgency Level**\n\nWhile your situation requires ongoing management, it doesn\u2019t currently represent an immediate emergency. However, given the history of a STEMI and reduced ejection fraction, continued monitoring and adherence to your rehabilitation plan are crucial.\n\n**Recommended Action**\n\nYour rehabilitation plan should progress through the following phases, guided by evidence-based guidelines such as those from the American Association of Cardiovascular and Rehabilitation Nurses (AACVN):\n\n*   **Phase II Cardiac Rehabilitation:** This should begin as soon as you\u2019re medically stable and cleared by your cardiologist. This phase focuses on supervised exercise training, education about heart-healthy lifestyle changes, and psychosocial support. Goals include improving your cardiovascular fitness, increasing your tolerance to exercise, and reducing symptoms like shortness of breath and fatigue.\n*   **Phase III Cardiac Rehabilitation:** Once you\u2019ve successfully completed Phase II, Phase III involves more independent exercise, continued education, and strategies for self-management.\n*   **Lifestyle Modifications:** Consistent adherence to a heart-healthy diet (low in saturated fat, cholesterol, and sodium), regular moderate-intensity exercise (as prescribed by your cardiac rehab team), smoking cessation (if applicable), and stress management are vital.\n\n**When to Seek Emergency Care**\n\n*   **Chest pain or discomfort:** Especially if it\u2019s new, worsening, or accompanied by shortness of breath, nausea, or sweating.\n*   **Shortness of breath:** Significantly increased shortness of breath at rest or with minimal exertion.\n*   **Irregular heartbeat:** Palpitations or a noticeable change in your heart rhythm.\n*   **Swelling:** Sudden swelling in your ankles, feet, or abdomen.\n*   **Severe fatigue:** Unexplained and debilitating fatigue.\n\n**Follow-Up Appointments**\n\n*   **Within 1-2 weeks of completing Phase I:** A follow-up appointment with your cardiologist to assess your recovery and adjust your medication regimen if needed.\n*   **Every 3-6 months:** Routine follow-up appointments with your cardiologist to monitor your ejection fraction, assess",
+        "metrics": {
+          "bleu_1": 21.5909,
+          "bleu_2": 7.015,
+          "rouge_1": 30.6333,
+          "rouge_2": 5.9084,
+          "rouge_l": 12.3711,
+          "gleu": 6.2054,
+          "meteor": 16.1029,
+          "bert_score": 60.9398,
+          "latency_ms": 12686.8
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address your rehabilitation plan and follow-up schedule. It\u2019s completely understandable to have questions and concerns after a STEMI, and it\u2019s fantastic that you\u2019ve already started cardiac rehab \u2013 that\u2019s a crucial first step. Given your ejection fraction of 45% and the stent placement, we need a structured approach to maximize your recovery.\n\n**Recovery Plan**\n\nFollowing your Phase I cardiac rehab, we\u2019ll transition to Phase II, which is crucial for building your strength and endurance. Here\u2019s a proposed plan, recognizing this is a starting point and will be tailored to your individual response:\n\n*   **Weeks 6-12:** Continue Phase II cardiac rehab 3 times per week. This will focus on increasing your heart rate reserve, improving walking distance, and learning to manage shortness of breath. We\u2019ll incorporate exercises like stationary cycling, arm ergometry, and upper body strength training. We\u2019ll aim for a gradual increase in intensity and duration, guided by your heart rate and perceived exertion.\n*   **Months 3-6:** Transition to a more independent exercise program, continuing cardiac rehab 2 times per week. This will involve a combination of supervised exercise (walking, cycling) and home-based exercises, including stretching and light resistance training. We'll work on increasing your overall activity level \u2013 aiming for at least 150 minutes of moderate-intensity aerobic exercise per week, as recommended by the American Heart Association.\n*   **Long-Term:** Maintain an ongoing exercise program, incorporating activities you enjoy, to preserve your cardiovascular health and functional capacity.\n\n**Progress Monitoring**\n\nWe'll track your progress using several key indicators:\n\n*   **Exercise Tolerance:** We'll monitor your ability to perform activities like walking, climbing stairs, and carrying groceries. We\u2019ll use the Borg Rating of Perceived Exertion (RPE) scale to gauge your effort.\n*   **Heart Rate Variability (HRV):** We'll periodically assess HRV, which can provide insights into your autonomic nervous system function and recovery.\n*   **Blood Pressure:** Regular monitoring of your blood pressure at rest and during exercise is essential.\n*   **Symptoms:** We\u2019ll discuss any symptoms you experience, such as chest pain, shortness of breath, dizziness, or palpitations.\n\n**Lifestyle Modifications**\n\n*   **Diet:** A heart-healthy diet, low in saturated and trans fats, cholesterol, and sodium, is paramount.",
+        "intents": [
+          "Rehabilitation_Advice",
+          "Drug_Counseling",
+          "Follow_up_Scheduling"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 0.3333333333333333,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 22.3796,
+          "bleu_2": 10.3963,
+          "rouge_1": 33.8686,
+          "rouge_2": 9.6633,
+          "rouge_l": 13.7226,
+          "gleu": 7.5391,
+          "meteor": 18.3901,
+          "bert_score": 60.8861,
+          "latency_ms": 12507.8
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0002",
+    "domain": "Post-Diagnosis",
+    "query": "I'm a 67-year-old woman who had a right total knee replacement 4 weeks ago due to severe osteoarthritis. My current range of motion is 75 degrees flexion. What rehabilitation milestones should I aim for, and when do I need to see my surgeon?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Early Post-Operative Rehabilitation (Weeks 2\u20136)**\n\nYour current 75 degrees of flexion at 4 weeks is within acceptable range, though the goal is to reach 90 degrees by week 6 to allow functional acti",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I'm a 67-year-old woman who had a right total knee replacement 4 weeks ago due t...]",
+        "metrics": {
+          "bleu_1": 0.0001,
+          "bleu_2": 0.0,
+          "rouge_1": 4.3956,
+          "rouge_2": 0.5525,
+          "rouge_l": 3.2967,
+          "gleu": 0.5636,
+          "meteor": 1.5901,
+          "bert_score": 41.4499,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s discuss your rehabilitation goals following your total knee replacement.\n\n**Symptom Assessment**\n\nYou\u2019re experiencing a common situation post-knee replacement \u2013 range of motion (ROM) is a key indicator of progress. 75 degrees flexion four weeks after surgery is a reasonable starting point, but it\u2019s important to understand that individual recovery varies. It\u2019s great you're proactively seeking information about milestones.\n\n**Rehabilitation Milestones (4-8 Weeks Post-Op)**\n\nHere\u2019s a breakdown of typical milestones, recognizing that these are general guidelines and your surgeon will tailor them to your specific needs:\n\n*   **Weeks 1-2:** Focus on pain management, swelling reduction, and gentle range of motion exercises. Expect to achieve approximately 90 degrees of flexion with assistance. Quadriceps sets and heel slides are often introduced.\n*   **Weeks 3-4:** Increase the intensity of ROM exercises. Aim for 100-110 degrees of flexion. Begin incorporating partial weight-bearing as tolerated, guided by your physical therapist.\n*   **Weeks 5-8:** Continue to improve flexion and extension. The goal is typically 120-135 degrees of flexion. You\u2019ll progress to full weight-bearing and functional activities like walking.\n\n*Source: American Academy of Orthopaedic Surgeons (AAOS) \u2013 Total Knee Arthroplasty Rehabilitation Guidelines [https://www.aaos.org/patient-information/total-knee-arthroplasty-rehab](https://www.aaos.org/patient-information/total-knee-arthroplasty-rehab)*\n\n**Progress Tracking**\n\nRegularly monitor your pain levels (using a scale of 0-10), swelling, and ability to perform daily activities. Keep a log of your ROM measurements, noting the time of day and any factors that might influence them (e.g., weather, medication). Communicate this information clearly to your physical therapist.\n\n**When to See Your Surgeon**\n\nYou should schedule a follow-up appointment with your surgeon if you experience any of the following:\n\n*   Increased pain that isn\u2019t controlled with medication.\n*   Significant swelling that doesn\u2019t improve with elevation and ice.\n*   Signs of infection (redness, warmth, pus, fever).\n*   Instability or giving way of the knee.\n*   Any new or worsening symptoms.\n\nGenerally,",
+        "metrics": {
+          "bleu_1": 26.5741,
+          "bleu_2": 12.0469,
+          "rouge_1": 38.081,
+          "rouge_2": 9.0226,
+          "rouge_l": 16.4918,
+          "gleu": 8.2126,
+          "meteor": 16.5351,
+          "bert_score": 62.3748,
+          "latency_ms": 11455.7
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address your rehabilitation goals and when to consult with your surgeon. It\u2019s completely understandable to be focused on progress after a total knee replacement \u2013 it\u2019s a significant undertaking!\n\n**Recovery Plan**\n\nAt 4 weeks post-op, your 75 degrees of flexion is a good starting point. Here\u2019s a phased approach, keeping in mind that everyone\u2019s recovery is unique:\n\n*   **Phase 1 (Weeks 4-6):** Continue with prescribed physical therapy focusing on regaining range of motion (aiming for 90 degrees flexion within this timeframe), quadriceps strengthening (start with isometric exercises \u2013 contracting the muscle without movement), and gait training with assistive devices. We\u2019ll also focus on pain management strategies.\n*   **Phase 2 (Weeks 7-10):** Increase resistance in exercises, gradually weaning off the assistive device as your strength and stability improve. We'll introduce more functional movements like step-ups and short walks. Your goal is to reach 110-120 degrees of flexion.\n*   **Phase 3 (Weeks 11+):** Continue to increase activity levels, focusing on returning to your pre-operative functional goals. This might include walking longer distances, climbing stairs, and engaging in low-impact activities.\n\n*Note: These are general guidelines. Your physical therapist will tailor the plan to your specific needs and progress.*\n\n**Progress Monitoring**\n\n*   **Key Indicators:** We'll track your range of motion (ROM) with goniometry regularly. We'll also assess your pain levels (using a scale of 0-10), your ability to bear weight, and your gait.\n*   **Frequency:** We'll aim for physical therapy sessions 2-3 times per week initially, then potentially less frequently as you progress. Daily self-monitoring of ROM and pain is crucial.\n\n**Warning Signs**\n\n*   **Increased Pain:** A sudden increase in pain beyond what you\u2019re managing with medication warrants immediate attention.\n*   **Swelling:** Significant swelling in the knee that doesn\u2019t subside with elevation or ice.\n*   **Redness or Warmth:** Indicates possible infection and requires prompt medical evaluation.\n*   **Numbness or Tingling:** Could signify nerve compression.\n*   **Loss of Range of Motion:** A sudden decrease in your ability to move your knee.\n\n**Follow-up Schedule**\n\n*",
+        "intents": [
+          "Rehabilitation_Advice",
+          "Progress_Tracking",
+          "Symptom_Analysis"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 31.4199,
+          "bleu_2": 14.4729,
+          "rouge_1": 43.5935,
+          "rouge_2": 12.1123,
+          "rouge_l": 17.673,
+          "gleu": 10.1669,
+          "meteor": 20.6049,
+          "bert_score": 65.1333,
+          "latency_ms": 13155.3
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0003",
+    "domain": "Post-Diagnosis",
+    "query": "My 14-year-old son had ACL reconstruction surgery using a hamstring autograft 3 weeks ago after a soccer injury. He is eager to return to sports. What does the rehab timeline look like, and when should we schedule follow-up visits with the orthopedic surgeon?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Phase 1 \u2013 Protection Phase (Weeks 0\u20136)**\n\nAt 3 weeks post-ACL reconstruction with hamstring autograft, your son should focus on reducing swelling, restoring full knee extension (0 degrees), and achi",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: My 14-year-old son had ACL reconstruction surgery using a hamstring autograft 3 ...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 5.0992,
+          "rouge_2": 1.1396,
+          "rouge_l": 3.3994,
+          "gleu": 0.5618,
+          "meteor": 1.4104,
+          "bert_score": 45.7973,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nThe patient is inquiring about the expected recovery timeline and follow-up scheduling for a 14-year-old following ACL reconstruction with a hamstring autograft. This is a common post-operative scenario, and understanding the rehabilitation process is crucial for successful return to sports.\n\n**Urgency Level**\n\nLow \u2013 This is a routine post-operative inquiry, focusing on a predictable recovery timeline.\n\n**Recommended Action**\n\nThe typical ACL reconstruction rehab timeline follows a phased approach, as outlined by the American Academy of Orthopaedic Surgeons (AAOS) and similar organizations. Here\u2019s a general breakdown:\n\n*   **Weeks 1-6: Protected Weight-Bearing & Range of Motion:** Focus on reducing swelling, protecting the graft, and regaining initial range of motion. This phase involves crutches, ice, and gentle exercises.\n*   **Weeks 6-12: Progressive Loading & Strengthening:** Gradually increasing weight-bearing and introducing more challenging exercises to build strength around the knee.\n*   **Weeks 12-24: Return to Activity:** Controlled return to sport-specific drills and activities, with continued strength and proprioception training.\n\nIt\u2019s important to note that this is a general guideline, and individual recovery will vary based on the patient\u2019s specific circumstances, adherence to the rehab program, and the surgeon\u2019s protocol.\n\n**When to Schedule Follow-up Visits**\n\n*   **Initial Follow-up:** Schedule a follow-up appointment with the orthopedic surgeon within 1-2 weeks post-operatively to assess wound healing, swelling, and range of motion.\n*   **Weeks 6 & 12:** Scheduled follow-ups are typically scheduled at 6 and 12 weeks post-op to monitor graft healing, assess progress, and adjust the rehab plan.\n*   **Ongoing:** Continue with regular follow-ups as directed by the surgeon, particularly as the patient approaches return to sport.  Communication with the physical therapist is also critical.\n\n**Disclaimer:** *This information is for pre-diagnostic guidance only and does not constitute medical advice. It is essential to follow the specific instructions provided by your son\u2019s orthopedic surgeon and physical therapist.*",
+        "metrics": {
+          "bleu_1": 20.1122,
+          "bleu_2": 7.6144,
+          "rouge_1": 34.8765,
+          "rouge_2": 9.2879,
+          "rouge_l": 16.0494,
+          "gleu": 6.0995,
+          "meteor": 11.3855,
+          "bert_score": 60.7232,
+          "latency_ms": 11488.0
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, I completely understand your concern and your son\u2019s eagerness to get back to soccer. It\u2019s fantastic that he\u2019s motivated, but it\u2019s absolutely crucial we take a measured and safe approach to his recovery. Let\u2019s address this systematically.\n\n**Recovery Plan**\n\nTypically, ACL reconstruction recovery with a hamstring autograft follows a phased approach, lasting approximately 6-9 months. Here\u2019s a breakdown:\n\n*   **Phase 1 (Weeks 1-6):** Non-weight-bearing or partial weight-bearing with crutches. Focus is on pain and swelling control, range of motion exercises (ROM) \u2013 specifically knee flexion \u2013 and gentle quadriceps activation. Physical therapy will be key here.\n*   **Phase 2 (Weeks 6-12):** Gradual increase in weight-bearing and activity. Continued ROM exercises, strengthening exercises (quadriceps, hamstrings, glutes), and gait training. We\u2019ll start with stationary cycling and eventually progress to low-impact activities.\n*   **Phase 3 (Weeks 12-24):** Return to functional activities, including agility drills and sport-specific exercises. This phase focuses on neuromuscular re-education and building confidence.\n*   **Phase 4 (Weeks 24+):** Full return to sport, with continued maintenance exercises.\n\n*Important Note:* This is a general guideline. Your son\u2019s specific timeline will depend on his individual progress, pain levels, and the surgeon\u2019s assessment.\n\n**Progress Monitoring**\n\nWe need to track several key indicators:\n\n*   **Pain Level:** Use a scale of 0-10 (0 = no pain, 10 = worst pain imaginable). We aim for a pain level of 2-3 during activity.\n*   **Swelling:** Assess swelling after activity. Minimal swelling is ideal.\n*   **Range of Motion:** Measure knee flexion regularly (ideally daily) \u2013 we\u2019re looking for consistent progress towards 120-135 degrees.\n*   **Strength:** Quadriceps strength testing (e.g., manual muscle testing) will be monitored weekly.\n*   **Functional Tests:** As he progresses, we\u2019ll incorporate functional tests like hop tests and agility drills (under the guidance of the physical therapist).\n\n**Lifestyle Modifications**\n\n*   **Nutrition:** A balanced diet rich in protein is essential for tissue repair.\n*   **Hydration:**",
+        "intents": [
+          "Follow_up_Scheduling",
+          "Progress_Tracking",
+          "Symptom_Analysis"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 27.4725,
+          "bleu_2": 10.6986,
+          "rouge_1": 38.4615,
+          "rouge_2": 8.0247,
+          "rouge_l": 15.0769,
+          "gleu": 7.9454,
+          "meteor": 19.2151,
+          "bert_score": 64.9606,
+          "latency_ms": 12287.0
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0004",
+    "domain": "Post-Diagnosis",
+    "query": "I am a 72-year-old man who had a left total hip replacement 2 weeks ago for avascular necrosis. I'm using a posterior approach prosthesis. What are the rehabilitation guidelines and precautions, and how often do I need follow-up visits?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Posterior Hip Precautions (First 6\u201312 Weeks)**\n\nSince your hip replacement was performed via a posterior approach, you must strictly observe posterior hip precautions to prevent dislocation: do not ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I am a 72-year-old man who had a left total hip replacement 2 weeks ago for avas...]",
+        "metrics": {
+          "bleu_1": 0.0001,
+          "bleu_2": 0.0,
+          "rouge_1": 5.0279,
+          "rouge_2": 1.1236,
+          "rouge_l": 3.9106,
+          "gleu": 0.5443,
+          "meteor": 1.3652,
+          "bert_score": 41.8638,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "**Symptom Assessment**\n\nYou\u2019re a 72-year-old male with a recent left total hip replacement (posterior approach prosthesis) following treatment for avascular necrosis. Rehabilitation after hip replacement surgery is a multi-stage process focused on regaining mobility and function. Given your age and the type of surgery, a structured approach is crucial.\n\n**Urgency Level**\n\nLow to Moderate \u2013 While discomfort is expected, any sudden increase in pain, swelling, or signs of infection (fever, redness, drainage) warrants immediate attention.\n\n**Recommended Action**\n\nBased on current guidelines (e.g., American Academy of Orthopaedic Surgeons \u2013 AAOS Hip Replacement Rehabilitation Protocol), your rehabilitation should follow a phased approach:\n\n*   **Phase 1 (0-6 weeks):** Non-weight bearing (NWB) with assistive devices. Focus is on pain management, edema control, and gentle range-of-motion exercises as tolerated.  Isometric exercises are often initiated.\n*   **Phase 2 (6-12 weeks):** Partial weight bearing (PWB) as tolerated, gradually increasing with physical therapy.  Exercises will progress to strengthening and improving gait.\n*   **Phase 3 (12+ weeks):** Full weight bearing (FWB) as tolerated, with continued strengthening and functional training.\n\nYour physical therapist will tailor this plan to your specific needs and progress.  Specifically, given your posterior approach, they will likely focus on maintaining hip stability and addressing any potential limitations related to the surgical approach.\n\n**Follow-Up Visits**\n\n*   **Initial Post-Op:** Typically, you'll have follow-up appointments scheduled for 1-3 days, 1 week, 6 weeks, and 3 months post-surgery.\n*   **Ongoing:**  Routine follow-ups are generally recommended every 3-6 months to monitor healing, assess range of motion, and address any persistent issues.  However, your surgeon may recommend more frequent visits based on your individual progress.\n\n**When to Seek Emergency Care**\n\n*   **Severe Pain:** Uncontrolled pain that doesn\u2019t respond to prescribed medication.\n*   **Signs of Infection:** Fever (100.4\u00b0F / 38\u00b0C or higher), redness, warmth, swelling, or drainage from the surgical site.\n*   **Sudden Swelling:** Rapid or unexplained swelling in the hip or leg.\n*   **Numbness or Tingling:**",
+        "metrics": {
+          "bleu_1": 23.5199,
+          "bleu_2": 7.6431,
+          "rouge_1": 37.8049,
+          "rouge_2": 6.422,
+          "rouge_l": 16.1585,
+          "gleu": 6.5319,
+          "meteor": 14.1208,
+          "bert_score": 62.5683,
+          "latency_ms": 13512.1
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address your rehabilitation guidelines and follow-up needs following your total hip replacement.\n\n**Rehabilitation Guidelines & Precautions**\n\nFollowing a posterior hip replacement, a structured rehabilitation program is crucial for optimal recovery. Here\u2019s a breakdown of typical guidelines, recognizing that these are general recommendations and your surgeon\u2019s specific protocol takes precedence:\n\n*   **Phase 1 (0-6 weeks):** Focus is on pain control, edema management, and gentle range of motion exercises. This phase emphasizes non-weight-bearing on the operated leg. Specific exercises include heel slides, ankle pumps, and quad sets.\n*   **Phase 2 (6-12 weeks):** Gradual increase in weight-bearing as tolerated, with assistive devices (walker, crutches) as needed. Strengthening exercises for the hip and surrounding muscles (gluteals, hamstrings, quadriceps) are introduced.\n*   **Phase 3 (12+ weeks):** Continued strengthening, improved mobility, and return to functional activities. This phase focuses on gait training and activities of daily living.\n\n**Precautions:**\n\n*   **Discomfort:** Any significant pain should be reported to your surgeon or physical therapist immediately.\n*   **Redness/Swelling:** Monitor for increased redness or swelling, which could indicate infection or mechanical issues.\n*   **Hip Stiffness:** Gentle range-of-motion exercises are key to preventing stiffness, but avoid forcing movements.\n*   **Proper Body Mechanics:**  Learn and consistently use proper body mechanics to avoid stressing the new joint.\n\n**Follow-Up Visits**\n\n*   **Initial Visits:** Typically, you'll have frequent follow-up visits with your surgeon (usually weekly for the first 2-4 weeks) to assess healing, manage pain, and adjust the rehabilitation plan.\n*   **Intermediate Visits:**  Follow-up visits with your surgeon will likely decrease to every 2-4 weeks for the next 6-8 weeks.\n*   **Long-Term Follow-Up:**  You\u2019ll likely have a final follow-up with your surgeon around 6 months post-op, and then periodic check-ups (e.g., annually) to monitor the long-term stability of the prosthesis.\n\n**Important Note:** *Given your age and recent surgery, close monitoring by your orthopedic surgeon is essential.  Your physical therapist will guide you through the specific exercises and provide hands-on support.*\n\nDo you have any",
+        "intents": [
+          "Dosage_Recommendation",
+          "Rehabilitation_Advice",
+          "Progress_Tracking"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 22.2906,
+          "bleu_2": 6.4448,
+          "rouge_1": 35.2239,
+          "rouge_2": 6.5868,
+          "rouge_l": 13.7313,
+          "gleu": 6.0653,
+          "meteor": 13.3154,
+          "bert_score": 62.568,
+          "latency_ms": 12663.7
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0005",
+    "domain": "Post-Diagnosis",
+    "query": "I'm a 60-year-old woman who suffered a moderate ischemic stroke (right MCA territory) 3 weeks ago. My NIHSS score at discharge was 8 and my modified Rankin Scale score is 3. I have left-sided hemiparesis affecting my arm more than my leg. What rehabilitation approach should I follow, and what is the schedule for follow-up appointments?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Acute to Subacute Stroke Rehabilitation (Weeks 2\u201312)**\n\nWith an NIHSS of 8 and mRS of 3, you have moderate disability requiring assistance with some daily activities. Inpatient rehabilitation (if no",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I'm a 60-year-old woman who suffered a moderate ischemic stroke (right MCA terri...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 2.2472,
+          "rouge_2": 0.565,
+          "rouge_l": 1.6854,
+          "gleu": 0.2377,
+          "meteor": 0.6964,
+          "bert_score": 41.1199,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "Okay, let\u2019s address your rehabilitation needs following your stroke. It\u2019s excellent that you\u2019re proactively seeking information and focusing on your recovery. Given your history \u2013 a moderate ischemic stroke in the right MCA territory with an initial NIHSS of 8 and a modified Rankin Scale (mRS) of 3 \u2013 a comprehensive and tailored rehabilitation program is crucial.\n\n**Symptom Assessment & Rehabilitation Approach**\n\nBased on your reported left-sided hemiparesis, primarily affecting your arm, a neurorehabilitation program focusing on upper extremity function is paramount. Current guidelines, such as those from the American Stroke Association and the World Stroke Organization, strongly recommend a multidisciplinary approach. This typically includes:\n\n*   **Physical Therapy:** To improve strength, range of motion, balance, and gait. Given your arm dominance, a significant portion of therapy will be dedicated to regaining arm function.\n*   **Occupational Therapy:** To address activities of daily living (ADLs) \u2013 dressing, eating, bathing \u2013 and to maximize your independence. They will focus on adaptive strategies and assistive devices.\n*   **Speech Therapy:** To address any speech or language difficulties that may have arisen due to the stroke.\n*   **Neuropsychological Assessment:** Given your NIHSS score, a neuropsychological evaluation can help identify cognitive deficits and tailor cognitive rehabilitation strategies.\n\n**Recommended Schedule for Follow-Up Appointments**\n\nA structured rehabilitation schedule is essential for optimal recovery. Here\u2019s a suggested timeline, recognizing that this will be adjusted based on your individual progress and the recommendations of your rehabilitation team:\n\n*   **Week 1-2:** Intensive inpatient rehabilitation (likely 3-6 weeks) \u2013 This will be the most intensive phase, focusing on foundational movement and ADL retraining.\n*   **Weeks 3-6:** Transition to an outpatient rehabilitation program (likely 2-3 times per week). This phase will continue to build on the skills learned in the inpatient setting, with a greater emphasis on functional independence.\n*   **Monthly Follow-Ups:** Scheduled with your neurologist and GP to monitor your overall condition, medication management, and any new symptoms.\n*   **Bi-Monthly Assessment:** A dedicated physical and occupational therapist will conduct a thorough assessment of your progress and adjust the rehabilitation plan accordingly.\n*   **Long-Term Support:** Continued access to physical therapy and occupational therapy may be needed for several months to a year, depending on your recovery trajectory.\n\n**When to Seek Emergency Care**\n\nWhile your",
+        "metrics": {
+          "bleu_1": 20.8108,
+          "bleu_2": 7.8764,
+          "rouge_1": 34.2368,
+          "rouge_2": 6.0086,
+          "rouge_l": 12.5535,
+          "gleu": 6.1737,
+          "meteor": 14.2672,
+          "bert_score": 62.4486,
+          "latency_ms": 13037.5
+        }
+      },
+      "medaide_plus": {
+        "response": "Okay, let\u2019s address this. It\u2019s completely understandable to be feeling anxious and uncertain after a stroke, especially with the details you\u2019ve shared. A stroke in the right MCA territory at your age, with an initial NIHSS of 8 and a modified Rankin Scale of 3, requires a structured and proactive rehabilitation approach. \n\n**Recovery Plan**\n\nGiven your presentation \u2013 left-sided hemiparesis predominantly affecting the arm \u2013 our primary goal is to maximize functional independence and reduce the impact of the neurological deficits. Here\u2019s a phased approach, aligning with established stroke rehabilitation guidelines:\n\n*   **Phase 1 (Weeks 1-4): Intensive Therapy:** This phase will focus on maximizing motor function and sensory awareness. We\u2019ll utilize a combination of:\n    *   **Physical Therapy (PT):**  This will be 3-5 times per week, starting with passive range of motion exercises to prevent contractures, followed by active-assisted exercises and, eventually, independent exercises targeting strengthening the arm and hand. We\u2019ll incorporate task-specific training \u2013 things like reaching for objects, dressing, and eating \u2013 as soon as you\u2019re able. We\u2019ll also work on balance and gait training, though initially, this will be primarily within the therapy setting.\n    *   **Occupational Therapy (OT):**  OT will focus on activities of daily living (ADLs) \u2013 fine motor skills, coordination, and cognitive strategies to adapt to your limitations.\n    *   **Neuropsychological Assessment:** Given the MCA territory involvement, a neuropsychological assessment will be crucial to identify any cognitive deficits impacting your ability to participate in therapy and daily life.\n*   **Phase 2 (Weeks 5-8): Functional Restoration:** We\u2019ll transition to a more functional setting, incorporating home exercise programs and community-based activities. PT and OT will continue, focusing on refining skills and increasing independence.\n*   **Phase 3 (Weeks 9+): Maintenance & Optimization:**  This phase will focus on maintaining gains and addressing any new challenges.  We'll adjust the program based on your ongoing progress and goals. \n\n**Progress Monitoring**\n\nWe\u2019ll track your progress using the following measurable indicators:\n\n*   **Motor Strength:** Using the Medical Research Council (MRC) scale to assess strength in your arm and hand. We\u2019ll aim for a gradual increase in MRC grade over time.\n*   **Range of Motion:** Measuring the degrees of movement",
+        "intents": [
+          "Follow_up_Scheduling",
+          "Health_Inquiry",
+          "Rehabilitation_Advice"
+        ],
+        "tier": "Moderate",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 22.0339,
+          "bleu_2": 9.008,
+          "rouge_1": 32.948,
+          "rouge_2": 5.7971,
+          "rouge_l": 13.0058,
+          "gleu": 6.6667,
+          "meteor": 15.2589,
+          "bert_score": 60.1906,
+          "latency_ms": 14108.1
+        }
+      }
+    }
+  }
+]

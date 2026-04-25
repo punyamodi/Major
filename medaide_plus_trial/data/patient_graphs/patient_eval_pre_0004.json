@@ -1,0 +1,380 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "eval_pre_0004",
+    "created_at": 1776028492.7376995
+  },
+  "nodes": [
+    {
+      "text": "penicillin",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1776039737.0237708,
+      "source": "regex",
+      "id": "Medication_penicillin"
+    },
+    {
+      "text": "fever",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776039737.0235076,
+      "source": "regex",
+      "id": "Symptom_fever"
+    },
+    {
+      "text": "sore throat",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776039737.0235105,
+      "source": "regex",
+      "id": "Symptom_sore_throat"
+    },
+    {
+      "text": "cough",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776039737.023512,
+      "source": "regex",
+      "id": "Symptom_cough"
+    },
+    {
+      "text": "runny nose",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776039737.0235126,
+      "source": "regex",
+      "id": "Symptom_runny_nose"
+    },
+    {
+      "text": "penicillin",
+      "type": "Allergy",
+      "confidence": 0.7,
+      "timestamp": 1776039737.0238647,
+      "source": "regex",
+      "id": "Allergy_penicillin"
+    },
+    {
+      "text": "rash",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776039737.0238135,
+      "source": "regex",
+      "id": "Symptom_rash"
+    },
+    {
+      "text": "acetaminophen",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1776029367.5933573,
+      "source": "regex",
+      "id": "Medication_acetaminophen"
+    },
+    {
+      "text": "ibuprofen",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1776029367.593359,
+      "source": "regex",
+      "id": "Medication_ibuprofen"
+    },
+    {
+      "text": "swelling",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776039737.023511,
+      "source": "regex",
+      "id": "Symptom_swelling"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Medication_penicillin",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Medication_penicillin",
+      "target": "Symptom_sore_throat"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Medication_penicillin",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Medication_penicillin",
+      "target": "Symptom_runny_nose"
+    },
+    {
+      "relationship": "Medication_to_Allergy",
+      "timestamp": 1776028512.242817,
+      "source": "Medication_penicillin",
+      "target": "Allergy_penicillin"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Medication_penicillin",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_fever",
+      "target": "Symptom_sore_throat"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_fever",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_fever",
+      "target": "Symptom_runny_nose"
+    },
+    {
+      "relationship": "Symptom_to_Allergy",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_fever",
+      "target": "Allergy_penicillin"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_fever",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_fever",
+      "target": "Symptom_swelling"
+    },
+    {
+      "relationship": "Symptom_to_Medication",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_fever",
+      "target": "Medication_penicillin"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_runny_nose"
+    },
+    {
+      "relationship": "Symptom_to_Allergy",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_sore_throat",
+      "target": "Allergy_penicillin"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_swelling"
+    },
+    {
+      "relationship": "Symptom_to_Medication",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_sore_throat",
+      "target": "Medication_penicillin"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_cough",
+      "target": "Symptom_runny_nose"
+    },
+    {
+      "relationship": "Symptom_to_Allergy",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_cough",
+      "target": "Allergy_penicillin"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_cough",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Medication",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_cough",
+      "target": "Medication_penicillin"
+    },
+    {
+      "relationship": "Symptom_to_Allergy",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_runny_nose",
+      "target": "Allergy_penicillin"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Symptom_runny_nose",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Medication",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_runny_nose",
+      "target": "Medication_penicillin"
+    },
+    {
+      "relationship": "Allergy_to_Symptom",
+      "timestamp": 1776028512.242817,
+      "source": "Allergy_penicillin",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Allergy",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_rash",
+      "target": "Allergy_penicillin"
+    },
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_acetaminophen",
+      "target": "Medication_ibuprofen"
+    },
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_acetaminophen",
+      "target": "Medication_penicillin"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_sore_throat"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_runny_nose"
+    },
+    {
+      "relationship": "Medication_to_Allergy",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_acetaminophen",
+      "target": "Allergy_penicillin"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_ibuprofen",
+      "target": "Medication_penicillin"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_sore_throat"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_runny_nose"
+    },
+    {
+      "relationship": "Medication_to_Allergy",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_ibuprofen",
+      "target": "Allergy_penicillin"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776029367.5945642,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_swelling",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_swelling",
+      "target": "Symptom_runny_nose"
+    },
+    {
+      "relationship": "Symptom_to_Medication",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_swelling",
+      "target": "Medication_penicillin"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_swelling",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Allergy",
+      "timestamp": 1776039737.023929,
+      "source": "Symptom_swelling",
+      "target": "Allergy_penicillin"
+    }
+  ]
+}

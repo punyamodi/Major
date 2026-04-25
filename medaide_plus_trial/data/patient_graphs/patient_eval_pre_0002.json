@@ -1,0 +1,250 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "eval_pre_0002",
+    "created_at": 1776028424.7004187
+  },
+  "nodes": [
+    {
+      "text": "shortness of breath",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776029231.5943475,
+      "source": "regex",
+      "id": "Symptom_shortness_of_breath"
+    },
+    {
+      "text": "chest pain",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776029231.5943584,
+      "source": "regex",
+      "id": "Symptom_chest_pain"
+    },
+    {
+      "text": "dizziness",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776028436.0335066,
+      "source": "regex",
+      "id": "Symptom_dizziness"
+    },
+    {
+      "text": "swelling",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776029231.5943527,
+      "source": "regex",
+      "id": "Symptom_swelling"
+    },
+    {
+      "text": "asthma",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776029231.594542,
+      "source": "regex",
+      "id": "Diagnosis_asthma"
+    },
+    {
+      "text": "copd",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776029231.5945404,
+      "source": "regex",
+      "id": "Diagnosis_copd"
+    },
+    {
+      "text": "bronchitis",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776029231.5945494,
+      "source": "regex",
+      "id": "Diagnosis_bronchitis"
+    },
+    {
+      "text": "heart failure",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776029231.5945435,
+      "source": "regex",
+      "id": "Diagnosis_heart_failure"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Symptom_chest_pain"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Symptom_dizziness"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Symptom_swelling"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Diagnosis_asthma"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Diagnosis_copd"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Diagnosis_bronchitis"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776029231.5950973,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Diagnosis_heart_failure"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_chest_pain",
+      "target": "Symptom_dizziness"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_chest_pain",
+      "target": "Symptom_swelling"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_chest_pain",
+      "target": "Diagnosis_asthma"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_chest_pain",
+      "target": "Diagnosis_copd"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_chest_pain",
+      "target": "Diagnosis_bronchitis"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776029231.5950973,
+      "source": "Symptom_chest_pain",
+      "target": "Diagnosis_heart_failure"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_dizziness",
+      "target": "Symptom_swelling"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_dizziness",
+      "target": "Diagnosis_asthma"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_dizziness",
+      "target": "Diagnosis_copd"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_dizziness",
+      "target": "Diagnosis_bronchitis"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_swelling",
+      "target": "Diagnosis_asthma"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_swelling",
+      "target": "Diagnosis_copd"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Symptom_swelling",
+      "target": "Diagnosis_bronchitis"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776029231.5950973,
+      "source": "Symptom_swelling",
+      "target": "Symptom_chest_pain"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776029231.5950973,
+      "source": "Symptom_swelling",
+      "target": "Diagnosis_heart_failure"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Diagnosis_asthma",
+      "target": "Diagnosis_copd"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Diagnosis_asthma",
+      "target": "Diagnosis_bronchitis"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776029231.5950973,
+      "source": "Diagnosis_asthma",
+      "target": "Diagnosis_heart_failure"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028436.0341108,
+      "source": "Diagnosis_copd",
+      "target": "Diagnosis_bronchitis"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776029231.5950973,
+      "source": "Diagnosis_copd",
+      "target": "Diagnosis_asthma"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776029231.5950973,
+      "source": "Diagnosis_copd",
+      "target": "Diagnosis_heart_failure"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776029231.5950973,
+      "source": "Diagnosis_heart_failure",
+      "target": "Diagnosis_bronchitis"
+    }
+  ]
+}

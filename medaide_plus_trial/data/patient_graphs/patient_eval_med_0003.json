@@ -1,0 +1,118 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "eval_med_0003",
+    "created_at": 1776028834.9832206
+  },
+  "nodes": [
+    {
+      "text": "simvastatin",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1776037439.4319522,
+      "source": "regex",
+      "id": "Medication_simvastatin"
+    },
+    {
+      "text": "atrial fibrillation",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776037439.432281,
+      "source": "regex",
+      "id": "Diagnosis_atrial_fibrillation"
+    },
+    {
+      "text": "heart failure",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776037439.4322803,
+      "source": "regex",
+      "id": "Diagnosis_heart_failure"
+    },
+    {
+      "text": "pravastatin",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1776037439.4319584,
+      "source": "regex",
+      "id": "Medication_pravastatin"
+    },
+    {
+      "text": "rosuvastatin",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1776037439.4319599,
+      "source": "regex",
+      "id": "Medication_rosuvastatin"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1776028850.1619933,
+      "source": "Medication_simvastatin",
+      "target": "Diagnosis_atrial_fibrillation"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1776028850.1619933,
+      "source": "Medication_simvastatin",
+      "target": "Diagnosis_heart_failure"
+    },
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1776037439.4327586,
+      "source": "Medication_simvastatin",
+      "target": "Medication_pravastatin"
+    },
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1776037439.4327586,
+      "source": "Medication_simvastatin",
+      "target": "Medication_rosuvastatin"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028850.1619933,
+      "source": "Diagnosis_atrial_fibrillation",
+      "target": "Diagnosis_heart_failure"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776037439.4327586,
+      "source": "Diagnosis_heart_failure",
+      "target": "Diagnosis_atrial_fibrillation"
+    },
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1776037439.4327586,
+      "source": "Medication_pravastatin",
+      "target": "Medication_rosuvastatin"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1776037439.4327586,
+      "source": "Medication_pravastatin",
+      "target": "Diagnosis_heart_failure"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1776037439.4327586,
+      "source": "Medication_pravastatin",
+      "target": "Diagnosis_atrial_fibrillation"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1776037439.4327586,
+      "source": "Medication_rosuvastatin",
+      "target": "Diagnosis_heart_failure"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1776037439.4327586,
+      "source": "Medication_rosuvastatin",
+      "target": "Diagnosis_atrial_fibrillation"
+    }
+  ]
+}

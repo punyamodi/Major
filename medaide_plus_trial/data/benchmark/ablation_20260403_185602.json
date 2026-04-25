@@ -1,0 +1,226 @@
+{
+  "Full MedAide+ (Baseline)": {
+    "key": "Full Model",
+    "description": "All 7 modules active",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 12.84,
+        "gleu": 4.2,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 14.29,
+        "gleu": 4.13,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 13.86,
+        "gleu": 4.8,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 13.91,
+        "gleu": 4.42,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 13.72,
+    "macro_gleu": 4.39
+  },
+  "w/o RIE (M1)": {
+    "key": "w/o RIE",
+    "description": "No query decomposition; raw query passed as single subquery",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 12.84,
+        "gleu": 4.2,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 14.29,
+        "gleu": 4.13,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 13.86,
+        "gleu": 4.8,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 13.91,
+        "gleu": 4.42,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 13.72,
+    "macro_gleu": 4.39
+  },
+  "w/o IPM (M2)": {
+    "key": "w/o IPM",
+    "description": "No intent classification; uniform distribution over 18 intents",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 12.84,
+        "gleu": 4.2,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 14.29,
+        "gleu": 4.13,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 13.86,
+        "gleu": 4.8,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 13.91,
+        "gleu": 4.42,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 13.72,
+    "macro_gleu": 4.39
+  },
+  "w/o RAC (M3)": {
+    "key": "w/o RAC",
+    "description": "No parallel agent collaboration; single agent sequential response",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 0.0,
+        "gleu": 0.0,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 0.0,
+        "gleu": 0.0,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 0.0,
+        "gleu": 0.0,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 0.0,
+        "gleu": 0.0,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 0.0,
+    "macro_gleu": 0.0
+  },
+  "w/o PLMM (M4)": {
+    "key": "N/A (MedAide+ extension)",
+    "description": "No patient history injection (stateless per query)",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 12.84,
+        "gleu": 4.2,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 14.29,
+        "gleu": 4.13,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 13.86,
+        "gleu": 4.8,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 13.91,
+        "gleu": 4.42,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 13.72,
+    "macro_gleu": 4.39
+  },
+  "w/o HDFG (M5)": {
+    "key": "N/A (MedAide+ extension)",
+    "description": "No hallucination detection; raw synthesis output returned",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 12.84,
+        "gleu": 4.2,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 14.29,
+        "gleu": 4.13,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 13.86,
+        "gleu": 4.8,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 13.91,
+        "gleu": 4.42,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 13.72,
+    "macro_gleu": 4.39
+  },
+  "w/o AQCR (M6)": {
+    "key": "N/A (MedAide+ extension)",
+    "description": "No adaptive complexity routing; always use 1 agent",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 0.0,
+        "gleu": 0.0,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 0.0,
+        "gleu": 0.0,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 0.0,
+        "gleu": 0.0,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 0.0,
+        "gleu": 0.0,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 0.0,
+    "macro_gleu": 0.0
+  },
+  "w/o MIET (M7)": {
+    "key": "N/A (MedAide+ extension)",
+    "description": "No multi-turn intent evolution tracking (stateless)",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 12.84,
+        "gleu": 4.2,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 14.29,
+        "gleu": 4.13,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 13.86,
+        "gleu": 4.8,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 13.91,
+        "gleu": 4.42,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 13.72,
+    "macro_gleu": 4.39
+  }
+}

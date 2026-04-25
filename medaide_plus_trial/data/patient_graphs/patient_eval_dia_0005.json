@@ -1,0 +1,54 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "eval_dia_0005",
+    "created_at": 1776028714.495747
+  },
+  "nodes": [
+    {
+      "text": "warfarin",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1776028731.6002924,
+      "source": "regex",
+      "id": "Medication_warfarin"
+    },
+    {
+      "text": "atrial fibrillation",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776028731.6010065,
+      "source": "regex",
+      "id": "Diagnosis_atrial_fibrillation"
+    },
+    {
+      "text": "stroke",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776028731.6010115,
+      "source": "regex",
+      "id": "Diagnosis_stroke"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1776028731.6015549,
+      "source": "Medication_warfarin",
+      "target": "Diagnosis_atrial_fibrillation"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1776028731.6015549,
+      "source": "Medication_warfarin",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028731.6015549,
+      "source": "Diagnosis_atrial_fibrillation",
+      "target": "Diagnosis_stroke"
+    }
+  ]
+}

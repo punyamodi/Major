@@ -1,0 +1,112 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "eval_dia_0001",
+    "created_at": 1776028565.0569758
+  },
+  "nodes": [
+    {
+      "text": "fatigue",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776028578.6726239,
+      "source": "regex",
+      "id": "Symptom_fatigue"
+    },
+    {
+      "text": "constipation",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776028578.672626,
+      "source": "regex",
+      "id": "Symptom_constipation"
+    },
+    {
+      "text": "depression",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776028578.6726294,
+      "source": "regex",
+      "id": "Symptom_depression"
+    },
+    {
+      "text": "hypothyroidism",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776028578.672796,
+      "source": "regex",
+      "id": "Diagnosis_hypothyroidism"
+    },
+    {
+      "text": "anemia",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1776028578.6727977,
+      "source": "regex",
+      "id": "Diagnosis_anemia"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028578.6733248,
+      "source": "Symptom_fatigue",
+      "target": "Symptom_constipation"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028578.6733248,
+      "source": "Symptom_fatigue",
+      "target": "Symptom_depression"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028578.6733248,
+      "source": "Symptom_fatigue",
+      "target": "Diagnosis_hypothyroidism"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028578.6733248,
+      "source": "Symptom_fatigue",
+      "target": "Diagnosis_anemia"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776028578.6733248,
+      "source": "Symptom_constipation",
+      "target": "Symptom_depression"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028578.6733248,
+      "source": "Symptom_constipation",
+      "target": "Diagnosis_hypothyroidism"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028578.6733248,
+      "source": "Symptom_constipation",
+      "target": "Diagnosis_anemia"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028578.6733248,
+      "source": "Symptom_depression",
+      "target": "Diagnosis_hypothyroidism"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1776028578.6733248,
+      "source": "Symptom_depression",
+      "target": "Diagnosis_anemia"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1776028578.6733248,
+      "source": "Diagnosis_hypothyroidism",
+      "target": "Diagnosis_anemia"
+    }
+  ]
+}

@@ -1,0 +1,1242 @@
+[
+  {
+    "id": "pred_0001",
+    "domain": "Pre-Diagnosis",
+    "query": "I am a 58-year-old male with a history of type 2 diabetes and hypertension. For the past two hours, I have been experiencing crushing substernal chest pain radiating to my left arm, accompanied by diaphoresis and nausea. My father had a myocardial infarction at age 52. Should I be worried, and how urgent is this?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This presentation warrants EMERGENCY evaluation \u00e2\u20ac\u201d call 911 immediately. Do not drive yourself to the hospital.\n\n**Symptom Triage:** Your symptoms \u00e2\u20ac\u201d crushing substernal ches",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I am a 58-year-old male with a history of type 2 diabetes and hypertension. For ...]",
+        "metrics": {
+          "bleu_1": 0.0146,
+          "bleu_2": 0.0075,
+          "rouge_1": 12.2271,
+          "rouge_2": 2.6432,
+          "rouge_l": 6.9869,
+          "gleu": 1.9851,
+          "meteor": 4.9011,
+          "bert_score": 46.3292,
+          "latency_ms": 1310.2
+        }
+      },
+      "medaide": {
+        "response": "<think>User message: \"I am a 58-year-old male with a history of type 2 diabetes and hypertension. For the past two hours, I have been experiencing crushing substernal chest pain radiating to my left arm, accompanied by diaphoresis and nausea. My father had a myocardial infarction at age 52. Should I be worried, and how urgent is this?\" We need to provide a focused medical response with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nWe must include disclaimers that we are not a doctor and advise immediate emergency care if needed. The guidelines require \"medical disclaimer\" at beginning and end of message. But instructions say to provide disclaimers for sensitive topics like medical advice. So I'll add disclaimers: \"I am not a doctor, please consult professional.\" Also include the disclaimer that this is pre-diagnostic guidance.\n\nWe need to produce answer with sections in order:\n- Urgency Assessment\n- Symptom Triage\n- Risk Factor Analysis\n- Red Flags\n- Immediate Actions\n\nLet's produce answer accordingly. We'll say: \"Based on your symptoms, you are experiencing signs of a possible myocardial infarction (heart attack). The chest pain is described as crushing substernal chest pain radiating to the left arm with diaphoresis and nausea for two hours. This is concerning especially given your risk factors including type 2 diabetes, hypertension, and family history of MI at age 52.\"\n\nWe need to produce answer in sections:\n\nUrgency Assessment: \"Emergency\" because these are classic symptoms of a heart attack.\n\nSymptom Triage: Evaluate chest pain, radiation, diaphoresis, nausea. The duration is two hours which is concerning.\n\nRisk Factor Analysis: Age 58, male, type 2 diabetes, hypertension, family history of MI at age 52. All risk factors for coronary artery disease and myocardial infarction.\n\nRed Flags: Crushing chest pain radiating to left arm, diaphoresis, nausea, duration > 20 minutes, high-risk profile.\n\nImmediate Actions: \"Call emergency services immediately (911 if in the US) or go to the nearest emergency room. Do not drive yourself.\"\n\nI'll produce answer with disclaimers at beginning and end. I must include disclaimer that this is not a substitute for professional advice.\n\nI'll produce answer accordingly.\n\nI'll produce answer as text message with markdown formatting sections.\n\nI'll produce answer in plain text",
+        "metrics": {
+          "bleu_1": 21.8329,
+          "bleu_2": 12.1458,
+          "rouge_1": 37.8007,
+          "rouge_2": 13.1034,
+          "rouge_l": 19.244,
+          "gleu": 8.2544,
+          "meteor": 24.9964,
+          "bert_score": 59.3357,
+          "latency_ms": 120773.0
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>User query: \"I am a 58-year-old male with a history of type 2 diabetes and hypertension. For the past two hours, I have been experiencing crushing substernal chest pain radiating to my left arm, accompanied by diaphoresis and nausea. My father had a myocardial infarction at age 52. Should I be worried, and how urgent is this?\" We need to provide a focused medical response with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nWe have instructions: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" So we must provide guidance that it's likely an emergency. The symptoms described (crushing substernal chest pain radiating to left arm, diaphoresis, nausea) are classic for myocardial infarction. Also risk factors include type 2 diabetes and hypertension, family history of MI at age 52. Therefore the answer is: \"This is a medical emergency.\" We must advise immediate call to emergency services (911 if in US). Provide instructions that this is urgent.\n\nWe need to provide sections as required:\n- Urgency Assessment: classify urgency level (emergency/urgent/routine).\n- Symptom Triage: systematic evaluation of reported symptoms.\n- Risk Factor Analysis: patient-specific risk factors and clinical history.\n- Red Flags: specific warning signs requiring immediate attention.\n- Immediate Actions: concrete steps the patient should take now.\n\nWe must provide a disclaimer at beginning and end that this is not professional advice. But instructions say \"You must give a disclaimer both at the beginning and at the end when replying topics above.\" So we need to include disclaimers at beginning and end.\n\nI'll produce answer with sections:\n\n\"Disclaimer: I am not a doctor, please consult a healthcare provider for personalized medical advice.\"\n\nThen provide sections:\nUrgency Assessment: This is an emergency. The symptoms described are concerning for acute coronary syndrome (myocardial infarction). It's urgent to seek immediate help.\n\nSymptom Triage: Crushing substernal chest pain radiating to left arm, diaphoresis, nausea are classic signs of myocardial infarction. Also risk factors include diabetes and hypertension.\n\nRisk Factor Analysis: Age 58, type 2 diabetes, hypertension, family history of MI at age 52. These increase the likelihood of coronary artery disease.\n\nRed Flags: Crushing chest pain radiating to left arm, diaphoresis, nausea are red flags for myocardial infarction.",
+        "intents": [
+          "Symptom_Triage",
+          "Drug_Counseling",
+          "Progress_Tracking"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.625,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 20.6522,
+          "bleu_2": 10.3401,
+          "rouge_1": 35.9862,
+          "rouge_2": 11.8056,
+          "rouge_l": 15.917,
+          "gleu": 7.2988,
+          "meteor": 25.4235,
+          "bert_score": 58.4146,
+          "latency_ms": 106653.9
+        }
+      }
+    }
+  },
+  {
+    "id": "pred_0002",
+    "domain": "Pre-Diagnosis",
+    "query": "I'm a 45-year-old woman with a BMI of 34 and a 20-pack-year smoking history. Over the past three weeks, I've noticed increasing shortness of breath when climbing stairs and occasional wheezing at night. I also have a sedentary lifestyle. What is my risk level, and how urgently should I seek care?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This situation is URGENT but not an immediate emergency. You should schedule an appointment within the next 1-2 days with your primary care physician or a pulmonologist.\n\n**Sym",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I'm a 45-year-old woman with a BMI of 34 and a 20-pack-year smoking history. Ove...]",
+        "metrics": {
+          "bleu_1": 0.0062,
+          "bleu_2": 0.0035,
+          "rouge_1": 12.4481,
+          "rouge_2": 5.0209,
+          "rouge_l": 6.639,
+          "gleu": 1.6867,
+          "meteor": 2.6288,
+          "bert_score": 44.7311,
+          "latency_ms": 0.1
+        }
+      },
+      "medaide": {
+        "response": "<think>We are asked: \"I'm a 45-year-old woman with a BMI of 34 and a 20-pack-year smoking history. Over the past three weeks, I've noticed increasing shortness of breath when climbing stairs and occasional wheezing at night. I also have a sedentary lifestyle. What is my risk level, and how urgently should I seek care?\" We need to provide a focused, directly relevant medical response. The answer must be in sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nWe are not allowed to repeat the question. So we produce an answer that is structured with these headings and then provide details.\n\nLet's check guidelines: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" We need to provide a response that includes sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions. The question is about risk level and urgency of care for a 45-year-old woman with BMI 34 (obese), 20-pack-year smoking history, sedentary lifestyle, increasing shortness of breath when climbing stairs, occasional wheezing at night over past three weeks.\n\nWe need to provide a pre-diagnosis guidance. We must include disclaimers that this is not definitive diagnosis and advise professional consultation.\n\nLet's produce answer with sections:\n\nUrgency Assessment: The symptoms are concerning but may be urgent if they worsen or become severe. But we need to check if it's emergency? Possibly not immediate emergency unless there is chest pain, severe shortness of breath, etc. However, the patient has risk factors for cardiovascular disease and lung conditions (smoking history, obesity, sedentary lifestyle). The symptoms are increasing over three weeks. It might be a sign of chronic obstructive pulmonary disease (COPD) or asthma exacerbation, but also could be heart failure. But we need to provide guidance that the patient should seek care soon.\n\nSymptom Triage: Evaluate shortness of breath and wheezing. The symptoms are progressive over three weeks. They might indicate an underlying respiratory condition such as COPD, asthma, or even heart disease. Also note sedentary lifestyle increases risk for cardiovascular issues.\n\nRisk Factor Analysis: BMI 34 indicates obesity; 20-pack-year smoking history is significant risk factor for lung and cardiovascular diseases; sedentary lifestyle further increases risk of metabolic syndrome and cardiovascular events. The combination of these factors places the patient at higher risk for chronic respiratory conditions, heart",
+        "metrics": {
+          "bleu_1": 21.1082,
+          "bleu_2": 9.1522,
+          "rouge_1": 34.6972,
+          "rouge_2": 9.1954,
+          "rouge_l": 14.4026,
+          "gleu": 6.6887,
+          "meteor": 21.9325,
+          "bert_score": 59.6022,
+          "latency_ms": 107091.5
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>We are asked: \"I'm a 45-year-old woman with BMI of 34 and a 20-pack-year smoking history. Over past three weeks, I've noticed increasing shortness of breath when climbing stairs and occasional wheezing at night. I also have a sedentary lifestyle. What is my risk level, and how urgently should I seek care?\" We need to provide a focused, directly relevant medical response. The answer must be in the following structure: \"Urgency Assessment\", \"Symptom Triage\", \"Risk Factor Analysis\", \"Red Flags\", \"Immediate Actions\". But instructions say: \"Provide a focused, directly relevant medical response. Be specific and concise.\" We need to provide a pre-diagnosis guidance.\n\nWe have risk factors: 45-year-old woman with BMI of 34 (obesity), 20-pack-year smoking history, sedentary lifestyle, increasing shortness of breath when climbing stairs, occasional wheezing at night. Also note that she has diagnoses: hypertension, asthma, COPD recorded on April 13, 2026. But the question says \"I'm a 45-year-old woman with BMI of 34 and a 20-pack-year smoking history. Over past three weeks, I've noticed increasing shortness of breath when climbing stairs and occasional wheezing at night.\" So she has risk factors for cardiovascular disease, COPD exacerbation, asthma exacerbation.\n\nWe need to provide pre-diagnosis guidance: \"Urgency Assessment\" - likely urgent if chest pain is present. But the question does not mention chest pain now? Actually, the conversation history includes multiple mentions of chest pain recorded on 2026-04-13. But the current query doesn't mention chest pain. It says increasing shortness of breath when climbing stairs and occasional wheezing at night. So we need to evaluate risk level: moderate risk due to obesity, smoking, sedentary lifestyle, and history of asthma/COPD/hypertension. The question is \"What is my risk level, and how urgently should I seek care?\" We can say that the symptoms are concerning for possible exacerbation of underlying respiratory conditions (asthma or COPD) or cardiovascular issues. Given her risk factors, she may be at moderate to high risk.\n\nWe need to provide a structured answer with sections: \"Urgency Assessment\", \"Symptom Triage\", \"Risk Factor Analysis\", \"Red Flags\", \"Immediate Actions\". But instructions say: \"Provide a focused, directly relevant medical response",
+        "intents": [
+          "Symptom_Triage",
+          "Risk_Assessment",
+          "Health_Inquiry"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.875,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 17.5793,
+          "bleu_2": 5.5213,
+          "rouge_1": 29.1096,
+          "rouge_2": 6.5292,
+          "rouge_l": 14.0411,
+          "gleu": 4.9928,
+          "meteor": 15.4746,
+          "bert_score": 56.1161,
+          "latency_ms": 118059.6
+        }
+      }
+    }
+  },
+  {
+    "id": "pred_0003",
+    "domain": "Pre-Diagnosis",
+    "query": "I am a 67-year-old male diabetic (HbA1c 8.2%) with a 15-year history of poorly controlled hypertension. Over the past week, I've been experiencing persistent headaches, blurred vision, and mild swelling in both ankles. My last blood pressure reading at home was 178/102 mmHg. How concerning are these symptoms given my medical history?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This is an URGENT situation. You should seek medical evaluation today, ideally at an urgent care facility or emergency department, given the possibility of hypertensive emergen",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I am a 67-year-old male diabetic (HbA1c 8.2%) with a 15-year history of poorly c...]",
+        "metrics": {
+          "bleu_1": 0.0019,
+          "bleu_2": 0.0008,
+          "rouge_1": 9.5618,
+          "rouge_2": 3.2129,
+          "rouge_l": 5.5777,
+          "gleu": 0.7901,
+          "meteor": 1.4793,
+          "bert_score": 47.1043,
+          "latency_ms": 0.1
+        }
+      },
+      "medaide": {
+        "response": "<think>User message: \"I am a 67-year-old male diabetic (HbA1c 8.2%) with a 15-year history of poorly controlled hypertension. Over the past week, I've been experiencing persistent headaches, blurred vision, and mild swelling in both ankles. My last blood pressure reading at home was 178/102 mmHg. How concerning are these symptoms given my medical history?\"\n\nWe need to provide a focused, directly relevant medical response. We must include sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nLet's check the guidelines: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" So we need to provide a pre-diagnostic guidance message with disclaimers that this is not definitive diagnosis and should be followed by professional consultation. We must include disclaimer at beginning and end if it's sensitive topics like medical advice. The instructions say: \"Provide general guidance on sensitive topics like medical, legal, financial matters or political matters, while clarifying that users should seek certified professionals for specific advice.\" So we need to provide a disclaimer.\n\nWe have guidelines: \"Always recommend professional medical consultation for serious symptoms.\"\n\nLet's check the question details:\n\n- Age: 67-year-old male\n- Diabetic with HbA1c 8.2% (which is high, indicating poor glycemic control)\n- History of poorly controlled hypertension for 15 years.\n- Over past week: persistent headaches, blurred vision, and mild swelling in both ankles.\n- Last blood pressure reading at home was 178/102 mmHg.\n\nWe need to provide a response that includes sections:\n\n**Urgency Assessment**: Evaluate if these symptoms are emergency or urgent. The blood pressure is high (178/102 mmHg) which is hypertensive crisis territory? Actually, 178/102 mmHg is not extremely high but it's significantly elevated. But the presence of persistent headaches and blurred vision might be concerning for hypertensive urgency or even hypertensive emergency if there are signs of end-organ damage. However, we need to check: \"persistent headaches\" can be a sign of hypertensive crisis. Blurred vision may indicate retinopathy or other complications. Mild swelling in both ankles could be due to fluid retention possibly from heart failure or kidney issues.\n\nGiven the patient's history of poorly controlled hypertension and diabetes, these symptoms are concerning for possible end-organ damage (e.g., hypertensive encephalopathy, hypertensive retinopathy,",
+        "metrics": {
+          "bleu_1": 24.3767,
+          "bleu_2": 14.0131,
+          "rouge_1": 40.3974,
+          "rouge_2": 14.6179,
+          "rouge_l": 15.894,
+          "gleu": 9.1794,
+          "meteor": 27.6619,
+          "bert_score": 61.6768,
+          "latency_ms": 103939.3
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>We have instructions: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" We need to provide a response that is structured with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nThe conversation context: The patient is 67-year-old male diabetic (HbA1c 8.2%) with a 15-year history of poorly controlled hypertension. Over the past week, he has been experiencing persistent headaches, blurred vision, and mild swelling in both ankles. His last blood pressure reading at home was 178/102 mmHg.\n\nWe need to provide a focused, directly relevant medical response. We must not repeat the question. The answer should be structured with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nLet's produce an answer that is careful and includes disclaimers that this is pre-diagnosis advice and to consult a doctor.\n\nWe need to include disclaimer at beginning and end as required by guidelines for medical topics. The instructions say: \"You must give a disclaimer both at the beginning and at the end when replying topics above at every message.\" So we need to include disclaimers at beginning and end.\n\nI'll produce answer with sections:\n\nUrgency Assessment:\n- Given his high blood pressure reading (178/102 mmHg) along with persistent headaches, blurred vision, and ankle swelling, these symptoms are concerning. They may indicate hypertensive urgency or even early signs of hypertensive emergency if not managed promptly. However, the patient is not describing chest pain, shortness of breath, or neurological deficits that would require immediate emergency care. But given his history of poorly controlled hypertension and diabetes, it's important to seek medical evaluation soon.\n\nSymptom Triage:\n- Persistent headaches and blurred vision can be associated with high blood pressure affecting the brain and eyes.\n- Ankle swelling may indicate fluid retention possibly related to heart failure or kidney issues secondary to hypertension.\n- The combination of these symptoms in a patient with known risk factors is concerning for end-organ damage.\n\nRisk Factor Analysis:\n- Age 67, male, diabetic (HbA1c 8.2%), and long-standing poorly controlled hypertension are significant risk factors for cardiovascular complications including stroke, heart failure, kidney disease.\n- The high blood pressure reading of 178/102 mmHg is above target levels, increasing the risk of hypertensive crisis.\n\nRed Flags:\n- Persistent headaches and blurred vision can be red flags for hypertensive en",
+        "intents": [
+          "Symptom_Triage",
+          "Progress_Tracking",
+          "Symptom_Analysis"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.9,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 24.282,
+          "bleu_2": 13.5772,
+          "rouge_1": 41.1669,
+          "rouge_2": 13.9837,
+          "rouge_l": 16.2075,
+          "gleu": 8.8467,
+          "meteor": 26.59,
+          "bert_score": 61.239,
+          "latency_ms": 117375.0
+        }
+      }
+    }
+  },
+  {
+    "id": "pred_0004",
+    "domain": "Pre-Diagnosis",
+    "query": "My 8-year-old daughter has had a fever of 102.5\u00c2\u00b0F for three days, along with a sore throat, difficulty swallowing, and tender swollen lymph nodes in her neck. She has no cough or runny nose. She had a penicillin allergy (rash) as a toddler. Should I take her to the ER or can this wait for a pediatrician visit?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This is URGENT but likely manageable with a same-day pediatrician visit rather than an ER visit, unless she develops breathing difficulty, drooling, inability to swallow liquid",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: My 8-year-old daughter has had a fever of 102.5\u00c2\u00b0F for three days, along with a ...]",
+        "metrics": {
+          "bleu_1": 0.0023,
+          "bleu_2": 0.0008,
+          "rouge_1": 8.6957,
+          "rouge_2": 1.4599,
+          "rouge_l": 6.5217,
+          "gleu": 0.9636,
+          "meteor": 2.7326,
+          "bert_score": 43.3149,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "<think>We are asked: \"My 8-year-old daughter has had a fever of 102.5\u00b0F for three days, along with a sore throat, difficulty swallowing, and tender swollen lymph nodes in her neck. She has no cough or runny nose. She had a penicillin allergy (rash) as a toddler. Should I take her to the ER or can this wait for a pediatrician visit?\" We need to provide a focused, directly relevant medical response. The answer should be structured with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nWe must not repeat question. Provide answer in markdown formatting if appropriate. Use clear language and disclaimers that I'm not a doctor. We'll provide disclaimer at beginning and end.\n\nI need to produce answer as \"pre-diagnosis medical assistant\" with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions. The question is about whether it's an emergency or can wait for pediatrician visit.\n\nLet's analyze the symptoms:\n\n- Fever of 102.5\u00b0F for three days.\n- Sore throat and difficulty swallowing.\n- Tender swollen lymph nodes in her neck.\n- No cough or runny nose.\n- History: penicillin allergy (rash) as toddler.\n\nInterpretation: The child has a high fever, sore throat, difficulty swallowing, tender cervical lymphadenopathy. This could be signs of bacterial pharyngitis, possibly streptococcal infection. However, the absence of cough and runny nose might support that it's not viral upper respiratory infection but rather bacterial. But also can be mononucleosis or other infections.\n\nThe question: Should I take her to ER or wait for pediatrician? The answer is likely \"urgent\" if there are signs of airway compromise, dehydration, inability to swallow fluids, etc. However, the child has difficulty swallowing which might indicate potential airway obstruction risk. But we need to check if it's an emergency.\n\nLet's consider: Fever 102.5\u00b0F for three days is concerning but not necessarily emergent unless there are signs of severe distress or dehydration. The presence of tender swollen lymph nodes in her neck and sore throat with difficulty swallowing might be consistent with bacterial pharyngitis, which can sometimes lead to complications like peritonsillar abscess if untreated.\n\nHowever, the question: \"Should I take her to ER or wait for pediatrician?\" We need to consider that if",
+        "metrics": {
+          "bleu_1": 21.0811,
+          "bleu_2": 7.5585,
+          "rouge_1": 36.0759,
+          "rouge_2": 6.6667,
+          "rouge_l": 12.9747,
+          "gleu": 6.1737,
+          "meteor": 18.7976,
+          "bert_score": 60.2605,
+          "latency_ms": 109183.0
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>User query: \"My 8-year-old daughter has had a fever of 102.5\u00b0F for three days, along with a sore throat, difficulty swallowing, and tender swollen lymph nodes in her neck. She has no cough or runny nose. She had a penicillin allergy (rash) as a toddler. Should I take her to the ER or can this wait for a pediatrician visit?\"\n\nWe need to provide a focused, directly relevant medical response. We must not repeat the question. The answer should be in sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nLet's check guidelines: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" So we need to provide guidance on whether it is emergency or urgent. Let me analyze symptoms:\n\n- Fever of 102.5\u00b0F for three days.\n- Sore throat\n- Difficulty swallowing (odynophagia)\n- Tender swollen lymph nodes in her neck.\n- No cough, no runny nose.\n- History: penicillin allergy as a toddler.\n\nWe need to consider if these are signs of possible bacterial infection like strep throat or maybe mononucleosis. But the question is \"Should I take her to the ER or can this wait for a pediatrician visit?\" We must provide guidance that it's not an immediate emergency unless there are red flags such as difficulty breathing, inability to swallow liquids, drooling, etc.\n\nLet me check: Fever of 102.5\u00b0F for three days is concerning but not necessarily emergent if stable. However, difficulty swallowing and tender swollen lymph nodes might be signs of a bacterial infection like strep throat or possibly tonsillitis. But the question is \"should I take her to the ER?\" The answer should be that it's likely urgent enough to see a pediatrician soon, but not an emergency unless there are additional red flags such as difficulty breathing, drooling, inability to swallow liquids, etc.\n\nI need to provide guidance: \"If your daughter is stable and able to drink fluids, you can schedule an appointment with her pediatrician promptly. However, if she develops any signs of airway compromise (e.g., stridor, drooling, severe difficulty swallowing), or if the fever worsens significantly, then seek emergency care.\"\n\nI need to mention that penicillin allergy is noted and should be communicated to the doctor.\n\nLet's check guidelines: \"Always recommend professional medical consultation for serious symptoms.\" So I'll say \"Please consult your pediatrician",
+        "intents": [
+          "Contraindication_Check",
+          "Drug_Counseling",
+          "Symptom_Triage"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 20.3125,
+          "bleu_2": 7.2825,
+          "rouge_1": 33.8509,
+          "rouge_2": 6.2305,
+          "rouge_l": 13.0435,
+          "gleu": 6.1438,
+          "meteor": 17.7784,
+          "bert_score": 58.8921,
+          "latency_ms": 107759.6
+        }
+      }
+    }
+  },
+  {
+    "id": "pred_0005",
+    "domain": "Pre-Diagnosis",
+    "query": "I'm a 72-year-old woman with osteoporosis and atrial fibrillation on warfarin. Last night I fell in the bathroom and hit the back of my head on the tub. I did not lose consciousness, but I now have a persistent dull headache and feel slightly dizzy. How serious is this, and what are my risks?",
+    "expected_intents": [
+      "Symptom_Triage",
+      "Risk_Assessment"
+    ],
+    "reference_answer": "**Urgency Assessment:** This is an EMERGENCY. You should go to the emergency department immediately for a non-contrast CT scan of the head. Patients on anticoagulants who sustain head trauma are at si",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Pre-Diagnosis query: I'm a 72-year-old woman with osteoporosis and atrial fibrillation on warfarin. L...]",
+        "metrics": {
+          "bleu_1": 0.0002,
+          "bleu_2": 0.0001,
+          "rouge_1": 7.6336,
+          "rouge_2": 1.5385,
+          "rouge_l": 6.1069,
+          "gleu": 0.9514,
+          "meteor": 2.4631,
+          "bert_score": 49.1051,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "<think>We need to produce answer with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nLet's check instructions: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" We have guidelines: Provide pre-diagnostic guidance. The user is 72-year-old woman with osteoporosis and atrial fibrillation on warfarin. She fell in the bathroom last night hitting back of head on tub, did not lose consciousness but now has persistent dull headache and slight dizziness.\n\nWe need to produce answer that includes sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nLet's check guidelines: \"Always recommend professional medical consultation for serious symptoms.\" Also \"flag emergency symptoms (chest pain, difficulty breathing, etc.)\" but here we have head injury. We need to mention risk factors: older age, osteoporosis, atrial fibrillation on warfarin increases bleeding risk. The fall might cause intracranial hemorrhage or subdural hematoma. Persistent headache and dizziness are concerning symptoms.\n\nWe need to produce answer with sections:\n\nUrgency Assessment: Possibly urgent evaluation needed because of head injury in older patient with anticoagulation therapy. It's not necessarily an emergency if no loss of consciousness, but persistent headache and dizziness are red flags for intracranial bleeding. So we can say \"urgent\" or \"immediate medical evaluation recommended.\"\n\nSymptom Triage: Evaluate the fall, head trauma, persistent headache, dizziness. The fact that she is on warfarin increases risk of bleeding complications.\n\nRisk Factor Analysis: Age 72, osteoporosis (which might predispose to fractures), atrial fibrillation and warfarin use increase risk for intracranial hemorrhage if there's a head injury. Also the fall itself may have caused other injuries.\n\nRed Flags: Persistent headache, dizziness after head trauma in an older patient on anticoagulation is concerning for possible intracranial bleeding or subdural hematoma. Other red flags might include worsening symptoms, confusion, weakness, vision changes, etc.\n\nImmediate Actions: Advise to seek immediate medical evaluation (urgent care or emergency department) especially because of the risk factors and persistent symptoms. Also advise not to delay evaluation even if symptoms are mild.\n\nI'll produce answer with sections as required:\n\nUrgency Assessment: \"This situation is concerning and should be evaluated promptly, ideally within 24 hours or sooner if symptoms worsen",
+        "metrics": {
+          "bleu_1": 26.1236,
+          "bleu_2": 11.1848,
+          "rouge_1": 41.9142,
+          "rouge_2": 10.9272,
+          "rouge_l": 17.4917,
+          "gleu": 8.11,
+          "meteor": 23.8785,
+          "bert_score": 62.9121,
+          "latency_ms": 112194.5
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>User query: \"I'm a 72-year-old woman with osteoporosis and atrial fibrillation on warfarin. Last night I fell in the bathroom and hit the back of my head on the tub. I did not lose consciousness, but I now have a persistent dull headache and feel slightly dizzy. How serious is this, and what are my risks?\"\n\nWe need to provide a pre-diagnosis medical advice response with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nLet's check guidelines: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" We must include disclaimers that this is not definitive diagnosis and advise professional consultation. Also mention that I'm not a doctor. But instructions say to provide disclaimer at beginning and end if sensitive topics like medical advice. So we need to include disclaimers.\n\nWe have guidelines: \"Provide a focused, directly relevant medical response.\" We must be specific and concise. Do not repeat the question. Use sections in order: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nLet's produce answer with these sections:\n\nUrgency Assessment:\n- The patient is 72-year-old woman with osteoporosis and atrial fibrillation on warfarin. She fell and hit the back of her head. No loss of consciousness but persistent dull headache and slight dizziness. This could be concerning for a possible intracranial hemorrhage, especially given anticoagulation therapy (war",
+        "intents": [
+          "Symptom_Triage",
+          "Drug_Counseling",
+          "Risk_Assessment"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 23.8978,
+          "bleu_2": 10.0322,
+          "rouge_1": 32.5581,
+          "rouge_2": 7.6433,
+          "rouge_l": 13.1078,
+          "gleu": 7.0825,
+          "meteor": 15.9837,
+          "bert_score": 55.6181,
+          "latency_ms": 78143.0
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0001",
+    "domain": "Diagnosis",
+    "query": "A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, constipation, and cold intolerance. Her TSH is 12.8 mIU/L (normal 0.4\u20134.0), free T4 is 0.5 ng/dL (normal 0.8\u20131.8), and hemoglobin is 10.2 g/dL (normal 12.0\u201316.0 g/dL for females). What are the possible diagnoses and how do the symptoms correlate?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nThis 54-year-old woman presents with a classic constellation of hypothyroid symptoms: fatigue, weight gain, constipation, and cold intolerance. Her laboratory findin",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, ...]",
+        "metrics": {
+          "bleu_1": 0.0025,
+          "bleu_2": 0.0016,
+          "rouge_1": 9.7744,
+          "rouge_2": 5.303,
+          "rouge_l": 6.7669,
+          "gleu": 1.8764,
+          "meteor": 3.589,
+          "bert_score": 43.1992,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "[PreDiagnosisAgent Mock Response] This is a test response for the query. In production, this would be answered by phi4-reasoning:14b with domain expertise. Please consult a qualified medical professional for actual medical advice.",
+        "metrics": {
+          "bleu_1": 0.0684,
+          "bleu_2": 0.0069,
+          "rouge_1": 7.9137,
+          "rouge_2": 0.0,
+          "rouge_l": 4.3165,
+          "gleu": 1.1038,
+          "meteor": 2.3992,
+          "bert_score": 41.9059,
+          "latency_ms": 10074.1
+        }
+      },
+      "medaide_plus": {
+        "response": "[DiagnosisAgent Mock Response] This is a test response for the query. In production, this would be answered by phi4-reasoning:14b with domain expertise. Please consult a qualified medical professional for actual medical advice.",
+        "intents": [
+          "Health_Inquiry",
+          "Symptom_Triage",
+          "Progress_Tracking"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 0.0684,
+          "bleu_2": 0.0069,
+          "rouge_1": 7.9137,
+          "rouge_2": 0.0,
+          "rouge_l": 4.3165,
+          "gleu": 1.1038,
+          "meteor": 2.3992,
+          "bert_score": 40.5688,
+          "latency_ms": 25655.0
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0002",
+    "domain": "Diagnosis",
+    "query": "A 67-year-old man with a 40-pack-year smoking history presents with progressive exertional dyspnea over 2 years, productive cough with white sputum, and bilateral wheezing on auscultation. Spirometry shows FEV1/FVC ratio of 0.58 and FEV1 of 52% predicted. Chest X-ray reveals hyperinflated lungs with flattened diaphragms. What diagnoses should be considered and what do the symptoms indicate?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nThis 67-year-old male with significant tobacco exposure presents with chronic respiratory symptoms and objective evidence of airflow obstruction on spirometry.\n\n**Sy",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 67-year-old man with a 40-pack-year smoking history presents with progressive ...]",
+        "metrics": {
+          "bleu_1": 0.0002,
+          "bleu_2": 0.0001,
+          "rouge_1": 9.9617,
+          "rouge_2": 3.0888,
+          "rouge_l": 6.8966,
+          "gleu": 1.0309,
+          "meteor": 2.0325,
+          "bert_score": 43.9806,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "[PreDiagnosisAgent Mock Response] This is a test response for the query. In production, this would be answered by phi4-reasoning:14b with domain expertise. Please consult a qualified medical professional for actual medical advice.",
+        "metrics": {
+          "bleu_1": 0.0456,
+          "bleu_2": 0.0044,
+          "rouge_1": 8.7591,
+          "rouge_2": 0.0,
+          "rouge_l": 5.8394,
+          "gleu": 1.134,
+          "meteor": 2.4686,
+          "bert_score": 42.4849,
+          "latency_ms": 14287.4
+        }
+      },
+      "medaide_plus": {
+        "response": "[DiagnosisAgent Mock Response] This is a test response for the query. In production, this would be answered by phi4-reasoning:14b with domain expertise. Please consult a qualified medical professional for actual medical advice.",
+        "intents": [
+          "Progress_Tracking",
+          "Symptom_Triage",
+          "Care_Support"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 0.0456,
+          "bleu_2": 0.0044,
+          "rouge_1": 8.7591,
+          "rouge_2": 0.0,
+          "rouge_l": 5.8394,
+          "gleu": 1.134,
+          "meteor": 2.4686,
+          "bert_score": 41.4889,
+          "latency_ms": 20898.0
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0003",
+    "domain": "Diagnosis",
+    "query": "A 28-year-old woman presents with episodic palpitations, diaphoresis, headaches, and anxiety lasting 15\u201320 minutes. During an episode her BP is 210/120 mmHg and heart rate is 130 bpm; between episodes BP is 130/85 mmHg. She has a family history of medullary thyroid carcinoma. What conditions should be considered and which symptoms are most diagnostically relevant?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nA young woman with paroxysmal hypertension accompanied by the classic triad of headache, diaphoresis, and palpitations raises a strong suspicion for a catecholamine-",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 28-year-old woman presents with episodic palpitations, diaphoresis, headaches,...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 7.874,
+          "rouge_2": 0.0,
+          "rouge_l": 3.937,
+          "gleu": 0.8247,
+          "meteor": 1.8091,
+          "bert_score": 47.5112,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "[PreDiagnosisAgent Mock Response] This is a test response for the query. In production, this would be answered by phi4-reasoning:14b with domain expertise. Please consult a qualified medical professional for actual medical advice.",
+        "metrics": {
+          "bleu_1": 0.0456,
+          "bleu_2": 0.0044,
+          "rouge_1": 8.8561,
+          "rouge_2": 0.0,
+          "rouge_l": 5.1661,
+          "gleu": 1.134,
+          "meteor": 2.693,
+          "bert_score": 41.4173,
+          "latency_ms": 9498.1
+        }
+      },
+      "medaide_plus": {
+        "response": "[DiagnosisAgent Mock Response] This is a test response for the query. In production, this would be answered by phi4-reasoning:14b with domain expertise. Please consult a qualified medical professional for actual medical advice.",
+        "intents": [
+          "Symptom_Triage",
+          "Progress_Tracking",
+          "Dosage_Recommendation"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 0.0456,
+          "bleu_2": 0.0044,
+          "rouge_1": 8.8561,
+          "rouge_2": 0.0,
+          "rouge_l": 5.1661,
+          "gleu": 1.134,
+          "meteor": 2.693,
+          "bert_score": 39.8505,
+          "latency_ms": 18906.7
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0004",
+    "domain": "Diagnosis",
+    "query": "A 45-year-old man presents with symmetric joint pain and morning stiffness lasting over 1 hour in the metacarpophalangeal and proximal interphalangeal joints of both hands for 3 months. He also reports fatigue and low-grade fevers. Physical exam reveals boggy synovitis of MCP joints 2\u20134 bilaterally. ESR is 48 mm/hr (normal <20) and CRP is 3.2 mg/dL (normal <0.5). What should be on the differential and which symptoms point toward specific diagnoses?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nThis 45-year-old man has a symmetric inflammatory polyarthropathy affecting small joints of the hands with prolonged morning stiffness, systemic symptoms, and elevat",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 45-year-old man presents with symmetric joint pain and morning stiffness lasti...]",
+        "metrics": {
+          "bleu_1": 0.0012,
+          "bleu_2": 0.0005,
+          "rouge_1": 13.0435,
+          "rouge_2": 3.5088,
+          "rouge_l": 7.8261,
+          "gleu": 1.4252,
+          "meteor": 3.831,
+          "bert_score": 48.2177,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "[PreDiagnosisAgent Mock Response] This is a test response for the query. In production, this would be answered by phi4-reasoning:14b with domain expertise. Please consult a qualified medical professional for actual medical advice.",
+        "metrics": {
+          "bleu_1": 0.1127,
+          "bleu_2": 0.0362,
+          "rouge_1": 9.0164,
+          "rouge_2": 0.8264,
+          "rouge_l": 6.5574,
+          "gleu": 1.3064,
+          "meteor": 2.5773,
+          "bert_score": 42.4227,
+          "latency_ms": 9714.1
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>We are asked: \"A 45-year-old man presents with symmetric joint pain and morning stiffness lasting over 1 hour in the metacarpophalangeal and proximal interphalangeal joints of both hands for 3 months. He also reports fatigue and low-grade fevers. Physical exam reveals boggy synovitis of MCP joints 2\u20134 bilaterally. ESR is 48 mm/hr (normal <20) and CRP is 3.2 mg/dL (normal <0.5). What should be on the differential and which symptoms point toward specific diagnoses?\" We need to provide a focused, directly relevant medical response. The answer must include sections: Clinical Presentation Summary, Symptom Analysis, Differential Diagnosis (Ranked by Likelihood), Recommended Additional Workup.\n\nWe have a 45-year-old man with symmetric joint pain in MCP and PIP joints of both hands for three months, morning stiffness lasting over one hour, fatigue, low-grade fevers. Physical exam reveals boggy synovitis of MCP joints bilaterally. ESR is elevated (48 mm/hr) and CRP is also elevated (3.2 mg/dL). Differential diagnosis: Likely rheumatoid arthritis (RA), given symmetric polyarthritis with morning stiffness >1 hour, involvement of small joints in hands, boggy synovitis, positive inflammatory markers. Also consider psoriatic arthritis if there were skin findings but not mentioned; however, the description is classic for RA. Other differentials: seronegative spondyloarthropathies (like reactive arthritis) are less likely given symmetric involvement of small joints and absence of axial involvement. Also systemic lupus erythematosus (SLE) can cause joint pain but usually has other features like rash, photosensitivity, etc. But the description is classic for RA.\n\nSymptoms: The morning stiffness lasting over one hour is a hallmark of inflammatory arthritis such as rheumatoid arthritis. Fatigue and low-grade fevers are systemic symptoms that support an inflammatory process. Elevated ESR and CRP further support active inflammation. The symmetric involvement of small joints in hands (MCP, PIP) with boggy synovitis is typical for RA.\n\nThus differential: 1. Rheumatoid Arthritis (most likely). 2. Psoriatic arthritis (if there were skin findings or nail changes but not mentioned). 3. Systemic lupus erythematosus (SLE) if other systemic features are present, but less",
+        "intents": [
+          "Symptom_Triage",
+          "Differential_Diagnosis",
+          "Health_Inquiry"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 29.9094,
+          "bleu_2": 15.9304,
+          "rouge_1": 49.5512,
+          "rouge_2": 22.3423,
+          "rouge_l": 21.544,
+          "gleu": 10.3945,
+          "meteor": 30.8906,
+          "bert_score": 67.1371,
+          "latency_ms": 163428.4
+        }
+      }
+    }
+  },
+  {
+    "id": "diag_0005",
+    "domain": "Diagnosis",
+    "query": "A 72-year-old woman with a history of atrial fibrillation on warfarin presents with sudden onset left-sided weakness, facial droop, and slurred speech 2 hours ago. Her INR is 1.3 (therapeutic range 2.0\u20133.0 for AF). NIHSS score is 14. CT head without contrast shows no acute hemorrhage. What are the most likely diagnoses and how do the symptoms localize the lesion?",
+    "expected_intents": [
+      "Differential_Diagnosis",
+      "Symptom_Analysis"
+    ],
+    "reference_answer": "**Clinical Presentation Summary**\n\nA 72-year-old woman with atrial fibrillation on subtherapeutic anticoagulation presents with acute neurological deficits consistent with a stroke syndrome.\n\n**Sympto",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Diagnosis query: A 72-year-old woman with a history of atrial fibrillation on warfarin presents w...]",
+        "metrics": {
+          "bleu_1": 0.0004,
+          "bleu_2": 0.0003,
+          "rouge_1": 10.2564,
+          "rouge_2": 6.6421,
+          "rouge_l": 8.0586,
+          "gleu": 2.3327,
+          "meteor": 3.2779,
+          "bert_score": 47.6676,
+          "latency_ms": 0.1
+        }
+      },
+      "medaide": {
+        "response": "<think>We have a question: \"A 72-year-old woman with a history of atrial fibrillation on warfarin presents with sudden onset left-sided weakness, facial droop, and slurred speech 2 hours ago. Her INR is 1.3 (therapeutic range 2.0\u20133.0 for AF). NIHSS score is 14. CT head without contrast shows no acute hemorrhage. What are the most likely diagnoses and how do the symptoms localize the lesion?\" We need to provide a focused, directly relevant medical response.\n\nWe have instructions: \"Provide a focused, directly relevant medical response. Be specific and concise. Do not repeat the question.\" So we must produce answer with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions. But instructions say to structure our response using these sections in order.\n\nWe need to provide a pre-diagnosis analysis. The patient is 72-year-old woman with atrial fibrillation on warfarin but INR is subtherapeutic (1.3) which means she's not anticoagulated enough, so risk of thromboembolism is high. She presents with sudden onset left-sided weakness, facial droop and slurred speech. The CT head without contrast shows no acute hemorrhage. NIHSS score is 14, which indicates moderate severity stroke.\n\nThe most likely diagnosis: Ischemic stroke due to embolic event from atrial fibrillation. But her INR is subtherapeutic so she might be at risk for thromboembolism. Also possibility of lacunar infarct? But given the sudden onset and symptoms, it's more likely an acute ischemic stroke.\n\nThe question: \"What are the most likely diagnoses and how do the symptoms localize the lesion?\" So answer: The patient is likely suffering from an acute ischemic stroke, probably due to embolism from atrial fibrillation. The left-sided weakness indicates involvement of right hemisphere (contralateral motor deficits). Facial droop also suggests involvement of the facial nerve nucleus or its descending fibers in the pons. Slurred speech may indicate involvement of the dominant hemisphere's language areas if she is right-handed, but not necessarily.\n\nWait: Actually, let me think: The patient has left-sided weakness and facial droop. That means that the lesion is likely in the right hemisphere (contralateral motor deficits). But then slurred speech might be due to involvement of the dominant hemisphere's language centers if she is right-handed",
+        "metrics": {
+          "bleu_1": 23.6769,
+          "bleu_2": 12.3335,
+          "rouge_1": 38.9241,
+          "rouge_2": 11.4286,
+          "rouge_l": 16.1392,
+          "gleu": 8.5315,
+          "meteor": 19.7762,
+          "bert_score": 60.9901,
+          "latency_ms": 125740.5
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>User query: \"A 72-year-old woman with a history of atrial fibrillation on warfarin presents with sudden onset left-sided weakness, facial droop, and slurred speech 2 hours ago. Her INR is 1.3 (therapeutic range 2.0\u20133.0 for AF). NIHSS score is 14. CT head without contrast shows no acute hemorrhage. What are the most likely diagnoses and how do the symptoms localize the lesion?\"\n\nWe need to provide a focused, directly relevant medical response. We must not repeat the question. The answer should be specific and concise.\n\nLet's analyze: A 72-year-old woman with atrial fibrillation on warfarin presents with sudden onset left-sided weakness, facial droop, slurred speech. Her INR is subtherapeutic (1.3) for AF. NIHSS score is 14. CT head without contrast shows no acute hemorrhage.\n\nInterpretation: The patient has a stroke likely due to embolism from atrial fibrillation. But her warfarin level is low, so she might be at risk of ischemic stroke. However, the INR is subtherapeutic (1.3) which means that her anticoagulation is not adequate. So the most likely diagnosis is an acute ischemic stroke due to embolism from atrial fibrillation. The CT head without contrast shows no hemorrhage, so it's more consistent with an ischemic stroke.\n\nSymptoms: left-sided weakness, facial droop, slurred speech are typical of a right hemisphere lesion (since the motor cortex controlling the left side is in the right hemisphere). So the lesion localizes to the right cerebral hemisphere. The NIHSS score of 14 indicates moderate severity.\n\nAlso consider differential diagnosis: Possibly transient ischemic attack (TIA) but given that symptoms persist for 2 hours and CT shows no hemorrhage, it's more likely an acute stroke. Also possibility of a hemorrhagic stroke is less likely because CT head without contrast did not show hemorrhage. But the INR is subtherapeutic so risk of hemorrhage is lower.\n\nThus answer: The most likely diagnosis is an acute ischemic stroke due to embolism from atrial fibrillation, with inadequate anticoagulation (INR 1.3). The symptoms localize to a lesion in the right cerebral hemisphere affecting the motor cortex and possibly adjacent areas controlling speech production (Broca's area) if slurred speech is present.\n\nWe can mention",
+        "intents": [
+          "Drug_Counseling",
+          "Symptom_Triage",
+          "Progress_Tracking"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 28.3286,
+          "bleu_2": 15.2771,
+          "rouge_1": 42.9487,
+          "rouge_2": 13.8264,
+          "rouge_l": 17.9487,
+          "gleu": 10.2418,
+          "meteor": 25.9736,
+          "bert_score": 62.2608,
+          "latency_ms": 134088.9
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0001",
+    "domain": "Medication",
+    "query": "A 68-year-old man with atrial fibrillation is on warfarin 5 mg daily (INR 2.4) and was just prescribed fluconazole 200 mg daily for a fungal infection. He also takes metoprolol 50 mg twice daily and atorvastatin 40 mg at bedtime. What drug interactions should be monitored, and do any dosage adjustments need to be made?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis**\n\nThe most critical interaction here is between warfarin and fluconazole. Fluconazole is a potent inhibitor of CYP2C9, the primary enzyme responsible for metabolizing the ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: A 68-year-old man with atrial fibrillation is on warfarin 5 mg daily (INR 2.4) a...]",
+        "metrics": {
+          "bleu_1": 0.0003,
+          "bleu_2": 0.0001,
+          "rouge_1": 9.7403,
+          "rouge_2": 1.9608,
+          "rouge_l": 8.4416,
+          "gleu": 1.1132,
+          "meteor": 2.7918,
+          "bert_score": 47.1889,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "<think>User message: \"A 68-year-old man with atrial fibrillation is on warfarin 5 mg daily (INR 2.4) and was just prescribed fluconazole 200 mg daily for a fungal infection. He also takes metoprolol 50 mg twice daily and atorvastatin 40 mg at bedtime. What drug interactions should be monitored, and do any dosage adjustments need to be made?\" We are asked: \"Provide a focused, directly relevant medical response. Be specific and concise. Do not repeat the question.\" So we must provide answer with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nWe have instructions: \"You are a highly knowledgeable pre-diagnosis medical assistant. Your role is to help patients understand their symptoms before seeing a doctor. You specialize in symptom triage, urgency assessment, risk factor evaluation, identification of red-flag symptoms, and guidance on immediate actions.\" But the question is about drug interactions between warfarin and fluconazole, plus metoprolol and atorvastatin. We need to provide answer with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nWe must include disclaimers that this is not a substitute for professional advice. But instructions say \"You must give a disclaimer both at the beginning and at the end when replying topics above.\" So we need to provide disclaimers at beginning and end. The guidelines instruct: \"Provide general guidance on sensitive topics like medical, legal, financial matters or political matters, while clarifying that users should seek certified professionals for specific advice or check official sites for updated information.\" Also instructions say: \"You must give a disclaimer both at the beginning and at the end when replying topics above at every message.\"\n\nSo I'll include disclaimers at beginning and end.\n\nI need to provide answer with sections:\n\n**Urgency Assessment**: Evaluate if this is an emergency. The question is about drug interactions, not acute symptoms. So likely \"Routine\" or \"non-emergency.\" But we must check: Warfarin and fluconazole interaction can increase INR risk. Also metoprolol and atorvastatin are less concerning. But warfarin and fluconazole have known interaction that increases the effect of warfarin, so increased bleeding risk. So I'll mention that it's important to monitor INR closely.\n\n**Symptom Triage**: Evaluate if there are",
+        "metrics": {
+          "bleu_1": 23.8889,
+          "bleu_2": 9.3008,
+          "rouge_1": 33.3333,
+          "rouge_2": 5.5215,
+          "rouge_l": 12.5382,
+          "gleu": 7.3222,
+          "meteor": 20.102,
+          "bert_score": 58.3476,
+          "latency_ms": 120171.2
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>We are asked: \"A 68-year-old man with atrial fibrillation is on warfarin 5 mg daily (INR 2.4) and was just prescribed fluconazole 200 mg daily for a fungal infection. He also takes metoprolol 50 mg twice daily and atorvastatin 40 mg at bedtime. What drug interactions should be monitored, and do any dosage adjustments need to be made?\" We are asked: \"Provide a focused, directly relevant medical response. Be specific and concise.\" The instructions require that we provide answer in sections: Drug Interaction Analysis, Dosage Recommendations, Monitoring Parameters, Clinical Recommendations.\n\nWe have patient with atrial fibrillation on warfarin 5 mg daily (INR 2.4) and now prescribed fluconazole 200 mg daily for fungal infection. Also taking metoprolol 50 mg twice daily and atorvastatin 40 mg at bedtime. We need to check interactions: Warfarin and fluconazole interaction is known to be significant because fluconazole can inhibit CYP2C9 metabolism of warfarin, increasing INR risk. So we must monitor for increased bleeding risk. Also, metoprolol and atorvastatin are not major interactions with warfarin or fluconazole? But check: Atorvastatin is metabolized by CYP3A4; however, fluconazole can inhibit CYP2C9 but not necessarily CYP3A4. However, there might be some interaction between atorvastatin and warfarin? Not significant. Also metoprolol is beta-blocker, no major interactions with warfarin or fluconazole.\n\nBut the main concern: Warfarin and fluconazole interaction. Fluconazole can increase INR by inhibiting metabolism of S-warfarin (and possibly R-warfarin) leading to increased anticoagulation effect. So dosage adjustments may be needed for warfarin if INR increases above therapeutic range.\n\nAlso, check potential interactions with metoprolol and atorvastatin: There is no significant interaction between fluconazole and metoprolol? Possibly slight increase in metoprolol levels due to CYP2D6 inhibition by fluconazole? But not sure. Let me recall: Fluconazole is a potent inhibitor of CYP2C9, but also can inhibit other cytochrome P450 enzymes like CYP3A4 and C",
+        "intents": [
+          "Drug_Counseling",
+          "Progress_Tracking",
+          "Dosage_Recommendation"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.7,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 32.0132,
+          "bleu_2": 15.2712,
+          "rouge_1": 44.0336,
+          "rouge_2": 10.4553,
+          "rouge_l": 16.1345,
+          "gleu": 11.0282,
+          "meteor": 21.0694,
+          "bert_score": 65.5603,
+          "latency_ms": 136921.2
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0002",
+    "domain": "Medication",
+    "query": "My 55-year-old father with type 2 diabetes is on metformin 1000 mg twice daily and is scheduled for a CT scan with iodinated IV contrast next week. He also takes lisinopril 20 mg daily and atorvastatin 20 mg daily. His last eGFR was 58 mL/min. What are the risks of continuing metformin, and what dosage adjustments are needed around the procedure?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis**\n\nThe primary concern is the combination of metformin and iodinated IV contrast media. While the contrast agent does not directly interact with metformin pharmacokinetical",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: My 55-year-old father with type 2 diabetes is on metformin 1000 mg twice daily a...]",
+        "metrics": {
+          "bleu_1": 0.0001,
+          "bleu_2": 0.0,
+          "rouge_1": 4.8485,
+          "rouge_2": 0.6098,
+          "rouge_l": 3.0303,
+          "gleu": 0.5942,
+          "meteor": 1.1173,
+          "bert_score": 43.0343,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "<think>User asks: \"My 55-year-old father with type 2 diabetes is on metformin 1000 mg twice daily and is scheduled for a CT scan with iodinated IV contrast next week. He also takes lisinopril 20 mg daily and atorvastatin 20 mg daily. His last eGFR was 58 mL/min. What are the risks of continuing metformin, and what dosage adjustments are needed around the procedure?\" We need to provide a focused answer with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nWe have guidelines: \"You are a highly knowledgeable pre-diagnosis medical assistant. Your role is to help patients understand their symptoms before seeing a doctor.\" But this question is about medication management around contrast CT scan in patient with type 2 diabetes on metformin and eGFR of 58 mL/min. The question asks: \"What are the risks of continuing metformin, and what dosage adjustments are needed around the procedure?\" We need to provide answer that includes risk factors for lactic acidosis if metformin is continued in patients with contrast exposure and reduced kidney function.\n\nI recall guidelines: For patients with eGFR < 30 mL/min, metformin should be discontinued prior to iodinated contrast procedures. But here eGFR is 58 mL/min which is borderline but not below threshold? Actually guidelines from FDA say that if eGFR is less than 30 mL/min, then metformin should be held. However, many guidelines suggest that if the patient has an eGFR between 30 and 45 mL/min, caution is advised. But in this case, his eGFR is 58 mL/min which is above threshold for immediate discontinuation? Let me recall: The risk of lactic acidosis increases with metformin use in patients with renal impairment. However, the guidelines from FDA say that if eGFR is less than 30 mL/min, then metformin should be discontinued prior to contrast administration and resumed only after kidney function has been re-evaluated. But his eGFR is 58 which is above threshold? Actually, I recall that many guidelines recommend discontinuing metformin for patients with an estimated GFR below 45 mL/min before contrast procedures. Let me check: The American College of Radiology (ACR) guidelines say that if the patient's creatinine clearance is less than 30 mL/min, then metformin should be withheld",
+        "metrics": {
+          "bleu_1": 30.0546,
+          "bleu_2": 16.2325,
+          "rouge_1": 39.5349,
+          "rouge_2": 11.0787,
+          "rouge_l": 15.6977,
+          "gleu": 10.7682,
+          "meteor": 22.7924,
+          "bert_score": 61.825,
+          "latency_ms": 125981.4
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>We have a query: \"My 55-year-old father with type 2 diabetes is on metformin 1000 mg twice daily and is scheduled for a CT scan with iodinated IV contrast next week. He also takes lisinopril 20 mg daily and atorvastatin 20 mg daily. His last eGFR was 58 mL/min. What are the risks of continuing metformin, and what dosage adjustments are needed around the procedure?\" We need to provide a focused answer with sections: Drug Interaction Analysis, Dosage Recommendations, Monitoring Parameters, Clinical Recommendations.\n\nWe have instructions: \"Provide a focused, directly relevant medical response. Be specific and concise.\" Also we must not repeat the question. So I'll produce an answer that is structured as required by guidelines:\n\nI need to provide:\n- **Drug Interaction Analysis**: Identify any clinically significant drug-drug interactions with metformin and iodinated contrast. But note: The main risk is lactic acidosis due to contrast-induced acute kidney injury (CI-AKI) in patients on metformin, especially if eGFR <60 mL/min. So I'll mention that the risk of continuing metformin around the procedure is increased risk for lactic acidosis and contrast-induced nephropathy. Also note that lisinopril and atorvastatin are not contraindicated with iodinated contrast.\n\n- **Dosage Recommendations**: The guidelines from FDA and other agencies: For patients with eGFR between 30-60 mL/min, metformin should be used with caution. In the setting of a CT scan with IV contrast, it is recommended to hold metformin before and after the procedure until kidney function has been re-evaluated. The typical recommendation is to discontinue metformin at least 48 hours prior to the procedure and then resume only after renal function is confirmed normal (eGFR >30 mL/min). But since his eGFR is 58, it's borderline but still above 30. However, guidelines say that if contrast is used, you should hold metformin for 24-48 hours post-procedure until kidney function is rechecked.\n\nI need to mention: \"The risk of continuing metformin around the procedure includes potential lactic acidosis due to contrast-induced nephropathy.\" Also note that his eGFR is borderline but still above threshold. But guidelines say if eGFR <60 mL/min, caution is advised. So I'll provide dosage adjustments: Stop",
+        "intents": [
+          "Symptom_Triage",
+          "Dosage_Recommendation",
+          "Drug_Counseling"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.6,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 32.5714,
+          "bleu_2": 15.5773,
+          "rouge_1": 44.3787,
+          "rouge_2": 13.3531,
+          "rouge_l": 17.7515,
+          "gleu": 10.6887,
+          "meteor": 23.7933,
+          "bert_score": 64.1852,
+          "latency_ms": 135716.5
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0003",
+    "domain": "Medication",
+    "query": "A 74-year-old woman with chronic heart failure and persistent atrial fibrillation is on simvastatin 40 mg daily and was recently started on amiodarone 200 mg daily for rate control. She also takes furosemide 40 mg daily and digoxin 0.125 mg daily. What is the interaction risk between simvastatin and amiodarone, and what dosing changes are recommended?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis**\n\nAmiodarone is a potent inhibitor of CYP3A4, the primary enzyme responsible for simvastatin metabolism. Co-administration significantly increases simvastatin plasma conce",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: A 74-year-old woman with chronic heart failure and persistent atrial fibrillatio...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 4.7198,
+          "rouge_2": 1.1869,
+          "rouge_l": 4.7198,
+          "gleu": 0.4202,
+          "meteor": 1.2925,
+          "bert_score": 39.6155,
+          "latency_ms": 0.1
+        }
+      },
+      "medaide": {
+        "response": "<think>We have a question: \"A 74-year-old woman with chronic heart failure and persistent atrial fibrillation is on simvastatin 40 mg daily and was recently started on amiodarone 200 mg daily for rate control. She also takes furosemide 40 mg daily and digoxin 0.125 mg daily. What is the interaction risk between simvastatin and amiodarone, and what dosing changes are recommended?\" We need to provide a focused answer.\n\nWe have instructions: \"Provide a focused, directly relevant medical response. Be specific and concise. Do not repeat the question.\" So we must produce an answer that includes sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions. But note that guidelines instruct to include these sections in order.\n\nWe need to provide a pre-diagnosis medical advice message with disclaimers at beginning and end. The instructions say \"You are a highly knowledgeable pre-diagnosis medical assistant\" but we must not provide definitive diagnosis. We must provide guidance on symptoms, risk factors, etc.\n\nThe question is about drug interaction between simvastatin and amiodarone. I recall that amiodarone can increase the plasma concentration of statins by inhibiting cytochrome P450 3A4 (CYP3A4) metabolism. This increases the risk for myopathy or rhabdomyolysis, especially with high doses of simvastatin. The recommended dosing change is to reduce the dose of simvastatin when co-administered with amiodarone. For example, guidelines often recommend reducing simvastatin from 40 mg daily to 20 mg daily or even lower if necessary.\n\nI recall that the FDA warns about increased risk of myopathy and rhabdomyolysis when simvastatin is used concurrently with amiodarone. The recommended dosing change: reduce simvastatin dose by half, i.e., from 40 mg to 20 mg daily. Alternatively, consider switching to a statin that is less affected by CYP3A4 inhibition (like pravastatin or rosuvastatin) if appropriate.\n\nI need to provide a response with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions. But the question is about drug interaction risk and dosing changes recommended. So I'll produce an answer that includes these sections:\n\nUrgency Assessment: The situation is",
+        "metrics": {
+          "bleu_1": 29.0801,
+          "bleu_2": 15.0008,
+          "rouge_1": 40.5405,
+          "rouge_2": 11.4458,
+          "rouge_l": 15.015,
+          "gleu": 10.2832,
+          "meteor": 19.7978,
+          "bert_score": 62.7025,
+          "latency_ms": 124242.6
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>We have a query: \"A 74-year-old woman with chronic heart failure and persistent atrial fibrillation is on simvastatin 40 mg daily and was recently started on amiodarone 200 mg daily for rate control. She also takes furosemide 40 mg daily and digoxin 0.125 mg daily. What is the interaction risk between simvastatin and amiodarone, and what dosing changes are recommended?\" We need to provide a focused answer with sections: Drug Interaction Analysis, Dosage Recommendations, Monitoring Parameters, Clinical Recommendations.\n\nWe have instructions: \"Provide a focused, directly relevant medical response. Be specific and concise.\" Also we must not repeat the question. So I'll produce an answer that is structured as required:\n\nI'll produce answer in four sections:\n1. Drug Interaction Analysis\n2. Dosage Recommendations\n3. Monitoring Parameters\n4. Clinical Recommendations\n\nWe need to mention that amiodarone is a potent inhibitor of CYP3A4, which increases simvastatin plasma levels and risk for myopathy and rhabdomyolysis. The interaction is high severity. Also note that the patient is on multiple statins? Actually she is on simvastatin 40 mg daily but also has pravastatin and rosuvastatin recorded in her history, but currently she's on simvastatin. But question says \"A 74-year-old woman with chronic heart failure and persistent atrial fibrillation is on simvastatin 40 mg daily\" so we assume that the current regimen is simvastatin 40 mg daily. The question: \"What is the interaction risk between simvastatin and amiodarone, and what dosing changes are recommended?\" So answer: Amiodarone can increase simvastatin levels by inhibiting CYP3A4 metabolism, increasing risk of myopathy and rhabdomyolysis. The FDA recommends reducing simvastatin dose to 20 mg daily when co-administered with amiodarone. Also note that the patient is elderly so caution is warranted.\n\nI'll produce answer in sections:\n\nDrug Interaction Analysis:\n- Amiodarone is a potent inhibitor of CYP3A4, which metabolizes simvastatin.\n- The interaction increases risk for myopathy and rhabdomyolysis.\n- Severity: High severity. \n- Also note that the patient's age and comorbidities (heart failure) further",
+        "intents": [
+          "Health_Inquiry",
+          "Drug_Counseling",
+          "Risk_Assessment"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.9,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 29.7214,
+          "bleu_2": 17.4527,
+          "rouge_1": 39.9386,
+          "rouge_2": 13.5593,
+          "rouge_l": 15.9754,
+          "gleu": 11.8974,
+          "meteor": 19.2021,
+          "bert_score": 63.3464,
+          "latency_ms": 137308.4
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0004",
+    "domain": "Medication",
+    "query": "A 42-year-old woman with major depressive disorder on sertraline 150 mg daily presents to the ED with acute lower back pain after a fall. The ED physician wants to prescribe tramadol 50 mg every 6 hours for pain. She also takes gabapentin 300 mg three times daily for chronic neuropathic pain. What are the interaction concerns, and what alternative analgesic strategy with proper dosing would you recommend?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis \u2014 Serotonin Syndrome Risk**\n\nThe combination of sertraline (an SSRI) and tramadol is a HIGH-RISK interaction. Tramadol has dual mechanisms: it is a weak mu-opioid receptor ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: A 42-year-old woman with major depressive disorder on sertraline 150 mg daily pr...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 3.681,
+          "rouge_2": 0.0,
+          "rouge_l": 3.681,
+          "gleu": 0.4244,
+          "meteor": 1.1182,
+          "bert_score": 43.1649,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "<think>We have a question: \"A 42-year-old woman with major depressive disorder on sertraline 150 mg daily presents to the ED with acute lower back pain after a fall. The ED physician wants to prescribe tramadol 50 mg every 6 hours for pain. She also takes gabapentin 300 mg three times daily for chronic neuropathic pain. What are the interaction concerns, and what alternative analgesic strategy with proper dosing would you recommend?\" We need to provide a focused answer.\n\nLet's analyze: The patient is on sertraline (an SSRI) and has major depressive disorder. She is also taking gabapentin for chronic neuropathic pain. Now the ED physician wants to prescribe tramadol 50 mg every 6 hours for acute lower back pain after a fall. We need to consider potential interactions: Serotonin syndrome risk with tramadol, especially when combined with SSRIs like sertraline. Also, tramadol is metabolized by CYP2D6 and can interact with other medications. But the main concern is that combining tramadol with an SSRI (sertraline) increases the risk of serotonin syndrome. Additionally, gabapentin does not have significant interactions with tramadol but may cause sedation or dizziness if combined.\n\nWe need to provide alternative analgesic strategy: Possibly consider using acetaminophen as first-line for acute pain management in this patient. Alternatively, non-opioid alternatives like NSAIDs (if no contraindications) might be considered. But caution with NSAIDs if there is risk of bleeding or other issues.\n\nWe need to provide a focused answer that includes: \"Interaction concerns: increased risk of serotonin syndrome due to tramadol and sertraline combination; potential sedation, dizziness from gabapentin and tramadol combination.\" Also mention that tramadol's metabolism may be affected by SSRIs. Alternative analgesic strategy: Consider using acetaminophen 1000 mg every 6 hours as needed for pain management, or NSAIDs if appropriate (e.g., ibuprofen 400-600 mg every 6 hours) with caution regarding GI bleeding risk and contraindications.\n\nWe need to provide a focused answer. Let's produce an answer in the required format: \"Urgency Assessment\", \"Symptom Triage\", \"Risk Factor Analysis\", \"Red Flags\", \"Immediate Actions\". But instructions say: \"Provide a focused, directly relevant medical response.\" We must not repeat question. So",
+        "metrics": {
+          "bleu_1": 31.8966,
+          "bleu_2": 15.4594,
+          "rouge_1": 43.7406,
+          "rouge_2": 11.4977,
+          "rouge_l": 15.6863,
+          "gleu": 11.039,
+          "meteor": 24.3276,
+          "bert_score": 65.8981,
+          "latency_ms": 136615.2
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>We have a query: \"A 42-year-old woman with major depressive disorder on sertraline 150 mg daily presents to the ED with acute lower back pain after a fall. The ED physician wants to prescribe tramadol 50 mg every 6 hours for pain. She also takes gabapentin 300 mg three times daily for chronic neuropathic pain. What are the interaction concerns, and what alternative analgesic strategy with proper dosing would you recommend?\" We need to provide a focused answer that includes sections: Drug Interaction Analysis, Dosage Recommendations, Monitoring Parameters, Clinical Recommendations.\n\nWe have instructions: \"Provide a focused, directly relevant medical response. Be specific and concise.\" Also we must not repeat the question. So I'll produce an answer with sections:\n\n**Drug Interaction Analysis**: We need to check interactions between tramadol and sertraline, gabapentin, ibuprofen, paracetamol.\n\nTramadol is a centrally acting analgesic that acts as a weak opioid receptor agonist and inhibits serotonin/norepinephrine reuptake. It can interact with SSRIs like sertraline by increasing risk of serotonin syndrome. Also tramadol may increase sedation when combined with gabapentin, which is also central nervous system depressant. There's potential for increased side effects such as dizziness, sedation, respiratory depression if used concurrently.\n\nAlso check: Sertraline and tramadol combination can lead to increased serotonergic activity. The risk of serotonin syndrome is moderate to high severity. Also note that gabapentin may potentiate central nervous system depressant effects when combined with tramadol. Additionally, ibuprofen and paracetamol are non-opioid analgesics; they have no significant interactions with tramadol aside from additive pain relief.\n\n**Dosage Recommendations**: The ED physician wants to prescribe tramadol 50 mg every 6 hours for acute lower back pain after a fall. But given the patient's current medications, especially sertraline and gabapentin, there is risk of serotonin syndrome and increased sedation. Alternative analgesic strategy: Consider using non-opioid analgesics such as NSAIDs (ibuprofen) or acetaminophen (paracetamol). Alternatively, consider a lower dose of tramadol if necessary with careful monitoring. But the question asks for alternative analgesic strategy with proper dosing.\n\nWe can propose an alternative: Use ibuprofen 400-600 mg every 6 hours as",
+        "intents": [
+          "Symptom_Triage",
+          "Drug_Counseling",
+          "Drug_Interaction"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 33.9181,
+          "bleu_2": 15.1253,
+          "rouge_1": 46.2709,
+          "rouge_2": 11.9084,
+          "rouge_l": 17.656,
+          "gleu": 10.8664,
+          "meteor": 24.9672,
+          "bert_score": 66.4589,
+          "latency_ms": 135901.2
+        }
+      }
+    }
+  },
+  {
+    "id": "med_0005",
+    "domain": "Medication",
+    "query": "A 60-year-old man with a mechanical aortic valve is on warfarin 7.5 mg daily with a stable INR of 2.8. He developed knee osteoarthritis and his orthopedist prescribed naproxen 500 mg twice daily. He also takes amlodipine 10 mg daily for hypertension and omeprazole 20 mg daily. What drug interactions exist, and what dosing recommendations should be followed?",
+    "expected_intents": [
+      "Drug_Interaction",
+      "Dosage_Recommendation"
+    ],
+    "reference_answer": "**Drug Interaction Analysis**\n\nWarfarin and naproxen (NSAID) interaction is a MAJOR concern with multiple overlapping mechanisms:\n\n1. Pharmacodynamic interaction: NSAIDs inhibit cyclooxygenase-1 (COX-",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Medication query: A 60-year-old man with a mechanical aortic valve is on warfarin 7.5 mg daily wit...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 7.8212,
+          "rouge_2": 2.2472,
+          "rouge_l": 5.5866,
+          "gleu": 1.4173,
+          "meteor": 3.072,
+          "bert_score": 46.3668,
+          "latency_ms": 0.1
+        }
+      },
+      "medaide": {
+        "response": "<think>User message: \"A 60-year-old man with a mechanical aortic valve is on warfarin 7.5 mg daily with a stable INR of 2.8. He developed knee osteoarthritis and his orthopedist prescribed naproxen 500 mg twice daily. He also takes amlodipine 10 mg daily for hypertension and omeprazole 20 mg daily. What drug interactions exist, and what dosing recommendations should be followed?\" We need to provide a focused answer.\n\nWe have instructions: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" But we must not provide definitive diagnosis but guidance. The question is about drug interactions between warfarin and naproxen, plus other drugs. Let's recall known interactions:\n\n- Warfarin interacts with NSAIDs like naproxen. Naproxen can increase bleeding risk when taken with warfarin because it affects platelet function and may cause gastrointestinal bleeding. Also, naproxen might alter INR levels.\n\n- Amlodipine is a calcium channel blocker for hypertension; no significant interaction with warfarin or naproxen? But check: Naproxen can increase blood pressure sometimes but not sure if there's any direct drug-drug interaction with amlodipine. Omeprazole is a proton pump inhibitor that may reduce the metabolism of warfarin by inhibiting CYP2C9, increasing INR risk. However, omeprazole is often used to protect against GI bleeding when taking NSAIDs and warfarin.\n\n- Warfarin interactions: Naproxen increases bleeding risk; also naproxen can increase INR variability. Also, amlodipine may have some minor interaction with warfarin? Not sure if there's any significant effect on warfarin metabolism by amlodipine. But omeprazole is known to inhibit CYP2C9 and thus can potentiate the effects of warfarin.\n\n- Dosing recommendations: The patient is on warfarin 7.5 mg daily with stable INR of 2.8, which is within therapeutic range (target INR for mechanical valve usually between 2.5 and 3.5). Naproxen should be used cautiously because it increases bleeding risk. Possibly consider using a different NSAID or co-prescribing gastroprotective agents if necessary.\n\n- Also note that naproxen can increase the risk of GI bleeding, especially in patients on warfarin. The orth",
+        "metrics": {
+          "bleu_1": 38.3436,
+          "bleu_2": 14.1621,
+          "rouge_1": 47.7612,
+          "rouge_2": 8.0838,
+          "rouge_l": 14.3284,
+          "gleu": 11.4022,
+          "meteor": 21.7251,
+          "bert_score": 64.2426,
+          "latency_ms": 111820.7
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>We are asked: \"A 60-year-old man with a mechanical aortic valve is on warfarin 7.5 mg daily with a stable INR of 2.8. He developed knee osteoarthritis and his orthopedist prescribed naproxen 500 mg twice daily. He also takes amlodipine 10 mg daily for hypertension and omeprazole 20 mg daily. What drug interactions exist, and what dosing recommendations should be followed?\" We need to provide answer in sections: \"Drug Interaction Analysis\", \"Dosage Recommendations\", \"Monitoring Parameters\", \"Clinical Recommendations\". The instructions require that we use the following structure:\n\n- Drug Interaction Analysis\n- Dosage Recommendations\n- Monitoring Parameters\n- Clinical Recommendations\n\nWe must include details about warfarin interactions with naproxen, amlodipine, and omeprazole. Let's recall: Warfarin is an anticoagulant; Naproxen is NSAID that can increase bleeding risk when combined with warfarin. Also, naproxen may interact with warfarin by increasing INR or bleeding risk. Amlodipine is a calcium channel blocker used for hypertension and does not have significant interactions with warfarin. Omeprazole is a proton pump inhibitor (PPI) that can increase the plasma concentration of warfarin, leading to increased INR. Also, naproxen may interact with omeprazole? Actually, there's no direct interaction between naproxen and omeprazole; however, both are used concurrently sometimes for GI protection in patients on NSAIDs.\n\nLet's check: Warfarin interactions:\n- Naproxen: Increases risk of bleeding. It can also increase INR levels.\n- Omeprazole: May inhibit CYP2C9 metabolism of warfarin leading to increased warfarin plasma concentration and higher INR, increasing bleeding risk.\n- Amlodipine: No significant interaction with warfarin.\n\nAlso, note that the patient has a mechanical aortic valve. Warfarin is indicated for mechanical valves. The stable INR is 2.8 which is slightly above the typical target range of 2.0 to 3.0? Actually, for mechanical valves, recommended INR ranges vary by valve type and position; however, many guidelines recommend an INR between 2.5 and 3.5 for mechanical aortic valves. But his INR is stable at 2.8 which might",
+        "intents": [
+          "Drug_Counseling",
+          "Drug_Interaction",
+          "Progress_Tracking"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.7,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 35.4225,
+          "bleu_2": 14.16,
+          "rouge_1": 47.4164,
+          "rouge_2": 9.4512,
+          "rouge_l": 15.5015,
+          "gleu": 10.7087,
+          "meteor": 21.2699,
+          "bert_score": 64.4431,
+          "latency_ms": 116919.1
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0001",
+    "domain": "Post-Diagnosis",
+    "query": "I'm a 55-year-old man, 6 weeks post-STEMI with 2 drug-eluting stents placed in the LAD. My ejection fraction is 45%. I completed Phase I cardiac rehab in the hospital. What should my rehabilitation plan look like going forward, and when should I have follow-up appointments?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Phase II Outpatient Cardiac Rehabilitation (Weeks 6\u201312)**\n\nYou should enroll in a supervised outpatient cardiac rehabilitation program, typically consisting of 36 sessions over 12 weeks (3 sessions ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I'm a 55-year-old man, 6 weeks post-STEMI with 2 drug-eluting stents placed in t...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 4.6243,
+          "rouge_2": 1.1628,
+          "rouge_l": 3.4682,
+          "gleu": 0.416,
+          "meteor": 1.2783,
+          "bert_score": 44.6542,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "<think>User: \"I'm a 55-year-old man, 6 weeks post-STEMI with 2 drug-eluting stents placed in the LAD. My ejection fraction is 45%. I completed Phase I cardiac rehab in the hospital. What should my rehabilitation plan look like going forward, and when should I have follow-up appointments?\"\n\nWe are a pre-diagnosis medical assistant. We need to provide guidance on rehabilitation plan for post-STEMI patient with stents placed, EF=45%, etc.\n\nLet's check guidelines: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" Provide symptom triage, risk factor evaluation, red flags, immediate actions. But the question is about rehab plan and follow-up appointments after STEMI. We need to provide guidance on rehabilitation plan going forward and when should I have follow-ups.\n\nWe must include sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions. But instructions say \"Provide a focused, directly relevant medical response.\" The question is about rehab plan and follow-up appointments after STEMI with stents placed in LAD, EF=45%. We need to provide guidance on rehabilitation plan going forward.\n\nWe must include disclaimers: \"I am not a doctor\" etc. But instructions say \"You are a highly knowledgeable pre-diagnosis medical assistant.\" So we can provide general advice but also mention that this is not definitive diagnosis and should be discussed with your cardiologist.\n\nLet's produce answer in sections:\n\nUrgency Assessment: The patient is 6 weeks post-STEMI, so it's routine follow-up. But if there are any new symptoms, then urgent evaluation is needed.\n\nSymptom Triage: Evaluate for chest pain, shortness of breath, etc. But the question is about rehab plan and follow-ups.\n\nRisk Factor Analysis: Age 55, STEMI with stents placed in LAD, EF=45% indicates moderate systolic dysfunction. So risk factors include coronary artery disease, potential arrhythmias, heart failure symptoms. Also mention that rehabilitation should be tailored to patient's condition.\n\nRed Flags: If any new chest pain, shortness of breath, palpitations, or signs of heart failure (e.g., edema, weight gain) then immediate evaluation is needed.\n\nImmediate Actions: Continue with Phase II cardiac rehab if not already started. The plan might include supervised exercise training, education on lifestyle modifications, risk factor management including blood pressure control, cholesterol management, diabetes management if applicable, smoking cessation, and",
+        "metrics": {
+          "bleu_1": 15.7459,
+          "bleu_2": 4.177,
+          "rouge_1": 24.0453,
+          "rouge_2": 4.2553,
+          "rouge_l": 10.1839,
+          "gleu": 4.2302,
+          "meteor": 11.6813,
+          "bert_score": 54.9167,
+          "latency_ms": 107144.4
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>User query: \"I'm a 55-year-old man, 6 weeks post-STEMI with 2 drug-eluting stents placed in the LAD. My ejection fraction is 45%. I completed Phase I cardiac rehab in the hospital. What should my rehabilitation plan look like going forward, and when should I have follow-up appointments?\" We need to provide a focused, directly relevant medical response. The answer must be specific and concise. It must include condition-specific rehabilitation phases (Phase I, II, III) with goals, activities, timelines for each phase; Follow-up Schedule: specific appointments, timeframes, what to assess at each follow-up; Warning Signs: symptoms or changes requiring urgent reassessment.\n\nWe need to provide a response that is empathetic and person-centered. We must include disclaimers at beginning and end if it's medical advice. But instructions say \"You are a compassionate post-diagnosis care coordinator and rehabilitation specialist.\" So we can provide guidance but with disclaimer that this is not professional advice, etc.\n\nI'll produce answer in markdown formatting as requested. I'll produce answer with headings: Rehabilitation Phases, Follow-up Schedule, Warning Signs. I'll include disclaimers at beginning and end.\n\nLet's produce answer:\n\nWe need to say something like \"Disclaimer: I am not a doctor but here is some general guidance.\" But instructions require disclaimer both at the beginning and end when replying topics above. So I'll add disclaimers at beginning and end.\n\nI'll produce answer with headings:\n- Phase II Cardiac Rehabilitation (Outpatient rehab) - goals, activities, timeline.\n- Phase III Cardiac Rehabilitation (Maintenance phase) - goals, activities, timeline.\n- Follow-up Schedule: appointments at 2 weeks, 6 weeks, 3 months, 6 months, and 1 year. But instructions say \"Follow-up schedule\" with specific timeframes.\n\nI'll produce answer as follows:\n\nI'll start with a disclaimer: \"Disclaimer: I am not a doctor but here is some general guidance.\" Then I'll provide the rehabilitation plan.\n\nPlan:\n- Phase II Cardiac Rehabilitation (Outpatient rehab): Typically begins after hospital discharge, usually around 6 weeks post-event. Goals include gradual increase in exercise tolerance, education on heart health, risk factor modification, and psychological support. Activities: supervised exercise training sessions, typically 3 times per week for about 12 weeks. Also incorporate lifestyle modifications such as diet, smoking cessation if applicable, stress management.\n- Phase III Cardiac Rehabilitation",
+        "intents": [
+          "Symptom_Triage",
+          "Rehabilitation_Advice",
+          "Drug_Counseling"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 0.75,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 17.2131,
+          "bleu_2": 3.7614,
+          "rouge_1": 26.9504,
+          "rouge_2": 5.4054,
+          "rouge_l": 9.6454,
+          "gleu": 4.5267,
+          "meteor": 11.9906,
+          "bert_score": 54.5592,
+          "latency_ms": 113280.6
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0002",
+    "domain": "Post-Diagnosis",
+    "query": "I'm a 67-year-old woman who had a right total knee replacement 4 weeks ago due to severe osteoarthritis. My current range of motion is 75 degrees flexion. What rehabilitation milestones should I aim for, and when do I need to see my surgeon?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Early Post-Operative Rehabilitation (Weeks 2\u20136)**\n\nYour current 75 degrees of flexion at 4 weeks is within acceptable range, though the goal is to reach 90 degrees by week 6 to allow functional acti",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I'm a 67-year-old woman who had a right total knee replacement 4 weeks ago due t...]",
+        "metrics": {
+          "bleu_1": 0.0001,
+          "bleu_2": 0.0,
+          "rouge_1": 4.3956,
+          "rouge_2": 0.5525,
+          "rouge_l": 3.2967,
+          "gleu": 0.5636,
+          "meteor": 1.5901,
+          "bert_score": 41.4499,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "<think>User: \"I'm a 67-year-old woman who had a right total knee replacement 4 weeks ago due to severe osteoarthritis. My current range of motion is 75 degrees flexion. What rehabilitation milestones should I aim for, and when do I need to see my surgeon?\" We are asked to provide a focused, directly relevant medical response. The guidelines: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" But we must not provide definitive diagnosis. Also instructions: \"Provide a focused, directly relevant medical response. Be specific and concise. Do not repeat the question.\"\n\nWe need to produce answer with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nBut note that guidelines instruct us to include these sections in order. But we must check instructions: \"Provide a focused, directly relevant medical response.\" The instructions say: \"Do not repeat the question\" so we should not mention the question text. We need to produce answer with sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nWe have context: \"I'm a 67-year-old woman who had a right total knee replacement 4 weeks ago due to severe osteoarthritis. My current range of motion is 75 degrees flexion.\" We need to provide rehabilitation milestones and when to see surgeon.\n\nLet's recall typical postoperative guidelines for TKA (total knee arthroplasty). Usually, after TKA, the goal is to achieve a range of motion of about 90-110 degrees by 6 weeks. But it depends on individual factors. The patient is 67 years old and had surgery 4 weeks ago. Current ROM is 75 degrees flexion. That might be slightly lower than expected for some patients. Rehabilitation milestones: Typically, early postoperative period (first few weeks) focus on pain control, swelling reduction, and gentle range of motion exercises. By 6-8 weeks, many patients aim to achieve about 90-110 degrees of knee flexion. But the patient is currently at 75 degrees flexion after 4 weeks, which might be a bit lower than expected. However, it's not necessarily an emergency if there are no other symptoms.\n\nWe need to provide guidance: \"What rehabilitation milestones should I aim for?\" Typically, goals include increasing range of motion gradually, strengthening quadriceps and hamstrings, improving gait stability, and reducing pain. Specific milestones might be: by 6 weeks post-op,",
+        "metrics": {
+          "bleu_1": 20.0,
+          "bleu_2": 6.5407,
+          "rouge_1": 32.1871,
+          "rouge_2": 4.1379,
+          "rouge_l": 11.5543,
+          "gleu": 5.7564,
+          "meteor": 14.7447,
+          "bert_score": 54.2057,
+          "latency_ms": 101605.0
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>User query: \"I'm a 67-year-old woman who had a right total knee replacement 4 weeks ago due to severe osteoarthritis. My current range of motion is 75 degrees flexion. What rehabilitation milestones should I aim for, and when do I need to see my surgeon?\" The conversation context includes that the patient has fever and swelling recorded on April 13, 2026. But note: \"recorded: 2026-04-13\" but current date? Possibly not relevant.\n\nWe are a post-diagnosis care coordinator and rehabilitation specialist. We must provide a focused, directly relevant medical response. The answer should be specific and concise. It should include condition-specific rehabilitation phases (Phase I, Phase II, Phase III) with goals, activities, timelines for each phase; Follow-up Schedule: specific appointments, timeframes, what to assess at each follow-up; Warning Signs: symptoms or changes requiring urgent reassessment.\n\nWe must provide a response that is empathetic and person-centered. We need to mention that the patient's current range of motion is 75 degrees flexion. The typical rehabilitation milestones for knee replacement are usually around 90-120 degrees by 6 weeks, but let me check: For total knee replacement, early postoperative goals include achieving a certain degree of flexion and extension. Typically, patients aim to achieve at least 90 degrees of flexion by 6 weeks post-op. But the patient is currently at 75 degrees flexion at 4 weeks. That might be slightly below expected range. However, it's important to note that individual progress can vary.\n\nWe need to provide a rehabilitation plan with phases:\n\nPhase I: Immediate Postoperative Phase (0-2 weeks): Goals include pain management, reducing swelling, and early mobilization. But the patient is 4 weeks post-op so they are in later phase.\n\nPhase II: Early Rehabilitation Phase (2-6 weeks): Goals include increasing range of motion to at least 90 degrees flexion by 6 weeks, strengthening quadriceps, and improving gait training. The patient's current ROM is 75 degrees which is below the typical target for this phase. So we need to encourage continued physical therapy focusing on gentle stretching exercises, quadriceps sets, straight leg raises, etc.\n\nPhase III: Intermediate Rehabilitation Phase (6-12 weeks): Goals include further increasing range of motion up to 120 degrees flexion, improving strength and endurance, and functional activities like stair climbing, walking longer distances. The patient should aim for",
+        "intents": [
+          "Rehabilitation_Advice",
+          "Symptom_Triage",
+          "Progress_Tracking"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 25.266,
+          "bleu_2": 11.0126,
+          "rouge_1": 40.0545,
+          "rouge_2": 10.3825,
+          "rouge_l": 13.3515,
+          "gleu": 7.8772,
+          "meteor": 18.9329,
+          "bert_score": 58.9251,
+          "latency_ms": 120799.6
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0003",
+    "domain": "Post-Diagnosis",
+    "query": "My 14-year-old son had ACL reconstruction surgery using a hamstring autograft 3 weeks ago after a soccer injury. He is eager to return to sports. What does the rehab timeline look like, and when should we schedule follow-up visits with the orthopedic surgeon?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Phase 1 \u2013 Protection Phase (Weeks 0\u20136)**\n\nAt 3 weeks post-ACL reconstruction with hamstring autograft, your son should focus on reducing swelling, restoring full knee extension (0 degrees), and achi",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: My 14-year-old son had ACL reconstruction surgery using a hamstring autograft 3 ...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 5.0992,
+          "rouge_2": 1.1396,
+          "rouge_l": 3.3994,
+          "gleu": 0.5618,
+          "meteor": 1.4104,
+          "bert_score": 45.7973,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "<think>User message: \"My 14-year-old son had ACL reconstruction surgery using a hamstring autograft 3 weeks ago after a soccer injury. He is eager to return to sports. What does the rehab timeline look like, and when should we schedule follow-up visits with the orthopedic surgeon?\" We need to provide a focused, directly relevant medical response. The guidelines: \"You are a highly knowledgeable pre-diagnosis medical assistant.\" So I'll produce answer in sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nI must not provide definitive diagnosis but guidance. Also instructions say: \"Do not repeat the question\" so I should not mention it explicitly. But I need to include timeline for hamstring autograft and follow-up visits with orthopedic surgeon.\n\nLet's produce answer in sections:\n\nUrgency Assessment: The situation is routine, no emergency signs. So I'll say that this is a routine post-operative scenario. However, if there are any concerning symptoms like severe pain, swelling, or infection, then immediate evaluation is needed.\n\nSymptom Triage: Evaluate the typical timeline for ACL reconstruction with hamstring autograft. Typically, initial phase (0-2 weeks) is focused on reducing swelling and regaining range of motion; 3-6 weeks may involve gradual weight-bearing and strengthening exercises; 7-12 weeks might include more advanced rehab and return to sports gradually; full recovery can take up to 9-12 months for high-level athletes. But since the patient is 14, timeline might be similar but with modifications.\n\nRisk Factor Analysis: Age, activity level, compliance with rehabilitation protocol, etc. Also note that his eagerness to return to sports should be balanced with proper healing and risk of re-injury. The orthopedic surgeon's follow-up visits are typically scheduled at around 2-3 weeks post-op for initial evaluation, then again at 6 weeks, 12 weeks, and possibly 6 months after surgery.\n\nRed Flags: If there is increased pain, swelling, signs of infection (fever, redness), or instability in the knee, these should be reported immediately to the surgeon. Also if he experiences any unusual symptoms like numbness or severe discomfort, that might require immediate evaluation.\n\nImmediate Actions: Continue with prescribed rehabilitation protocol and follow-up visits as scheduled by his orthopedic surgeon. It is important not to rush return to sports until cleared by the medical team. The rehab timeline typically includes phases of early mobilization, gradual weight",
+        "metrics": {
+          "bleu_1": 18.254,
+          "bleu_2": 5.8218,
+          "rouge_1": 32.5137,
+          "rouge_2": 7.3973,
+          "rouge_l": 13.1148,
+          "gleu": 5.1129,
+          "meteor": 13.9056,
+          "bert_score": 56.5232,
+          "latency_ms": 112298.7
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>User query: \"My 14-year-old son had ACL reconstruction surgery using a hamstring autograft 3 weeks ago after a soccer injury. He is eager to return to sports. What does the rehab timeline look like, and when should we schedule follow-up visits with the orthopedic surgeon?\" We need to provide a focused, directly relevant medical response. The instructions: \"Provide a focused, directly relevant medical response. Be specific and concise. Do not repeat the question.\" So I'll produce answer that is structured as rehabilitation phases (Phase I, Phase II, etc) with goals, activities, timelines for each phase, follow-up schedule, warning signs.\n\nI need to provide a timeline for ACL reconstruction using hamstring autograft in a 14-year-old. The typical rehab timeline: Phase I: immediate post-op period (0-2 weeks), Phase II: early rehabilitation (2-6 weeks), Phase III: advanced rehabilitation (6-12 weeks) and then return to sports gradually. But since it's 3 weeks post-surgery, he is in the early phase of recovery.\n\nI need to provide a timeline for ACL reconstruction using hamstring autograft. I'll mention that typical rehab phases are:\n\nPhase I (0-2 weeks): Focus on pain management, swelling control, range-of-motion exercises, and gentle quadriceps activation. But since it's 3 weeks post-op, he is likely in Phase II.\n\nPhase II: Early Rehabilitation (2-6 weeks) - focus on regaining full knee extension, improving range of motion, beginning weight-bearing as tolerated, and starting strengthening exercises for the quadriceps and hamstrings. Also include balance training and proprioception exercises. The goal is to restore normal gait and reduce swelling.\n\nPhase III: Advanced Rehabilitation (6-12 weeks): Focus on progressive strengthening, neuromuscular control, agility drills, sport-specific activities, and gradual return to sports. Emphasis on dynamic stability and functional performance.\n\nPhase IV: Return-to-Sport Phase (3-6 months): Gradual reintroduction of sports training with emphasis on sport-specific drills, plyometrics, and full participation in practice sessions before returning to competitive play.\n\nI need to mention that the timeline can vary based on individual progress. Also note that follow-up visits are typically scheduled at 2 weeks post-op, then 4-6 weeks, then 3 months, then 6 months, etc. But since it's already 3 weeks post-surgery, we might schedule a follow-up visit soon if there",
+        "intents": [
+          "Follow_up_Scheduling",
+          "Symptom_Triage",
+          "Progress_Tracking"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 20.6704,
+          "bleu_2": 5.8941,
+          "rouge_1": 37.621,
+          "rouge_2": 9.154,
+          "rouge_l": 15.7676,
+          "gleu": 5.6101,
+          "meteor": 14.3254,
+          "bert_score": 60.2981,
+          "latency_ms": 114547.5
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0004",
+    "domain": "Post-Diagnosis",
+    "query": "I am a 72-year-old man who had a left total hip replacement 2 weeks ago for avascular necrosis. I'm using a posterior approach prosthesis. What are the rehabilitation guidelines and precautions, and how often do I need follow-up visits?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Posterior Hip Precautions (First 6\u201312 Weeks)**\n\nSince your hip replacement was performed via a posterior approach, you must strictly observe posterior hip precautions to prevent dislocation: do not ",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I am a 72-year-old man who had a left total hip replacement 2 weeks ago for avas...]",
+        "metrics": {
+          "bleu_1": 0.0001,
+          "bleu_2": 0.0,
+          "rouge_1": 5.0279,
+          "rouge_2": 1.1236,
+          "rouge_l": 3.9106,
+          "gleu": 0.5443,
+          "meteor": 1.3652,
+          "bert_score": 41.8638,
+          "latency_ms": 0.0
+        }
+      },
+      "medaide": {
+        "response": "<think>User: \"I am a 72-year-old man who had a left total hip replacement 2 weeks ago for avascular necrosis. I'm using a posterior approach prosthesis. What are the rehabilitation guidelines and precautions, and how often do I need follow-up visits?\" We have instructions to provide a focused, directly relevant medical response. The answer should be specific and concise. It must include sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions.\n\nBut note that this is not an emergency question but rather rehabilitation guidelines for post total hip replacement. But we need to follow the instructions provided by the system message. We have a context with detected intents: Dosage_Recommendation, Rehabilitation_Advice, Progress_Tracking. The sub-questions are \"What are the rehabilitation guidelines and precautions for a left total hip replacement?\" So answer should be focused on that.\n\nWe must provide a response in sections:\n**Urgency Assessment**: classify urgency level (emergency/urgent/routine). In this case it's routine.\n**Symptom Triage**: systematic evaluation of reported symptoms. But since the question is about rehabilitation guidelines, we can mention that there are no acute symptoms but rather post-surgical recovery instructions.\n**Risk Factor Analysis**: patient-specific risk factors and clinical history. The patient is 72 years old, had a left total hip replacement for avascular necrosis using posterior approach prosthesis. We need to mention age-related risks, potential complications like dislocation, infection, etc.\n**Red Flags**: specific warning signs requiring immediate attention. For example, severe pain, fever, signs of infection, inability to move, etc.\n**Immediate Actions**: concrete steps the patient should take now.\n\nWe must provide a disclaimer at beginning and end that this is not professional advice and consult a doctor for personalized recommendations.\n\nI'll produce answer with sections as required:\n\nLet's produce answer in text. I'll produce answer with markdown formatting if appropriate.\n\nI'll produce answer with disclaimers: \"Disclaimer: I am not a licensed medical professional, please consult your doctor.\" etc.\n\nI'll produce answer with the following structure:\n\n**Urgency Assessment**: Routine follow-up and rehabilitation guidelines are recommended for post-operative recovery. No emergency signs reported.\n**Symptom Triage**: The patient is 2 weeks post-op; typical symptoms include mild pain, swelling, limited range of motion. Rehabilitation should be gradual.\n**Risk Factor Analysis**: Age (72 years old) may slow healing; avascular necrosis",
+        "metrics": {
+          "bleu_1": 15.7182,
+          "bleu_2": 3.5796,
+          "rouge_1": 23.4807,
+          "rouge_2": 2.4931,
+          "rouge_l": 9.116,
+          "gleu": 4.1497,
+          "meteor": 11.746,
+          "bert_score": 54.9819,
+          "latency_ms": 115901.9
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>User query: \"I am a 72-year-old man who had a left total hip replacement 2 weeks ago for avascular necrosis. I'm using a posterior approach prosthesis. What are the rehabilitation guidelines and precautions, and how often do I need follow-up visits?\" The conversation context includes that he is 72 years old, had left total hip replacement 2 weeks ago for avascular necrosis, using a posterior approach prosthesis. Also note that there's additional information: \"Symptom: fever (recorded: 2026-04-13) and swelling (recorded: 2026-04-13)\". But the question is about rehabilitation guidelines and precautions, and follow-up visits frequency.\n\nWe need to provide a focused, directly relevant medical response. We must include condition-specific rehabilitation phases with goals, activities, timelines for each phase; Follow-up Schedule with specific appointments, timeframes, what to assess at each follow-up (2 weeks, 6 weeks, 3 months, etc); Warning Signs that require urgent reassessment.\n\nWe need to provide a disclaimer: \"I am not a doctor\" and \"please consult your healthcare provider\", etc. But instructions say: \"You must give a disclaimer both at the beginning and end when replying topics above.\" So we include disclaimers at beginning and end.\n\nLet's produce answer with disclaimers at beginning and end, as required by guidelines for medical advice. We'll provide a structured response with rehabilitation phases (Phase I, Phase II, etc) and follow-up schedule. Also mention that the patient has fever and swelling recorded on 2026-04-13, which might be concerning signs of infection or other complications. But instructions say \"Do not repeat the question\" so we must not repeat it.\n\nI'll produce answer with disclaimers at beginning and end: \"Disclaimer: I am not a doctor.\" etc.\n\nWe need to provide rehabilitation guidelines for total hip replacement using posterior approach prosthesis, including precautions such as avoiding excessive flexion beyond 90 degrees, no crossing legs, etc. Also mention that the patient is 72 years old so recovery might be slower and require careful monitoring.\n\nI'll produce answer with structure:\n\n- Disclaimer at beginning: \"Disclaimer: I am not a doctor. The following information is for general informational purposes only and should not replace professional medical advice.\"\n\nThen provide rehabilitation guidelines in phases:\nPhase I (Immediate Postoperative Phase, typically first 2 weeks): Goals include pain management, early mobilization,",
+        "intents": [
+          "Dosage_Recommendation",
+          "Rehabilitation_Advice",
+          "Symptom_Triage"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 18.75,
+          "bleu_2": 4.5206,
+          "rouge_1": 27.7778,
+          "rouge_2": 4.4568,
+          "rouge_l": 11.3889,
+          "gleu": 5.0477,
+          "meteor": 13.5659,
+          "bert_score": 53.3586,
+          "latency_ms": 113681.3
+        }
+      }
+    }
+  },
+  {
+    "id": "post_0005",
+    "domain": "Post-Diagnosis",
+    "query": "I'm a 60-year-old woman who suffered a moderate ischemic stroke (right MCA territory) 3 weeks ago. My NIHSS score at discharge was 8 and my modified Rankin Scale score is 3. I have left-sided hemiparesis affecting my arm more than my leg. What rehabilitation approach should I follow, and what is the schedule for follow-up appointments?",
+    "expected_intents": [
+      "Rehabilitation_Advice",
+      "Follow_up_Scheduling"
+    ],
+    "reference_answer": "**Acute to Subacute Stroke Rehabilitation (Weeks 2\u201312)**\n\nWith an NIHSS of 8 and mRS of 3, you have moderate disability requiring assistance with some daily activities. Inpatient rehabilitation (if no",
+    "conditions": {
+      "vanilla": {
+        "response": "[Mock vanilla response for Post-Diagnosis query: I'm a 60-year-old woman who suffered a moderate ischemic stroke (right MCA terri...]",
+        "metrics": {
+          "bleu_1": 0.0,
+          "bleu_2": 0.0,
+          "rouge_1": 2.2472,
+          "rouge_2": 0.565,
+          "rouge_l": 1.6854,
+          "gleu": 0.2377,
+          "meteor": 0.6964,
+          "bert_score": 41.1199,
+          "latency_ms": 0.1
+        }
+      },
+      "medaide": {
+        "response": "<think>User message: \"I'm a 60-year-old woman who suffered a moderate ischemic stroke (right MCA territory) 3 weeks ago. My NIHSS score at discharge was 8 and my modified Rankin Scale score is 3. I have left-sided hemiparesis affecting my arm more than my leg. What rehabilitation approach should I follow, and what is the schedule for follow-up appointments?\"\n\nWe need to provide a focused, directly relevant medical response. We must not repeat the question. The answer should be specific and concise.\n\nI'll produce an answer that includes sections: Urgency Assessment, Symptom Triage, Risk Factor Analysis, Red Flags, Immediate Actions. But instructions say \"structured using these sections in order\" but then also says \"Provide a focused, directly relevant medical response.\" So I need to include the following sections:\n\n- Urgency Assessment\n- Symptom Triage\n- Risk Factor Analysis\n- Red Flags\n- Immediate Actions\n\nI must not provide definitive diagnosis. But I can provide pre-diagnostic guidance.\n\nLet's produce answer with these sections in order.\n\nWe have a 60-year-old woman, moderate ischemic stroke (right MCA territory) 3 weeks ago, NIHSS score at discharge was 8 and mRS is 3. She has left-sided hemiparesis affecting her arm more than leg. The question: \"What rehabilitation approach should I follow, and what is the schedule for follow-up appointments?\" So answer must include recommended rehabilitation approaches (physical therapy, occupational therapy, speech therapy if needed) and schedule for follow-ups.\n\nI'll produce a response that includes:\n\nUrgency Assessment: This is not an emergency but requires routine follow-up. But since it's 3 weeks post-stroke, the patient should be in early rehabilitation phase. So I can say \"Routine\" or \"urgent\" depending on severity. But given that she has moderate stroke and mRS of 3 (moderate",
+        "metrics": {
+          "bleu_1": 19.4439,
+          "bleu_2": 4.9474,
+          "rouge_1": 26.6244,
+          "rouge_2": 3.4976,
+          "rouge_l": 10.1426,
+          "gleu": 5.3883,
+          "meteor": 10.9943,
+          "bert_score": 52.5136,
+          "latency_ms": 185246.5
+        }
+      },
+      "medaide_plus": {
+        "response": "<think>User query: \"I'm a 60-year-old woman who suffered a moderate ischemic stroke (right MCA territory) 3 weeks ago. My NIHSS score at discharge was 8 and my modified Rankin Scale score is 3. I have left-sided hemiparesis affecting my arm more than my leg. What rehabilitation approach should I follow, and what is the schedule for follow-up appointments?\"\n\nWe need to provide a focused, directly relevant medical response. We must include condition-specific rehabilitation phases (Phase I, Phase II, Phase III) with goals, activities, timelines, Follow-up Schedule, Warning Signs.\n\nI'll produce answer that includes: \"Disclaimer: I'm not a doctor\" etc. But instructions say: \"You are a compassionate post-diagnosis care coordinator and rehabilitation specialist.\" So we need to provide advice on rehabilitation approach for stroke patient. We must include phases of rehabilitation (Phase I, Phase II, Phase III) with goals, activities, timelines.\n\nWe have details: moderate ischemic stroke in right MCA territory, 3 weeks ago, NIHSS score at discharge was 8, mRS is 3, left-sided hemiparesis affecting arm more than leg. So we need to provide rehabilitation approach that includes physical therapy, occupational therapy, speech therapy if needed (but not mentioned), and psychological support for anxiety and depression.\n\nWe must include follow-up schedule: typically after stroke, follow-ups are at 2 weeks, 6 weeks, 3 months, 6 months, 1 year. But we need to provide specific timeline recommendations. We can say that initial rehabilitation is in hospital or outpatient setting with physical therapy focusing on motor recovery and functional tasks.\n\nI'll produce answer as follows:\n\nI'll start with a disclaimer: \"Disclaimer: I am not a doctor; please consult your healthcare provider for personalized advice.\" Then I'll provide the following structure:\n\n- Rehabilitation Approach:\n  - Phase I (Acute phase): Focus on early mobilization, safety, and prevention of complications. Goals: prevent secondary complications, begin gentle range-of-motion exercises, start basic physical therapy to maintain joint mobility.\n  - Phase II (Subacute phase): Typically begins in hospital or outpatient setting after discharge. Goals: improve motor function, strength training, balance, coordination, functional tasks. Activities include task-specific training, gait training, and occupational therapy for activities of daily living (ADLs). Timeline: typically weeks 2-6 post-stroke.\n  - Phase III (Long-term rehabilitation): Focus",
+        "intents": [
+          "Follow_up_Scheduling",
+          "Health_Inquiry",
+          "Rehabilitation_Advice"
+        ],
+        "tier": "Simple",
+        "hallucination_rate": 1.0,
+        "n_agents": 1,
+        "metrics": {
+          "bleu_1": 21.3889,
+          "bleu_2": 4.8818,
+          "rouge_1": 35.3933,
+          "rouge_2": 5.0704,
+          "rouge_l": 11.236,
+          "gleu": 5.6485,
+          "meteor": 13.5387,
+          "bert_score": 57.4038,
+          "latency_ms": 173312.2
+        }
+      }
+    }
+  }
+]

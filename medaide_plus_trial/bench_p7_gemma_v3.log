@@ -1,0 +1,217 @@
+
+Benchmark: medaide_plus_benchmark_v2.json
+Models:    gemma3:4b
+Limit:     2 instances/category
+Output:    C:\Users\modip\OneDrive\Desktop\college study material-PunyaModi\Sem 8\Major\medaide_plus_trial\data\benchmark\ollama_results
+
+Local Ollama models: ['gpt-oss:20b', 'phi4-reasoning:14b', 'qwen3:8b', 'gemma3:4b']
+
+Ollama daemon: OK (status 200)
+
+
+######################################################################
+#  MODEL: gemma3:4b
+######################################################################
+  Pinging gemma3:4b... OK
+
+======================================================================
+  Running benchmark: gemma3:4b  (limit=2, condition=all)
+======================================================================
+INFO  
+Category: Pre-Diagnosis ù 2 instances
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Initializing MedAide+ full pipeline (may take 1û3 min)...
+INFO  Loaded config from C:\Users\modip\OneDrive\Desktop\college study material-PunyaModi\Sem 8\Major\medaide_plus_trial\config\_tmp_ollama_gemma3_4b.yaml.
+2026-04-11 02:45:53,628 | medaide_plus.pipeline | [32mINFO[0m | Loaded config from C:\Users\modip\OneDrive\Desktop\college study material-PunyaModi\Sem 8\Major\medaide_plus_trial\config\_tmp_ollama_gemma3_4b.yaml.
+INFO  Initializing MedAide+ Pipeline...
+2026-04-11 02:45:53,629 | medaide_plus.pipeline | [32mINFO[0m | Initializing MedAide+ Pipeline...
+2026-04-11 02:45:53,638 | medaide_plus.llm_provider | [32mINFO[0m | Creating provider from YAML config: ollama
+INFO  Creating provider from YAML config: ollama
+INFO  Creating LLM provider: ollama (model=gemma3:4b)
+2026-04-11 02:45:53,639 | medaide_plus.llm_provider | [32mINFO[0m | Creating LLM provider: ollama (model=gemma3:4b)
+2026-04-11 02:45:53,639 | medaide_plus.pipeline | [32mINFO[0m | LLM provider initialized: OllamaProvider
+INFO  LLM provider initialized: OllamaProvider
+2026-04-11 02:45:53,639 | medaide_plus.pipeline | [32mINFO[0m | Seeding KB with sample medical guidelines.
+INFO  Seeding KB with sample medical guidelines.
+INFO  Disabling Tensorflow because USE_TORCH is set
+INFO  Use pytorch device_name: cuda
+INFO  Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-04-11 02:45:57,656 | medaide_plus.rag | [32mINFO[0m | Sentence-transformer loaded: all-MiniLM-L6-v2
+INFO  Sentence-transformer loaded: all-MiniLM-L6-v2
+INFO  Loading faiss with AVX512 support.
+INFO  Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+INFO  Loading faiss with AVX2 support.
+INFO  Successfully loaded faiss with AVX2 support.
+2026-04-11 02:45:57,977 | medaide_plus.rag | [32mINFO[0m | Added 5 documents. Total: 5.
+INFO  Added 5 documents. Total: 5.
+INFO  Added 5 documents. Total: 5.
+INFO  Loading modules...
+2026-04-11 02:45:57,977 | medaide_plus.kb_manager | [32mINFO[0m | Added 5 documents. Total: 5.
+2026-04-11 02:45:57,977 | medaide_plus.pipeline | [32mINFO[0m | Loading modules...
+INFO  Loading Flan-T5 model: google/flan-t5-base
+2026-04-11 02:45:57,999 | medaide_plus.m1_amqu | [32mINFO[0m | Loading Flan-T5 model: google/flan-t5-base
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+2026-04-11 02:46:00,077 | medaide_plus.m1_amqu | [32mINFO[0m | Flan-T5 loaded successfully.
+INFO  Flan-T5 loaded successfully.
+INFO  Use pytorch device_name: cuda
+INFO  Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-04-11 02:46:03,220 | medaide_plus.m1_amqu | [32mINFO[0m | Sentence-transformer loaded for consistency filtering.
+INFO  Sentence-transformer loaded for consistency filtering.
+2026-04-11 02:46:03,221 | medaide_plus.m2_hdio | [32mINFO[0m | Loading BioBERT: dmis-lab/biobert-base-cased-v1.2
+INFO  Loading BioBERT: dmis-lab/biobert-base-cased-v1.2
+INFO  BioBERT loaded successfully.
+2026-04-11 02:46:06,089 | medaide_plus.m2_hdio | [32mINFO[0m | BioBERT loaded successfully.
+2026-04-11 02:46:07,052 | medaide_plus.m4_plmm | [33mWARNING[0m | spaCy model en_core_web_sm not found. Run: python -m spacy download en_core_web_sm. Using regex fallback.
+WARNING  spaCy model en_core_web_sm not found. Run: python -m spacy download en_core_web_sm. Using regex fallback.
+INFO  Use pytorch device_name: cuda
+INFO  Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-04-11 02:46:10,135 | medaide_plus.m5_hdfg | [32mINFO[0m | Sentence-transformer loaded for HDFG.
+INFO  Sentence-transformer loaded for HDFG.
+2026-04-11 02:46:10,180 | medaide_plus.m5_hdfg | [32mINFO[0m | FAISS index built with 5 documents.
+INFO  FAISS index built with 5 documents.
+INFO  Use pytorch device_name: cuda
+INFO  Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+INFO  MedAide+ Pipeline initialized successfully.
+2026-04-11 02:46:13,329 | medaide_plus.pipeline | [32mINFO[0m | MedAide+ Pipeline initialized successfully.
+INFO  Pipeline ready.
+INFO  AMQU processing query: I am a 58-year-old male with a history of type 2 diabetes and hypertension. For ...
+2026-04-11 02:46:13,330 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU processing query: I am a 58-year-old male with a history of type 2 diabetes and hypertension. For ...
+2026-04-11 02:46:16,316 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  AMQU complete: 1 subqueries, 5 docs retrieved.
+2026-04-11 02:46:16,356 | medaide_plus.m3_dmacn | [32mINFO[0m | DMACN: running 1 agents in parallel for query: I am a 58-year-old male with a history of type 2 diabetes an...
+INFO  DMACN: running 1 agents in parallel for query: I am a 58-year-old male with a history of type 2 diabetes an...
+INFO  HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+2026-04-11 02:48:09,948 | medaide_plus.pipeline | [32mINFO[0m | Pipeline: processing query for patient=eval_pre_0001
+INFO  Pipeline: processing query for patient=eval_pre_0001
+2026-04-11 02:48:09,959 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU processing query: [Patient History - ID: eval_pre_0001]
+INFO  AMQU processing query: [Patient History - ID: eval_pre_0001]
+  ò Diagnosis: diabetes (recorded: 2026-04...
+  ò Diagnosis: diabetes (recorded: 2026-04...
+2026-04-11 02:48:18,844 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  AMQU complete: 1 subqueries, 5 docs retrieved.
+2026-04-11 02:48:18,969 | medaide_plus.m6_aqcr | [32mINFO[0m | AQCR: query routed to 'Moderate' tier (2 agents, method=feature_based).
+INFO  AQCR: query routed to 'Moderate' tier (2 agents, method=feature_based).
+2026-04-11 02:48:18,969 | medaide_plus.pipeline | [32mINFO[0m | Routing to tier=Simple (1 agent) with reference-aligned specialist selection.
+INFO  Routing to tier=Simple (1 agent) with reference-aligned specialist selection.
+2026-04-11 02:48:18,969 | medaide_plus.m3_dmacn | [32mINFO[0m | DMACN: running 1 agents in parallel for query: [Patient History - ID: eval_pre_0001]
+INFO  DMACN: running 1 agents in parallel for query: [Patient History - ID: eval_pre_0001]
+  ò Diagnosis: diabete...
+  ò Diagnosis: diabete...
+INFO  HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-11 02:53:27,185 | medaide_plus.m4_plmm | [32mINFO[0m | PLMM: added 2 new nodes to patient eval_pre_0001's graph (total: 7).
+INFO  PLMM: added 2 new nodes to patient eval_pre_0001's graph (total: 7).
+2026-04-11 02:53:27,185 | medaide_plus.pipeline | [32mINFO[0m | Pipeline complete: tier=Simple, n_agents=1, confidence=0.650, hallucination_rate=0.600, latency=317237ms
+INFO  Pipeline complete: tier=Simple, n_agents=1, confidence=0.650, hallucination_rate=0.600, latency=317237ms
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+2026-04-11 02:53:32,135 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU processing query: I'm a 45-year-old woman with a BMI of 34 and a 20-pack-year smoking history. Ove...
+INFO  AMQU processing query: I'm a 45-year-old woman with a BMI of 34 and a 20-pack-year smoking history. Ove...
+2026-04-11 02:53:36,436 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  AMQU complete: 1 subqueries, 5 docs retrieved.
+2026-04-11 02:53:36,489 | medaide_plus.m3_dmacn | [32mINFO[0m | DMACN: running 1 agents in parallel for query: I'm a 45-year-old woman with a BMI of 34 and a 20-pack-year ...
+INFO  DMACN: running 1 agents in parallel for query: I'm a 45-year-old woman with a BMI of 34 and a 20-pack-year ...
+INFO  HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+2026-04-11 02:55:09,535 | medaide_plus.pipeline | [32mINFO[0m | Pipeline: processing query for patient=eval_pre_0002
+INFO  Pipeline: processing query for patient=eval_pre_0002
+2026-04-11 02:55:09,543 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU processing query: [Patient History - ID: eval_pre_0002]
+  ò Symptom: shortness of breath (recorded...
+INFO  AMQU processing query: [Patient History - ID: eval_pre_0002]
+  ò Symptom: shortness of breath (recorded...
+2026-04-11 02:55:19,513 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  AMQU complete: 1 subqueries, 5 docs retrieved.
+2026-04-11 02:55:19,624 | medaide_plus.m6_aqcr | [32mINFO[0m | AQCR: query routed to 'Moderate' tier (2 agents, method=feature_based).
+INFO  AQCR: query routed to 'Moderate' tier (2 agents, method=feature_based).
+2026-04-11 02:55:19,624 | medaide_plus.pipeline | [32mINFO[0m | Routing to tier=Simple (1 agent) with reference-aligned specialist selection.
+INFO  Routing to tier=Simple (1 agent) with reference-aligned specialist selection.
+2026-04-11 02:55:19,624 | medaide_plus.m3_dmacn | [32mINFO[0m | DMACN: running 1 agents in parallel for query: [Patient History - ID: eval_pre_0002]
+  ò Symptom: shortness...
+INFO  DMACN: running 1 agents in parallel for query: [Patient History - ID: eval_pre_0002]
+  ò Symptom: shortness...
+INFO  HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-11 03:10:18,342 | medaide_plus.m4_plmm | [32mINFO[0m | PLMM: added 0 new nodes to patient eval_pre_0002's graph (total: 5).
+INFO  PLMM: added 0 new nodes to patient eval_pre_0002's graph (total: 5).
+INFO  Pipeline complete: tier=Simple, n_agents=1, confidence=0.630, hallucination_rate=0.700, latency=908817ms
+2026-04-11 03:10:18,353 | medaide_plus.pipeline | [32mINFO[0m | Pipeline complete: tier=Simple, n_agents=1, confidence=0.630, hallucination_rate=0.700, latency=908817ms
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO    Pre-Diagnosis: 2/2 done
+INFO  
+Category: Diagnosis ù 2 instances
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  AMQU processing query: A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, ...
+2026-04-11 03:10:27,550 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU processing query: A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, ...
+2026-04-11 03:10:56,854 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  DMACN: running 1 agents in parallel for query: A 54-year-old woman presents with fatigue, weight gain of 15...
+2026-04-11 03:10:57,638 | medaide_plus.m3_dmacn | [32mINFO[0m | DMACN: running 1 agents in parallel for query: A 54-year-old woman presents with fatigue, weight gain of 15...
+INFO  HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Pipeline: processing query for patient=eval_dia_0001
+2026-04-11 03:12:58,669 | medaide_plus.pipeline | [32mINFO[0m | Pipeline: processing query for patient=eval_dia_0001
+2026-04-11 03:12:58,678 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU processing query: A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, ...
+INFO  AMQU processing query: A 54-year-old woman presents with fatigue, weight gain of 15 lbs over 6 months, ...
+2026-04-11 03:13:03,377 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  AQCR: query routed to 'Moderate' tier (2 agents, method=feature_based).
+2026-04-11 03:13:03,499 | medaide_plus.m6_aqcr | [32mINFO[0m | AQCR: query routed to 'Moderate' tier (2 agents, method=feature_based).
+INFO  Routing to tier=Simple (1 agent) with reference-aligned specialist selection.
+2026-04-11 03:13:03,499 | medaide_plus.pipeline | [32mINFO[0m | Routing to tier=Simple (1 agent) with reference-aligned specialist selection.
+2026-04-11 03:13:03,499 | medaide_plus.m3_dmacn | [32mINFO[0m | DMACN: running 1 agents in parallel for query: A 54-year-old woman presents with fatigue, weight gain of 15...
+INFO  DMACN: running 1 agents in parallel for query: A 54-year-old woman presents with fatigue, weight gain of 15...
+INFO  HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+INFO  PLMM: added 4 new nodes to patient eval_dia_0001's graph (total: 4).
+2026-04-11 03:15:04,079 | medaide_plus.m4_plmm | [32mINFO[0m | PLMM: added 4 new nodes to patient eval_dia_0001's graph (total: 4).
+2026-04-11 03:15:04,095 | medaide_plus.pipeline | [32mINFO[0m | Pipeline complete: tier=Simple, n_agents=1, confidence=0.590, hallucination_rate=1.000, latency=125424ms
+INFO  Pipeline complete: tier=Simple, n_agents=1, confidence=0.590, hallucination_rate=1.000, latency=125424ms
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+2026-04-11 03:15:11,795 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU processing query: A 67-year-old man with a 40-pack-year smoking history presents with progressive ...
+INFO  AMQU processing query: A 67-year-old man with a 40-pack-year smoking history presents with progressive ...
+2026-04-11 03:15:22,346 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  AMQU complete: 1 subqueries, 5 docs retrieved.
+2026-04-11 03:15:23,287 | medaide_plus.m3_dmacn | [32mINFO[0m | DMACN: running 1 agents in parallel for query: A 67-year-old man with a 40-pack-year smoking history presen...
+INFO  DMACN: running 1 agents in parallel for query: A 67-year-old man with a 40-pack-year smoking history presen...
+INFO  HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Using default tokenizer.
+INFO  Pipeline: processing query for patient=eval_dia_0002
+2026-04-11 03:17:26,593 | medaide_plus.pipeline | [32mINFO[0m | Pipeline: processing query for patient=eval_dia_0002
+2026-04-11 03:17:26,597 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU processing query: A 67-year-old man with a 40-pack-year smoking history presents with progressive ...
+INFO  AMQU processing query: A 67-year-old man with a 40-pack-year smoking history presents with progressive ...
+2026-04-11 03:17:37,948 | medaide_plus.m1_amqu | [32mINFO[0m | AMQU complete: 1 subqueries, 5 docs retrieved.
+INFO  AMQU complete: 1 subqueries, 5 docs retrieved.
+2026-04-11 03:17:38,062 | medaide_plus.m6_aqcr | [32mINFO[0m | AQCR: query routed to 'Moderate' tier (2 agents, method=feature_based).
+INFO  AQCR: query routed to 'Moderate' tier (2 agents, method=feature_based).
+2026-04-11 03:17:38,062 | medaide_plus.pipeline | [32mINFO[0m | Routing to tier=Simple (1 agent) with reference-aligned specialist selection.
+INFO  Routing to tier=Simple (1 agent) with reference-aligned specialist selection.
+2026-04-11 03:17:38,062 | medaide_plus.m3_dmacn | [32mINFO[0m | DMACN: running 1 agents in parallel for query: A 67-year-old man with a 40-pack-year smoking history presen...
+INFO  DMACN: running 1 agents in parallel for query: A 67-year-old man with a 40-pack-year smoking history presen...
+INFO  HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FFED6D0B99D  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFED8C7E8D7  Unknown               Unknown  Unknown
+ntdll.dll          00007FFED9AEC53C  Unknown               Unknown  Unknown

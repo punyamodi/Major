@@ -1,0 +1,60 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "eval_pos_0004",
+    "created_at": 1776029057.234883
+  },
+  "nodes": [
+    {
+      "text": "swelling",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776038852.8128676,
+      "source": "regex",
+      "id": "Symptom_swelling"
+    },
+    {
+      "text": "fever",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1776038852.8128657,
+      "source": "regex",
+      "id": "Symptom_fever"
+    },
+    {
+      "text": "april",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1776038852.8126266,
+      "source": "regex",
+      "id": "Medication_april"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776029072.6276293,
+      "source": "Symptom_swelling",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1776038852.8135214,
+      "source": "Symptom_fever",
+      "target": "Symptom_swelling"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776038852.8135214,
+      "source": "Medication_april",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1776038852.8135214,
+      "source": "Medication_april",
+      "target": "Symptom_swelling"
+    }
+  ]
+}

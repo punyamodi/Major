@@ -1,0 +1,58 @@
+{
+  "w/o RAC (M3)": {
+    "key": "w/o RAC",
+    "description": "No parallel agent collaboration; single agent sequential response",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 13.21,
+        "gleu": 4.2,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 14.74,
+        "gleu": 4.13,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 12.24,
+        "gleu": 4.8,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 12.5,
+        "gleu": 4.42,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 13.17,
+    "macro_gleu": 4.39
+  },
+  "w/o AQCR (M6)": {
+    "key": "N/A (MedAide+ extension)",
+    "description": "No adaptive complexity routing; always use 1 agent",
+    "per_category": {
+      "Pre-Diagnosis": {
+        "rouge_l": 13.21,
+        "gleu": 4.2,
+        "n": 1
+      },
+      "Diagnosis": {
+        "rouge_l": 14.74,
+        "gleu": 4.13,
+        "n": 1
+      },
+      "Medication": {
+        "rouge_l": 12.24,
+        "gleu": 4.8,
+        "n": 1
+      },
+      "Post-Diagnosis": {
+        "rouge_l": 12.5,
+        "gleu": 4.42,
+        "n": 1
+      }
+    },
+    "macro_rouge_l": 13.17,
+    "macro_gleu": 4.39
+  }
+}
