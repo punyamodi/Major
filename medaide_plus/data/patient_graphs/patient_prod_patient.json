@@ -1,0 +1,150 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "prod_patient",
+    "created_at": 1777498685.4142027
+  },
+  "nodes": [
+    {
+      "text": "acetaminophen",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1777498704.7276947,
+      "source": "regex",
+      "id": "Medication_acetaminophen"
+    },
+    {
+      "text": "ibuprofen",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1777498704.7276995,
+      "source": "regex",
+      "id": "Medication_ibuprofen"
+    },
+    {
+      "text": "sore throat",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777498704.728485,
+      "source": "regex",
+      "id": "Symptom_sore_throat"
+    },
+    {
+      "text": "fever",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777498704.728486,
+      "source": "regex",
+      "id": "Symptom_fever"
+    },
+    {
+      "text": "cough",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777498704.728487,
+      "source": "regex",
+      "id": "Symptom_cough"
+    },
+    {
+      "text": "fatigue",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777498704.7284927,
+      "source": "regex",
+      "id": "Symptom_fatigue"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1777498704.7296624,
+      "source": "Medication_acetaminophen",
+      "target": "Medication_ibuprofen"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_sore_throat"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_fatigue"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_sore_throat"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_fatigue"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_fatigue"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Symptom_fever",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Symptom_fever",
+      "target": "Symptom_fatigue"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777498704.7296624,
+      "source": "Symptom_cough",
+      "target": "Symptom_fatigue"
+    }
+  ]
+}

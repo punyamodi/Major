@@ -1,0 +1,50 @@
+llm:
+  provider: "ollama"
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "qwen3:8b"
+    max_tokens: 1024
+    temperature: 0.3
+    num_ctx: 2048
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-4o"
+    max_tokens: 1024
+    temperature: 0.3
+
+api:
+  max_tokens: 1024
+  temperature: 0.3
+
+modules:
+  amqu:
+    k_shots: 5
+    consistency_threshold: 0.85
+    min_count: 3
+    recency_lambda: 0.1
+    max_subqueries: 5
+  hdio:
+    ood_threshold: 0.30
+    num_categories: 4
+    num_intents: 18
+    gat_heads: 4
+    gat_hidden: 128
+  dmacn:
+    max_agents: 1
+    timeout: 180
+    confidence_weight: true
+
+knowledge_base:
+  kb_path: "medaide_plus/data/knowledge_base.json"
+  faiss_index_path: "medaide_plus/data/faiss_index"
+  chunk_size: 512
+  overlap: 64
+  top_k: 5
+
+logging:
+  level: "INFO"
+  file: "medaide_plus/logs/medaide_original.log"
+
+runtime:
+  allow_mock_llm: false
+  allow_provider_fallback: false

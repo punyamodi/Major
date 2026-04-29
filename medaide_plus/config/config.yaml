@@ -130,6 +130,10 @@ logging:
   format: "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
   file: "logs/medaide_plus.log"
 
+runtime:
+  allow_mock_llm: false
+  allow_provider_fallback: false
+
 evaluation:
   bleu_weights: [0.25, 0.25, 0.25, 0.25]
   rouge_types: ["rouge1", "rouge2", "rougeL"]

@@ -1,0 +1,338 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "patient_001",
+    "created_at": 1777499541.8661928
+  },
+  "nodes": [
+    {
+      "text": "chest pain",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777499569.2697728,
+      "source": "regex",
+      "id": "Symptom_chest_pain"
+    },
+    {
+      "text": "shortness of breath",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777499569.2697768,
+      "source": "regex",
+      "id": "Symptom_shortness_of_breath"
+    },
+    {
+      "text": "dizziness",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777500190.6081362,
+      "source": "regex",
+      "id": "Symptom_dizziness"
+    },
+    {
+      "text": "headache",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777500190.6081345,
+      "source": "regex",
+      "id": "Symptom_headache"
+    },
+    {
+      "text": "hypertension",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1777500190.6093047,
+      "source": "regex",
+      "id": "Diagnosis_hypertension"
+    },
+    {
+      "text": "hyperthyroidism",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1777500190.6093178,
+      "source": "regex",
+      "id": "Diagnosis_hyperthyroidism"
+    },
+    {
+      "text": "stroke",
+      "type": "Diagnosis",
+      "confidence": 0.7,
+      "timestamp": 1777500190.609316,
+      "source": "regex",
+      "id": "Diagnosis_stroke"
+    },
+    {
+      "text": "lisinopril",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1777500190.606514,
+      "source": "regex",
+      "id": "Medication_lisinopril"
+    },
+    {
+      "text": "amlodipine",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1777500190.6065211,
+      "source": "regex",
+      "id": "Medication_amlodipine"
+    },
+    {
+      "text": "hydrochlorothiazide",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1777500190.6065233,
+      "source": "regex",
+      "id": "Medication_hydrochlorothiazide"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_chest_pain",
+      "target": "Symptom_shortness_of_breath"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_chest_pain",
+      "target": "Symptom_dizziness"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_chest_pain",
+      "target": "Symptom_headache"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_chest_pain",
+      "target": "Diagnosis_hypertension"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_chest_pain",
+      "target": "Diagnosis_hyperthyroidism"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_chest_pain",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Symptom_dizziness"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Symptom_headache"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Diagnosis_hypertension"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Diagnosis_hyperthyroidism"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_shortness_of_breath",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_dizziness",
+      "target": "Symptom_headache"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_dizziness",
+      "target": "Diagnosis_hypertension"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_dizziness",
+      "target": "Diagnosis_hyperthyroidism"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_dizziness",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_headache",
+      "target": "Diagnosis_hypertension"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_headache",
+      "target": "Diagnosis_hyperthyroidism"
+    },
+    {
+      "relationship": "Symptom_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Symptom_headache",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500190.6107574,
+      "source": "Symptom_headache",
+      "target": "Symptom_dizziness"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Diagnosis_hypertension",
+      "target": "Diagnosis_hyperthyroidism"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Diagnosis_hypertension",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1777499569.2713196,
+      "source": "Diagnosis_hyperthyroidism",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Diagnosis_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Diagnosis_stroke",
+      "target": "Diagnosis_hyperthyroidism"
+    },
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_lisinopril",
+      "target": "Medication_amlodipine"
+    },
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_lisinopril",
+      "target": "Medication_hydrochlorothiazide"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_lisinopril",
+      "target": "Symptom_headache"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_lisinopril",
+      "target": "Symptom_dizziness"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_lisinopril",
+      "target": "Diagnosis_hypertension"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_lisinopril",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_lisinopril",
+      "target": "Diagnosis_hyperthyroidism"
+    },
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_amlodipine",
+      "target": "Medication_hydrochlorothiazide"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_amlodipine",
+      "target": "Symptom_headache"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_amlodipine",
+      "target": "Symptom_dizziness"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_amlodipine",
+      "target": "Diagnosis_hypertension"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_amlodipine",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_amlodipine",
+      "target": "Diagnosis_hyperthyroidism"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_hydrochlorothiazide",
+      "target": "Symptom_headache"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_hydrochlorothiazide",
+      "target": "Symptom_dizziness"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_hydrochlorothiazide",
+      "target": "Diagnosis_hypertension"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_hydrochlorothiazide",
+      "target": "Diagnosis_stroke"
+    },
+    {
+      "relationship": "Medication_to_Diagnosis",
+      "timestamp": 1777500190.6107574,
+      "source": "Medication_hydrochlorothiazide",
+      "target": "Diagnosis_hyperthyroidism"
+    }
+  ]
+}

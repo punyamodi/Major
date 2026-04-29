@@ -107,7 +107,12 @@ class MedAidePlusPipeline:
         llm_provider=None,
     ) -> None:
         self.default_patient_id = patient_id or "default_patient"
+        self._config_source_path: Optional[Path] = None
         self.config = self._load_config(config_path)
+        self._resolve_runtime_paths()
+        runtime_cfg = self.config.get("runtime", {})
+        self.allow_mock_llm = bool(runtime_cfg.get("allow_mock_llm", False))
+        self.allow_provider_fallback = bool(runtime_cfg.get("allow_provider_fallback", False))
 
         setup_logging(
             level=self.config.get("logging", {}).get("level", "INFO"),
@@ -118,8 +123,13 @@ class MedAidePlusPipeline:
         self._llm_provider = llm_provider or _create_llm_provider(self.config)
         if self._llm_provider:
             logger.info(f"LLM provider initialized: {type(self._llm_provider).__name__}")
+        elif not self.allow_mock_llm:
+            raise RuntimeError(
+                "LLM provider initialization failed. Configure a valid provider in config.yaml "
+                "or set runtime.allow_mock_llm=true for explicit non-production test mode."
+            )
         else:
-            logger.info("No LLM provider configured. Using legacy OpenAI client / mock.")
+            logger.warning("LLM provider unavailable; running with runtime.allow_mock_llm=true.")
 
         # Load knowledge base
         self.kb_manager = KBManager(config=self.config.get("knowledge_base", {}))
@@ -158,6 +168,8 @@ class MedAidePlusPipeline:
             "model": provider_settings.get("model", api_config.get("openai_model", "gpt-4o")),
             "max_tokens": provider_settings.get("max_tokens", api_config.get("max_tokens", 1024)),
             "temperature": provider_settings.get("temperature", api_config.get("temperature", 0.3)),
+            "allow_mock_llm": self.allow_mock_llm,
+            "allow_provider_fallback": self.allow_provider_fallback,
         }
         self.agents = [
             PreDiagnosisAgent(config=agent_config, llm_provider=self._llm_provider),
@@ -192,25 +204,54 @@ class MedAidePlusPipeline:
         if config_path and Path(config_path).exists():
             with open(config_path, "r", encoding="utf-8") as f:
                 config = yaml.safe_load(f)
+            self._config_source_path = Path(config_path).resolve()
             logger.info(f"Loaded config from {config_path}.")
             return config or {}
         else:
             logger.warning("No config file found. Using defaults.")
             return {}
 
+    def _resolve_runtime_paths(self) -> None:
+        """Resolve relative runtime paths against repository-aware base directory."""
+        if self._config_source_path is not None:
+            base_dir = self._config_source_path.parent.parent
+        else:
+            base_dir = Path.cwd()
+
+        kb_cfg = self.config.setdefault("knowledge_base", {})
+        for key in ("kb_path", "faiss_index_path"):
+            value = kb_cfg.get(key)
+            if isinstance(value, str) and value and not Path(value).is_absolute():
+                kb_cfg[key] = str((base_dir / value).resolve())
+
+        log_cfg = self.config.setdefault("logging", {})
+        log_file = log_cfg.get("file")
+        if isinstance(log_file, str) and log_file and not Path(log_file).is_absolute():
+            log_cfg["file"] = str((base_dir / log_file).resolve())
+
+        plmm_cfg = self.config.setdefault("modules", {}).setdefault("plmm", {})
+        graph_path = plmm_cfg.get("graph_storage_path")
+        if isinstance(graph_path, str) and graph_path and not Path(graph_path).is_absolute():
+            plmm_cfg["graph_storage_path"] = str((base_dir / graph_path).resolve())
+
     def _init_knowledge_base(self) -> None:
-        """Initialize knowledge base with sample data if empty."""
+        """Initialize knowledge base from configured persisted data only."""
         kb_path = self.config.get("knowledge_base", {}).get(
             "kb_path", "data/knowledge_base.json"
         )
-        if Path(kb_path).exists():
-            self.kb_manager.load(kb_path)
-        else:
-            logger.info("Seeding KB with sample medical guidelines.")
-            sample_docs = KBManager.create_sample_kb()
-            texts = [d["text"] for d in sample_docs]
-            metas = [d.get("metadata", {}) for d in sample_docs]
-            self.kb_manager.add_documents(texts, metas)
+        kb_file = Path(kb_path)
+        if not kb_file.exists():
+            raise FileNotFoundError(
+                f"Knowledge base file not found: {kb_file}. "
+                "Provide a real knowledge_base.json for production RAG."
+            )
+
+        loaded = self.kb_manager.load(str(kb_file))
+        if loaded == 0:
+            raise ValueError(
+                f"Knowledge base is empty or invalid: {kb_file}. "
+                "Production mode requires non-empty persisted KB data."
+            )
 
     async def run(
         self,

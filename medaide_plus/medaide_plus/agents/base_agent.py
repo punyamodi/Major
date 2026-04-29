@@ -62,6 +62,8 @@ class BaseAgent(ABC):
         self.temperature: float = self.config.get("temperature", 0.3)
         self._client = llm_client
         self._provider = llm_provider
+        self.allow_mock_llm: bool = bool(self.config.get("allow_mock_llm", False))
+        self.allow_provider_fallback: bool = bool(self.config.get("allow_provider_fallback", False))
 
     @property
     @abstractmethod
@@ -120,7 +122,8 @@ class BaseAgent(ABC):
         """
         Call the LLM using the configured provider.
 
-        Priority: LLMProvider → legacy OpenAI client → mock response.
+        Priority: Configured provider → legacy OpenAI client.
+        Mock responses are allowed only when explicitly enabled.
 
         Args:
             prompt: Full prompt string.
@@ -160,9 +163,10 @@ class BaseAgent(ABC):
                         )
                         await asyncio.sleep(base_sleep * (attempt + 1))
 
-                logger.warning(f"[{self.name}] Provider returned empty response after retries. Returning empty string.")
-                return ""
+                raise RuntimeError("Provider returned empty response after retries.")
             except Exception as e:
+                if not self.allow_provider_fallback:
+                    raise RuntimeError(f"Configured provider failed: {e}") from e
                 logger.warning(f"[{self.name}] Provider call failed: {e}. Trying fallback.")
 
         # Priority 2: Legacy OpenAI client
@@ -172,10 +176,14 @@ class BaseAgent(ABC):
                 from openai import AsyncOpenAI
                 api_key = os.environ.get("OPENAI_API_KEY")
                 if not api_key:
-                    return self._mock_response(prompt)
+                    if self.allow_mock_llm:
+                        return self._mock_response(prompt)
+                    raise RuntimeError("No usable LLM backend available (missing OPENAI_API_KEY).")
                 self._client = AsyncOpenAI(api_key=api_key)
             except ImportError:
-                return self._mock_response(prompt)
+                if self.allow_mock_llm:
+                    return self._mock_response(prompt)
+                raise RuntimeError("OpenAI client unavailable and no configured provider succeeded.")
 
         try:
             response = await self._client.chat.completions.create(
@@ -189,8 +197,10 @@ class BaseAgent(ABC):
             )
             return response.choices[0].message.content.strip()
         except Exception as e:
-            logger.warning(f"[{self.name}] LLM call failed: {e}. Using mock.")
-            return self._mock_response(prompt)
+            if self.allow_mock_llm:
+                logger.warning(f"[{self.name}] LLM call failed: {e}. Using mock.")
+                return self._mock_response(prompt)
+            raise RuntimeError(f"LLM call failed: {e}") from e
 
     def _mock_response(self, prompt: str) -> str:
         """

@@ -13,11 +13,32 @@ class TestMedAidePlusPipeline:
 
     @pytest.fixture
     def pipeline(self, tmp_path):
-        """Create a minimal pipeline for testing (no LLM calls)."""
+        """Create a minimal pipeline for testing (explicit mock mode)."""
         import yaml
+        import json
         from medaide_plus.pipeline import MedAidePlusPipeline
 
         storage = str(tmp_path / "patient_graphs")
+        kb_path = tmp_path / "knowledge_base.json"
+        kb_path.write_text(
+            json.dumps(
+                {
+                    "documents": [
+                        {
+                            "id": "kb_test_001",
+                            "text": "Hypertension management includes lifestyle changes and antihypertensive therapy.",
+                            "metadata": {"category": "Diagnosis"},
+                        },
+                        {
+                            "id": "kb_test_002",
+                            "text": "Metformin is first-line treatment for type 2 diabetes in most adults.",
+                            "metadata": {"category": "Medication"},
+                        },
+                    ]
+                }
+            ),
+            encoding="utf-8",
+        )
 
         config = {
             "models": {"openai_model": "gpt-4o"},
@@ -30,6 +51,8 @@ class TestMedAidePlusPipeline:
                 "aqcr": {"simple_threshold": 0.33, "complex_threshold": 0.66},
                 "miet": {"beta": 0.6, "buffer_size": 3},
             },
+            "knowledge_base": {"kb_path": str(kb_path), "top_k": 3},
+            "runtime": {"allow_mock_llm": True},
             "api": {"openai_model": "gpt-4o", "max_tokens": 512, "temperature": 0.3},
             "logging": {"level": "WARNING"},
         }

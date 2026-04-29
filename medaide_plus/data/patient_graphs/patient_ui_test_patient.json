@@ -1,0 +1,194 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "patient_id": "ui_test_patient",
+    "created_at": 1777499992.9358213
+  },
+  "nodes": [
+    {
+      "text": "acetaminophen",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1777500009.4631524,
+      "source": "regex",
+      "id": "Medication_acetaminophen"
+    },
+    {
+      "text": "ibuprofen",
+      "type": "Medication",
+      "confidence": 0.7,
+      "timestamp": 1777500009.4631572,
+      "source": "regex",
+      "id": "Medication_ibuprofen"
+    },
+    {
+      "text": "fever",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777500009.4642882,
+      "source": "regex",
+      "id": "Symptom_fever"
+    },
+    {
+      "text": "sore throat",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777500009.4642894,
+      "source": "regex",
+      "id": "Symptom_sore_throat"
+    },
+    {
+      "text": "cough",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777500009.4642906,
+      "source": "regex",
+      "id": "Symptom_cough"
+    },
+    {
+      "text": "fatigue",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777500009.4643013,
+      "source": "regex",
+      "id": "Symptom_fatigue"
+    },
+    {
+      "text": "rash",
+      "type": "Symptom",
+      "confidence": 0.7,
+      "timestamp": 1777500009.4643073,
+      "source": "regex",
+      "id": "Symptom_rash"
+    }
+  ],
+  "edges": [
+    {
+      "relationship": "Medication_to_Medication",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_acetaminophen",
+      "target": "Medication_ibuprofen"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_sore_throat"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_fatigue"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_acetaminophen",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_fever"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_sore_throat"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_fatigue"
+    },
+    {
+      "relationship": "Medication_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Medication_ibuprofen",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_fever",
+      "target": "Symptom_sore_throat"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_fever",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_fever",
+      "target": "Symptom_fatigue"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_fever",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_cough"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_fatigue"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_sore_throat",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_cough",
+      "target": "Symptom_fatigue"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_cough",
+      "target": "Symptom_rash"
+    },
+    {
+      "relationship": "Symptom_to_Symptom",
+      "timestamp": 1777500009.4658446,
+      "source": "Symptom_fatigue",
+      "target": "Symptom_rash"
+    }
+  ]
+}

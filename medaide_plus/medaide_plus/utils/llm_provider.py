@@ -215,18 +215,7 @@ class OllamaProvider(BaseLLMProvider):
         # consumes 3-4 GB of VRAM even on small models. Setting 2048 drops KV-cache
         # to ~200 MB, allowing a 8B Q4 model to fully load on an 8 GB GPU (RTX 3070).
         self.num_ctx = num_ctx
-
-    def _sync_chat(
-        self,
-        model: str,
-        payload: Dict[str, Any],
-    ) -> Dict[str, Any]:
-        """Synchronous httpx call — safe across event-loop boundaries."""
-        import httpx
-        with httpx.Client(timeout=180.0) as client:
-            resp = client.post(f"{self.base_url}/api/chat", json=payload)
-            resp.raise_for_status()
-            return resp.json()
+        self._client: Any = None
 
     async def chat(
         self,
@@ -238,13 +227,9 @@ class OllamaProvider(BaseLLMProvider):
     ) -> LLMResponse:
         """Send a chat completion request to the Ollama REST API.
 
-        Uses a fresh synchronous httpx.Client per call (via run_in_executor)
-        so it is safe across multiple asyncio.run() invocations that each
-        create a new event loop.
-
         Endpoint: ``POST /api/chat`` (non-streaming).
         """
-        import asyncio
+        import httpx
 
         model = model or self.model
         start = time.time()
@@ -262,10 +247,14 @@ class OllamaProvider(BaseLLMProvider):
         }
 
         try:
-            loop = asyncio.get_event_loop()
-            data = await loop.run_in_executor(
-                None, self._sync_chat, model, payload
-            )
+            if self._client is not None:
+                resp = await self._client.post(f"{self.base_url}/api/chat", json=payload)
+            else:
+                async with httpx.AsyncClient(timeout=180.0) as client:
+                    resp = await client.post(f"{self.base_url}/api/chat", json=payload)
+
+            resp.raise_for_status()
+            data = resp.json()
             msg = data.get("message", {})
             # thinking models (Qwen3) may put response in content when think=False;
             # fall back to the thinking field if content is empty.
@@ -295,20 +284,18 @@ class OllamaProvider(BaseLLMProvider):
 
     async def health_check(self) -> bool:
         """Check Ollama availability via ``GET /api/tags``."""
-        import asyncio
         import httpx
 
-        def _check() -> bool:
-            try:
-                with httpx.Client(timeout=5.0) as client:
-                    resp = client.get(f"{self.base_url}/api/tags")
-                    return resp.status_code == 200
-            except Exception as exc:
-                logger.warning("Ollama health check failed: %s", exc)
-                return False
-
-        loop = asyncio.get_event_loop()
-        return await loop.run_in_executor(None, _check)
+        try:
+            if self._client is not None:
+                resp = await self._client.get(f"{self.base_url}/api/tags")
+            else:
+                async with httpx.AsyncClient(timeout=5.0) as client:
+                    resp = await client.get(f"{self.base_url}/api/tags")
+            return resp.status_code == 200
+        except Exception as exc:
+            logger.warning("Ollama health check failed: %s", exc)
+            return False
 
 
 # ---------------------------------------------------------------------------
