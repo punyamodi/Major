@@ -2,6 +2,20 @@
 
 This folder provides a standalone custom UI to test the **final MedAide+ architecture** with local Ollama models.
 
+## Prerequisites
+- Python environment with dependencies installed from medaide_plus/requirements.txt
+- Ollama running at http://localhost:11434
+- A local model pulled (default: qwen3:8b)
+
+## Setup
+
+From repository root:
+
+```powershell
+pip install -r .\medaide_plus\requirements.txt
+ollama pull qwen3:8b
+```
+
 ## Running the App
 
 ### Start

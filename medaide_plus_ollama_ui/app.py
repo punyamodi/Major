@@ -142,7 +142,16 @@ def _build_runtime_config(
     )
 
     config.setdefault("modules", {})
+    config["modules"].setdefault("amqu", {})
+    config["modules"]["amqu"].setdefault("use_flan_t5", False)
+    config["modules"]["amqu"].setdefault("use_consistency_filter", False)
+    config["modules"].setdefault("hdio", {})
+    config["modules"]["hdio"].setdefault("use_biobert", False)
+    config["modules"]["hdio"].setdefault("use_sentence_transformer", False)
+    config["modules"]["hdio"].setdefault("use_gat", False)
     config["modules"].setdefault("plmm", {})
+    config["modules"].setdefault("hdfg", {})
+    config["modules"]["hdfg"].setdefault("enabled", False)
     config["modules"]["plmm"]["graph_storage_path"] = str(
         MEDAIDE_ROOT / "data" / "patient_graphs"
     )

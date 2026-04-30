@@ -61,6 +61,7 @@ class HdfgModule:
         knowledge_base: Optional[List[str]] = None,
     ) -> None:
         self.config = config or {}
+        self.enabled: bool = bool(self.config.get("enabled", True))
         self.mc_passes: int = self.config.get("mc_dropout_passes", 15)
         self.uncertainty_threshold: float = self.config.get("uncertainty_threshold", 0.5)
         self.top_k: int = self.config.get("faiss_top_k", 5)
@@ -120,6 +121,14 @@ class HdfgModule:
         Returns:
             HdfgResult with annotated response and verification details.
         """
+        if not self.enabled:
+            return HdfgResult(
+                original_response=response,
+                annotated_response=response,
+                hallucination_rate=0.0,
+                overall_confidence=1.0,
+                metadata={"n_claims": 0, "disabled": True},
+            )
         claims = self._extract_claims(response)
         if not claims:
             return HdfgResult(

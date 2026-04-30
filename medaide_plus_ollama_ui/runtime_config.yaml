@@ -57,12 +57,17 @@ modules:
     min_count: 3
     recency_lambda: 0.1
     max_subqueries: 5
+    use_flan_t5: false
+    use_consistency_filter: false
   hdio:
     ood_threshold: 0.3
     num_categories: 4
     num_intents: 18
     gat_heads: 4
     gat_hidden: 128
+    use_biobert: false
+    use_sentence_transformer: false
+    use_gat: false
   dmacn:
     max_agents: 4
     timeout: 180
@@ -82,6 +87,7 @@ modules:
     uncertainty_threshold: 0.3
     faiss_top_k: 5
     support_threshold: 0.75
+    enabled: false
   aqcr:
     simple_agents: 1
     moderate_agents: 2

@@ -70,6 +70,10 @@ class AMQUModule:
         corpus: Optional[List[str]] = None,
     ) -> None:
         self.config = config or {}
+        self.use_flan_t5: bool = bool(self.config.get("use_flan_t5", True))
+        self.use_consistency_filter: bool = bool(
+            self.config.get("use_consistency_filter", True)
+        )
         self.k_shots: int = self.config.get("k_shots", 5)
         self.consistency_threshold: float = self.config.get("consistency_threshold", 0.85)
         self.min_count: int = self.config.get("min_count", 3)
@@ -90,19 +94,22 @@ class AMQUModule:
     def _load_models(self) -> None:
         """Load Flan-T5 and sentence-transformer models with graceful fallback."""
         # Load Flan-T5 for decomposition
-        try:
-            from transformers import T5ForConditionalGeneration, T5Tokenizer
-            import torch
-            model_name = "google/flan-t5-base"
-            logger.info(f"Loading Flan-T5 model: {model_name}")
-            self._tokenizer = T5Tokenizer.from_pretrained(model_name)
-            self._model = T5ForConditionalGeneration.from_pretrained(model_name)
-            self._model.eval()
-            logger.info("Flan-T5 loaded successfully.")
-        except Exception as e:
-            logger.warning(f"Could not load Flan-T5 ({e}). Using rule-based fallback.")
-            self._model = None
-            self._tokenizer = None
+        if not self.use_flan_t5:
+            logger.info("Flan-T5 disabled; using rule-based decomposition.")
+        else:
+            try:
+                from transformers import T5ForConditionalGeneration, T5Tokenizer
+                import torch
+                model_name = "google/flan-t5-base"
+                logger.info(f"Loading Flan-T5 model: {model_name}")
+                self._tokenizer = T5Tokenizer.from_pretrained(model_name)
+                self._model = T5ForConditionalGeneration.from_pretrained(model_name)
+                self._model.eval()
+                logger.info("Flan-T5 loaded successfully.")
+            except Exception as e:
+                logger.warning(f"Could not load Flan-T5 ({e}). Using rule-based fallback.")
+                self._model = None
+                self._tokenizer = None
 
         # Load sentence-transformer for consistency filtering
         try:
@@ -157,7 +164,11 @@ class AMQUModule:
         candidate_sets = self._generate_subqueries(query, k=self.k_shots)
 
         # Step 2: Filter by consistency
-        filtered_subqueries = self._filter_by_consistency(candidate_sets)
+        if self.use_consistency_filter:
+            filtered_subqueries = self._filter_by_consistency(candidate_sets)
+        else:
+            logger.info("Consistency filter disabled; using first candidate set.")
+            filtered_subqueries = candidate_sets[0] if candidate_sets else []
         result.subqueries = filtered_subqueries[:self.max_subqueries]
 
         # Step 3: Recency-weighted BM25 retrieval

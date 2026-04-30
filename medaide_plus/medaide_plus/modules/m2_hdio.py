@@ -175,6 +175,11 @@ class HDIOModule:
         self.n_intents: int = len(ALL_INTENTS)          # 18
         self.gat_heads: int = self.config.get("gat_heads", 4)
         self.gat_hidden: int = self.config.get("gat_hidden", 128)
+        self.use_biobert: bool = bool(self.config.get("use_biobert", True))
+        self.use_sentence_transformer: bool = bool(
+            self.config.get("use_sentence_transformer", True)
+        )
+        self.use_gat: bool = bool(self.config.get("use_gat", True))
 
         self._encoder = None
         self._gat_layer = None
@@ -185,19 +190,28 @@ class HDIOModule:
 
     def _load_models(self) -> None:
         """Load BioBERT encoder with fallback to sentence-transformer."""
-        try:
-            from transformers import AutoTokenizer, AutoModel
-            import torch
-            model_name = "dmis-lab/biobert-base-cased-v1.2"
-            logger.info(f"Loading BioBERT: {model_name}")
-            self._tokenizer = AutoTokenizer.from_pretrained(model_name)
-            self._bert_model = AutoModel.from_pretrained(model_name)
-            self._bert_model.eval()
-            self._encoder_type = "biobert"
-            self._encoder_dim = 768
-            logger.info("BioBERT loaded successfully.")
-        except Exception as e:
-            logger.warning(f"BioBERT unavailable ({e}). Trying sentence-transformer.")
+        self._encoder_type = None
+        self._encoder_dim = None
+        if self.use_biobert:
+            try:
+                from transformers import AutoTokenizer, AutoModel
+                import torch
+                model_name = "dmis-lab/biobert-base-cased-v1.2"
+                logger.info(f"Loading BioBERT: {model_name}")
+                self._tokenizer = AutoTokenizer.from_pretrained(model_name)
+                self._bert_model = AutoModel.from_pretrained(model_name)
+                self._bert_model.eval()
+                self._encoder_type = "biobert"
+                self._encoder_dim = 768
+                logger.info("BioBERT loaded successfully.")
+            except Exception as e:
+                logger.warning(f"BioBERT unavailable ({e}). Trying sentence-transformer.")
+        else:
+            logger.info("BioBERT disabled; skipping transformer encoder.")
+
+        if self._encoder_type == "biobert":
+            return
+        if self.use_sentence_transformer:
             try:
                 from sentence_transformers import SentenceTransformer
                 self._sent_model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -208,6 +222,10 @@ class HDIOModule:
                 logger.warning(f"Sentence-transformer also unavailable ({e2}). Using TF-IDF.")
                 self._encoder_type = "tfidf"
                 self._encoder_dim = 256
+        else:
+            logger.info("Sentence-transformer disabled; using TF-IDF.")
+            self._encoder_type = "tfidf"
+            self._encoder_dim = 256
 
         # Initialize GAT layer
         self._gat_layer = GATLayer(
@@ -317,21 +335,25 @@ class HDIOModule:
         # Step 2: Build graph node features
         # Category nodes: mean of member intent keyword embeddings
         # Intent nodes: query-relevant attention scores (simplified)
-        n_total = self.n_categories + self.n_intents
-        node_features = np.zeros((n_total, self._encoder_dim), dtype=np.float32)
+        if self.use_gat:
+            n_total = self.n_categories + self.n_intents
+            node_features = np.zeros((n_total, self._encoder_dim), dtype=np.float32)
 
-        # Query embedding for all nodes (broadcast — in practice nodes would have own embeddings)
-        for i in range(n_total):
-            node_features[i] = query_embedding
+            # Query embedding for all nodes (broadcast — in practice nodes would have own embeddings)
+            for i in range(n_total):
+                node_features[i] = query_embedding
 
-        # Step 3: GAT forward pass
-        gat_out = self._gat_layer.forward(node_features, self._intent_graph)
+            # Step 3: GAT forward pass
+            gat_out = self._gat_layer.forward(node_features, self._intent_graph)
 
-        # Normalize gat output
-        gat_mean = gat_out.mean(axis=0)  # (gat_hidden,)
-        gat_norm = np.linalg.norm(gat_mean)
-        if gat_norm > 0:
-            gat_mean = gat_mean / gat_norm
+            # Normalize gat output
+            gat_mean = gat_out.mean(axis=0)  # (gat_hidden,)
+            gat_norm = np.linalg.norm(gat_mean)
+            if gat_norm > 0:
+                gat_mean = gat_mean / gat_norm
+        else:
+            logger.info("GAT disabled; using keyword-only intent scoring.")
+            gat_mean = np.zeros(self.gat_hidden, dtype=np.float32)
 
         # Step 4: Compute per-intent sigmoid scores (multi-label)
         # Use keyword matching + embedding similarity hybrid

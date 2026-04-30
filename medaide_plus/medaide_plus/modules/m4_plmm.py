@@ -438,7 +438,7 @@ class PLMMModule:
         safe_id = re.sub(r"[^a-zA-Z0-9_-]", "_", patient_id)
         filepath = self.storage_path / f"patient_{safe_id}.json"
         try:
-            data = nx.node_link_data(graph)
+            data = nx.node_link_data(graph, edges="edges")
             with open(filepath, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2, default=str)
             logger.debug(f"Saved patient graph to {filepath}.")
@@ -462,7 +462,13 @@ class PLMMModule:
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            graph = nx.node_link_graph(data, directed=True, multigraph=False)
+            edges_key = "edges" if "edges" in data else "links"
+            graph = nx.node_link_graph(
+                data,
+                directed=True,
+                multigraph=False,
+                edges=edges_key,
+            )
             logger.debug(
                 f"Loaded patient graph from {filepath} "
                 f"({graph.number_of_nodes()} nodes)."
